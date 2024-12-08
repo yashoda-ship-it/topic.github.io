@@ -101,36 +101,36 @@ Structures like Fenwick trees and sparse tables optimize memory usage compared t
         <tr>
             <td>Traversals</td>
             <td>
-                - **Preorder**: Visit the node first, then its left and right children.<br>
-                - **Inorder**: Visit the left child, then the node, then the right child (used for sorting in binary search trees).<br>
-                - **Postorder**: Visit left and right children, then the node.<br>
-                - **Level-order**: Visit nodes one level at a time.
+                Preorder: Visit the node first, then its left and right children.<br>
+                Inorder: Visit the left child, then the node, then the right child (used for sorting in binary search trees).<br>
+                Postorder: Visit left and right children, then the node.<br>
+                Level-order: Visit nodes one level at a time.
             </td>
             <td>
-                - **Breadth-First Search (BFS)**<br>
-                - **Depth-First Search (DFS)**
+                Breadth-First Search (BFS)<br>
+                Depth-First Search (DFS)
             </td>
         </tr>
         <tr>
             <td>Applications</td>
             <td>
-                - **Binary Search Trees** for fast searching and inserting.<br>
-                - **Heaps** for managing priorities and sorting.<br>
-                - **Tries** for autocomplete and dictionary lookups.<br>
-                - Representing family trees and file systems.
+                Binary Search Trees for fast searching and inserting.<br>
+                Heaps for managing priorities and sorting.<br>
+                Tries for autocomplete and dictionary lookups.<br>
+                Representing family trees and file systems.
             </td>
             <td>
-                - **Social networks** to represent friendships.<br>
-                - **Maps** for finding routes.<br>
-                - **Web crawling** to explore the internet.<br>
-                - **Electric circuits** to show how components are connected.
+                Social networks to represent friendships.<br>
+                Maps for finding routes.<br>
+                Web crawling to explore the internet.<br>
+                Electric circuits to show how components are connected.
             </td>
         </tr>
     </table>
 </body>
 </html>
 </p>
-<p><strong>7.</strong>Deliberate on sorting and searching algorithms, the technique behind each and they connect to real world</p>
+<p><strong></br>7.</strong>Deliberate on sorting and searching algorithms, the technique behind each and they connect to real world
   <strong></br>Ans:</br></strong> Sorting algorithms are used to arrange a collection of items in a particular order, typically ascending or descending. The choice of algorithm depends on the size of the dataset and the environment in which it is used.               
  <strong></br>Bubble Sort:</strong> Repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
 
@@ -147,7 +147,7 @@ Structures like Fenwick trees and sparse tables optimize memory usage compared t
 
  <strong></br>Real-World Connection:</strong> Widely used in sorting operations where data is dynamic or when average performance is more important, such as in sort operations on databases and network protocols.</br>
                               
- <strong></br>searching algorithms</br></strong>      
+ <strong></br>searching algorithms</br></strong> Searching algorithms are used to find specific data within a collection of data.     
  <strong></br>Boyer-Moore Algorithm:</strong> Utilizes the bad character rule and the good suffix rule to skip over parts of the text that cannot contain a match. This allows the search to progress quickly when mismatches occur.  
  <strong></br>Real-World Connection:</strong> Widely used in text processing applications like text editors, search engines, and spam filters due to its efficiency in pattern matching.</br>
  <strong></br>Knuth-Morris-Pratt (KMP) Algorithm: </strong>Utilizes a precomputed partial match table (also known as the "next" array) to skip unnecessary comparisons during the search.
@@ -162,7 +162,20 @@ Structures like Fenwick trees and sparse tables optimize memory usage compared t
  <strong></br>Rolling Hash (for Rabin-Karp):</strong>Utilizes a hash function to compute a hash for a sliding window of text, enabling quick checks of pattern matches within the text.
 
  <strong></br>Real-World Connection:</strong> Useful in applications requiring efficient substring search within large texts, such as text compression algorithms and plagiarism detection systems.</br></p>
-<p><strong>8.</strong>Discuss the importance of graph algorithms with respect to spanning trees and shortest paths</p>
-<strong></br>Ans:</br></strong></p>
+<p><strong>8.</strong>Discuss the importance of graph algorithms with respect to spanning trees and shortest paths
+<strong></br>Ans:</br></strong>Graph algorithms are fundamental in efficiently solving a wide range of problems in computer science, network theory, and real-world applications. Two of the most important types of graph algorithms relate to spanning trees and shortest paths, each playing a crucial role in optimizing network design and data flow.
+
+<strong></br>Spanning Trees:</strong> A spanning tree of a graph is a subgraph that connects all the vertices together without forming any cycles and with the minimum possible number of edges. It is a type of minimal connected graph that covers all the nodes.
+<strong></br>Importance:</strong>
+  <strong></br>Algorithms:</strong> Key algorithms for finding spanning trees include Prim’s algorithm and Kruskal’s algorithm. Prim’s algorithm grows the minimum spanning tree incrementally by adding the smallest possible edge, while Kruskal’s algorithm sorts all edges and adds them one by one, ensuring the tree remains minimal.
+<strong></br>Real-World Connection:</strong> In telecommunications, spanning trees are used to prevent loops in network switches (Spanning Tree Protocol). In urban planning, spanning trees represent the most efficient routes for public transportation or electricity distribution.
+<strong></br> Shortest Paths:</strong> The shortest path problem seeks to find the path between two nodes in a graph such that the sum of the weights of its edges is minimized.
+<strong></br>Importance:</strong>
+  <strong></br>Routing:</strong> Shortest path algorithms are crucial for network routing, where they are used to find the optimal path for data packets across the internet or within a network of routers. Algorithms like Dijkstra’s and Bellman-Ford are commonly used for graphs with non-negative weights and those with negative weights, respectively.
+<strong></br>Applications:</strong>
+Transport Networks: Shortest path algorithms optimize routes for traffic management, delivery services, and logistics.
+Geographical Information Systems (GIS): They are used in map routing to find the shortest paths on road networks.
+Artificial Intelligence: In AI, shortest path algorithms assist in finding the most efficient path for robots in a grid or solving puzzle problems like the shortest path in a maze.
+<strong></br>Real-World Connection:</strong> In supply chain management, finding the shortest path between distribution centers and warehouses can significantly reduce delivery times and costs. In healthcare, shortest paths help route patients between departments efficiently.</p>
 <p><strong>9.Discuss about the different studied algorithm design techniques.</p>
 <strong></br>Ans:</br></strong>      </p>
