@@ -1,13 +1,15 @@
 <h2>Course Reflections</h2>
 <h3>Mem 2 - Yashoda Talawar</br>Roll number : 357</h3>
 <p> <strong>1.</strong>What are the kinds of problems we see in the nature?
-<strong></br>Ans:</br></strong><strong>Iteration:</strong>Repeating tasks, like summing a list of numbers.
+<strong></br>Ans:</br></strong><strong>Iteration:</strong>Repeating tasks, like summing a list of numbers,Problems like calculating compound interest.
 </br><strong>
-  Recursion:</strong>Self-similar patterns like tree branching, fractals, or the food chain.</br>
-<strong>Backtracking:</strong>Trial-and-error processes like ants finding food or birds buildingnests.</p>
+  Recursion:</strong>Scenarios like Fibonacci sequence generation or solving the Tower of Hanoi involve recursive calls and factorial
+</br>
+<strong>Backtracking:</strong> Exploring possibilities to find a solution, like solving a maze,n-queens, or generating all possible permutations use backtracking to explore solutions.
+</p>
 
-<p>2.What is space and time efficiency? Why are they important? Explain the different class of problems and orders of growth</p>
-  <p><strong>Ans:</br>Space Efficiency:</strong>It Refers to how much memory (or storage) an algorithm uses while solving a problem.
+<p>2.What is space and time efficiency? Why are they important? Explain the different class of problems and orders of growth
+  <strong></br>Ans:</br>Space Efficiency:</strong>It Refers to how much memory (or storage) an algorithm uses while solving a problem.
 </br><strong>Example:</strong> An algorithm that requires less RAM is more space-efficient.</br><strong> Time Efficiency:</strong>It Refers to how much time an algorithm takes to solve a problem as the input size increases.</br><strong>Example:</strong>
 An algorithm that runs faster as data grows is time-efficient.</br></br><strong>Why are They Important?</strong></br></br>
 <strong>Resource Management:</strong></br>Efficient algorithms save memory and time, which is crucial for limited resources in real-world systems.
@@ -19,28 +21,29 @@ Faster, efficient solutions are vital in applications like GPS, healthcare, AI, 
 <strong>Decision Problems:</strong> Determining whether a given condition is true or false for a problem.</br>
 <strong>Search Problems:</strong> Locating specific information from a large dataset (like finding a word in a dictionary).</br></p>
 
-<p>3.Take away from different design principles from chapter 2</p>
- <p></p>
+<p>3.Take away from different design principles from chapter 2
+ <strong></br>Modularity:</strong>strong> Simplifies complex problems into smaller tasks.
+<strong></br>Abstraction:</strong>strong> Hides implementation details to focus on solving the problem.
+<strong></br>Efficiency: </strong>strong>Optimizing time and space complexities to improve performance.
+<strong></br>Reusability:</strong>strong> Algorithms like dynamic programming can be applied across multiple domains.</p>
 
 <p>4.The hierarchical data and how different tree data structures solve and optimize over the problem scenarios (tree, bst, avl, 2-3, red-black, heap, trie)</p>
-  <p><strong>Ans:</br></strong><strong>Hierarchical Data & Tree Data Structures</br></strong>
-  Hierarchical data shows parent-child relationships and can be effectively represented using tree data structures. These trees have special properties that make operations faster, depending on their type and purpose.
-</br></br>
-<strong>General Tree:</br></strong>
-A binary search tree (BST) is a special kind of binary tree where the left child is smaller, and the right child is greater than the parent. It allows efficient searching and inserting with an average time of O(log n). But if it gets unbalanced, performance can drop to O(n).</br></br>
-<strong>AVL Tree:</br></strong>An AVL Tree is a balanced version of a binary search tree. It keeps itself balanced by ensuring a strict condition at every node. Because of this, operations like searching, inserting, and deleting have a guaranteed time of O(log n), even in the worst case. It's ideal for real-time systems.
-</br></br>
-<strong>Red-Black Tree:</br></strong>A Red-Black Tree is another type of self-balancing binary search tree. It uses a color system (red or black) to quickly balance itself, requiring fewer adjustments than AVL trees. It works efficiently for tasks like database indexing and managing ordered data.
-</br></br>
-<strong>2-3 Tree:</br></strong>A 2-3 tree is a balanced tree where each node can have two or three children. It is great for database indexing and supports efficient searching and inserting with a time complexity of O(log n). It's an alternative to B-Trees for managing ordered datasets.
-</br></br><strong>Heap:</br></strong>A heap is a type of tree that maintains a property where the largest or smallest value is always at the root. Heaps are used in priority queues, scheduling tasks, and sorting. They allow fast access to the maximum or minimum value in O(1) time and insertion or deletion in O(log n).
-</br></br><strong>Trie:</br></strong>A Trie, or prefix tree, is a tree optimized for storing and searching strings. Each branch represents a single character, which makes prefix-based lookups very fast. They're commonly used in features like autocomplete, dictionary lookups, or routing. However, they use a lot of memory for very large datasets.
-</br></br><strong>Choosing the Right Tree:</br></strong><strong>Trie:</strong>Best for autocomplete or prefix-based searches.</br>
-</br><strong>Heap:</strong> Great for priority queues or task scheduling.</br>
-</br><strong>AVL Tree or Red-Black Tree:</strong>Use these for frequent searching and inserting in ordered data.</br>
-</br><strong>General Trees:</strong>Best for situations with simple parent-child relationships that don't need balancing.</br></p>
-
-<p>5.The need of array query algorithms and their implications. Their applications and principles need to be discussed</p>
+<strong></br>General Tree:</strong>
+Represents basic parent-child relationships but lacks specific balancing properties.
+<strong></br>Binary Search Tree (BST):</strong>
+Organizes data such that left children are smaller and right children are larger than the parent. It offers efficient searching and insertion with an average time complexity of O(log n), but performance can degrade to O(n) if unbalanced.
+<strong></br>AVL Tree:</strong>
+A self-balancing BST ensuring all operations (search, insert, delete) are consistently O(log n). It's ideal for real-time systems due to its guaranteed balance.
+<strong></br>Heap:</strong>
+Maintains the property where the root is always the maximum or minimum value. It's commonly used in priority queues and task scheduling, with insertion and deletion at O(log n) and fast root access at O(1).
+<strong></br>Trie:</strong>
+Optimized for prefix-based searches, where each branch represents a character. It's widely used in autocomplete and dictionary lookups, offering fast search but higher memory usage.
+Choosing the Right Tree:
+<strong></br>Trie:</strong> For prefix-based searches or autocomplete.
+<strong></br>Heap:</strong> For priority queues and scheduling.
+<strong></br>AVL/Red-Black Trees:</strong> For frequent searching and updates in ordered data.
+<strong></br>General Tree:</strong> For simple parent-child relationships without balancing needs.
+</p>
  <p><strong>Ans:</br></strong><strong>The Need for Array Query Algorithms:</br></strong>
  Array query algorithms help us quickly search, retrieve, and update data in arrays. Arrays store data in consecutive memory spaces, but without efficient algorithms, operations on large arrays can become very slow. These algorithms save time and make data processing faster, especially when dealing with big datasets.
 </br></br>
