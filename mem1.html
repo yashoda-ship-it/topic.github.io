@@ -19,17 +19,58 @@ Predators engage in tactical decision-making regarding their hunting strategies,
  <strong>6.Growth and Structure:</strong></br>
 Tree branches develop in configurations that optimize sunlight exposure, while roots extend to effectively gather water and nutrients. Similarly, river systems evolve branching patterns that minimize energy loss while facilitating water flow. These natural growth strategies are crucial for efficient resource utilization and survival across various environments.</br></p>
 <p>2.What is space and time efficiency? Why are they important? Explain the different class of problems and orders of growth</p>
-  <p>Ans:<strong></strong>1. Time Efficiency:  
-Definition: Time efficiency pertains to the duration an algorithm requires to execute its function based on the size of the input. This is frequently evaluated using Big-O notation, which indicates the worst-case scenario regarding execution time.</br>  
-Importance: Time efficiency holds significant importance, particularly when dealing with extensive datasets or inputs, as an inefficient algorithm may result in excessively long processing times. Enhancing time efficiency is essential for ensuring that software or systems can manage large-scale data or computations promptly, which is vital in areas such as real-time systems, big data analytics, and artificial intelligence.</br>  
+  <p>Ans:<strong>1. Time Efficiency:</strong></br>
+<strong>Definition</strong></br>: Time efficiency pertains to the duration an algorithm requires to execute its function based on the size of the input. This is frequently evaluated using Big-O notation, which indicates the worst-case scenario regarding execution time.</br>  
+<strong>Importance</strong></br>: Time efficiency holds significant importance, particularly when dealing with extensive datasets or inputs, as an inefficient algorithm may result in excessively long processing times. Enhancing time efficiency is essential for ensuring that software or systems can manage large-scale data or computations promptly, which is vital in areas such as real-time systems, big data analytics, and artificial intelligence.</br>  
 
-2.<strong></strong> Space Efficiency: </br>
-Definition: Space efficiency denotes the quantity of memory utilized by an algorithm in relation to the size of the input. Similar to time efficiency, it is typically assessed through Big-O notation to evaluate memory requirements.</br>  
-Importance: Space efficiency is critical for environments with constrained memory resources (such as embedded systems and mobile devices) and for handling large datasets. Poor memory management can lead to system failures, memory shortages, or decreased performance. Therefore, optimizing for space is essential to ensure that the algorithm minimizes memory usage while still delivering the intended outcomes.</br>
-<strong></strong>Why Are They Significant?</br>
-<strong></strong>1.Real-world Limitations:</br> The efficiency of both time and space is vital as it enables algorithms to scale effectively with increasing data volumes. An algorithm that performs adequately on smaller datasets may struggle to provide prompt results or may utilize excessive memory when applied to larger datasets.</br>
-<strong></strong>2.Performance and Expenses: Algorithms that operate efficiently minimize resource usage, resulting in reduced operational costs related to computational power (time) and storage (space). This aspect is particularly critical in sectors such as cloud computing, data centers, and mobile application development, where resource consumption directly impacts expenses.</br>
-<strong></strong>3.User Satisfaction: In applications aimed at consumers, time efficiency is crucial for ensuring a swift user experience. Inefficient algorithms can lead to subpar performance, resulting in user dissatisfaction and decreased engagement.</br> </p>
+2.<strong>Space Efficiency:</strong> </br>
+<strong>Definition</strong>: Space efficiency denotes the quantity of memory utilized by an algorithm in relation to the size of the input. Similar to time efficiency, it is typically assessed through Big-O notation to evaluate memory requirements.</br>  
+<strong>Importance</strong>: Space efficiency is critical for environments with constrained memory resources (such as embedded systems and mobile devices) and for handling large datasets. Poor memory management can lead to system failures, memory shortages, or decreased performance. Therefore, optimizing for space is essential to ensure that the algorithm minimizes memory usage while still delivering the intended outcomes.</br>
+<strong>Why Are They Important?</strong></br>
+<strong>1.Real-world Limitations:</strong></br> The efficiency of both time and space is vital as it enables algorithms to scale effectively with increasing data volumes. An algorithm that performs adequately on smaller datasets may struggle to provide prompt results or may utilize excessive memory when applied to larger datasets.</br>
+<strong>2.Performance and Expenses:</strong></br>Algorithms that operate efficiently minimize resource usage, resulting in reduced operational costs related to computational power (time) and storage (space). This aspect is particularly critical in sectors such as cloud computing, data centers, and mobile application development, where resource consumption directly impacts expenses.</br>
+<strong>3.User Satisfaction</strong></br>: In applications aimed at consumers, time efficiency is crucial for ensuring a swift user experience. Inefficient algorithms can lead to subpar performance, resulting in user dissatisfaction and decreased engagement.</br>
+<strong>Different Categories of Problems and Growth Rates</strong></br>
+<strong>1. Constant Time: O(1)</strong></br>
+
+ An algorithm that functions in constant time maintains the same execution duration, irrespective of the input size. The time required remains unchanged as the problem size expands.</br>
+<strong>Example:</strong> Accessing an element in an array using its index is an O(1) operation, as the time taken remains constant regardless of the number of elements in the array.</br>
+
+<strong> 2.Logarithmic Time: O(log n)</strong></br>
+
+The execution time increases logarithmically in relation to the input size. When the input size doubles, the time taken increases by a constant factor. This behavior is characteristic of algorithms that decompose the problem into smaller subproblems, such as binary search.</br>
+<strong>Example:</strong> In binary search, each iteration halves the search space, resulting in a gradual increase in time required to locate an element in a sorted array as the array size increases.</br>
+
+<strong>3. Linear Time: O(n)</strong></br>
+
+The execution time escalates linearly with the input size. If the input size is doubled, the execution time also doubles. This is typical of algorithms that must examine each element in the input exactly once.</br>
+<strong>Example:</strong> Linear search examines each element in a list sequentially until the target value is found, leading to a time increase that is directly proportional to the list size.</br>
+
+
+<strong>4. Linearithmic Time: O(n log n)</strong></br>
+
+ This growth rate represents a combination of linear and logarithmic growth. The execution time increases more rapidly than linear time but more slowly than quadratic time. Algorithms exhibiting this time complexity typically segment the input into smaller components and process them, as seen in divide-and-conquer methodologies.</br>
+<strong>Example</strong>: Merge Sort and Quick Sort are examples of O(n log n) algorithms, as they divide the list into smaller sublists (log n) and then process each element in a linear manner (n).</br>
+
+<strong>5. Quadratic Time: O(n²)</strong></br>
+The execution time increases quadratically in relation to the size of the input. When the input size is doubled, the time required for execution rises by a factor of four. This behavior is characteristic of algorithms that utilize nested loops across the input data. </br>
+<strong>Example:</strong>Bubble sort, each element is compared to every other element, leading to n² comparisons for n elements, which results in a time complexity of O(n²)</br>
+
+<strong>6. Cubic Time: O(n³)</strong></br>
+
+The execution time increases cubically as the size of the input expands. When the input size is doubled, the time taken increases by a factor of eight.</br>
+<strong>Example:</strong>The Floyd-Warshall Algorithm, which determines the shortest paths between all pairs of nodes in a graph, utilizes three nested loops, resulting in a time complexity of O(n³).</br>
+
+<strong>7. Exponential Time: O(2^n)</strong></br>
+
+The execution time escalates exponentially with the increase in input size. This indicates that for each additional element, the time required doubles. Exponential growth is highly inefficient for large datasets.</br>
+<strong>Example:</strong>Brute-force algorithm used to solve the Traveling Salesman Problem, which examines all possible route permutations, leading to a complexity of O(2^n).</br>
+
+<strong>8. Factorial Time: O(n!)</strong></br>
+
+The execution time increases factorially as the input size grows. The time complexity escalates at an extremely rapid rate with larger input sizes, rendering algorithms with O(n!) complexity impractical for even moderately sized inputs.</br>
+<strong>Example:</strong> Generating all permutations of a set containing n items exhibits factorial time complexity, as there are n! possible arrangements of n items.</br>
+ </p>
 <p>3.Take away from different design principles from chapter 2</p>
  <p> Ans:</p>
 <p>4.The hierarchical data and how different tree data structures solve and optimize over the problem scenarios (tree, bst, avl, 2-3, red-black, heap, trie)</p>
