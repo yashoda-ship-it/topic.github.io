@@ -1,7 +1,7 @@
 <h2>Course Reflections</h2>
 <h3>Mem 2 - Yashoda Talawar</br>Roll number: 357</h3>
 <p>
-  <strong>1.</strong> What are the kinds of problems we see in the nature? <br>
+  <strong>1.</strong> What are the kinds of problems we see in nature?<br>
   <strong>Ans:</strong><br>
   <strong>Iteration:</strong> Repeating tasks, like summing a list of numbers, problems like calculating compound interest.<br>
   <strong>Recursion:</strong> Scenarios like Fibonacci sequence generation or solving the Tower of Hanoi involve recursive calls and factorial.<br>
@@ -32,4 +32,34 @@
   <strong>Abstraction:</strong> Hides implementation details to focus on solving the problem.<br>
   <strong>Efficiency:</strong> Optimizing time and space complexities to improve performance.<br>
   <strong>Reusability:</strong> Algorithms like dynamic programming can be applied across multiple domains.
+</p>
+
+<p>
+  <strong>4.</strong> The hierarchical data and how different tree data structures solve and optimize over problem scenarios:<br>
+  <strong>General Tree:</strong> Represents basic parent-child relationships but lacks specific balancing properties.<br>
+  <strong>Binary Search Tree (BST):</strong> Organizes data such that left children are smaller and right children are larger than the parent. It offers efficient searching and insertion with an average time complexity of O(log n), but performance can degrade to O(n) if unbalanced.<br>
+  <strong>AVL Tree:</strong> A self-balancing BST ensuring all operations (search, insert, delete) are consistently O(log n). It's ideal for real-time systems due to its guaranteed balance.<br>
+  <strong>Heap:</strong> Maintains the property where the root is always the maximum or minimum value. It's commonly used in priority queues and task scheduling, with insertion and deletion at O(log n) and fast root access at O(1).<br>
+  <strong>Trie:</strong> Optimized for prefix-based searches, where each branch represents a character. It's widely used in autocomplete and dictionary lookups, offering fast search but higher memory usage.<br>
+  <strong>Choosing the right tree:</strong><br>
+  - <strong>Trie:</strong> For prefix-based searches or autocomplete.<br>
+  - <strong>Heap:</strong> For priority queues and scheduling.<br>
+  - <strong>AVL/Red-Black Trees:</strong> For frequent searching and updates in ordered data.<br>
+  - <strong>General Tree:</strong> For simple parent-child relationships without balancing needs.
+</p>
+
+<p>
+  <strong>5.</strong> The need for array query algorithms and their implications. Their applications and principles need to be discussed:<br>
+  <strong>Ans:</strong> Array query algorithms are essential for efficiently performing operations like range queries, updates, and aggregations on array data. These algorithms optimize scenarios where frequent queries or updates need to be processed quickly, such as in real-time systems or large-scale data analysis.<br>
+  <strong>Segment Trees:</strong> Used for range queries (e.g., range sum, range minimum). Enable efficient query and update operations in O(log n). Example: Finding the sum of elements in a specific range in stock market analysis.<br>
+  <strong>Fenwick Tree (Binary Indexed Tree):</strong> Optimizes prefix sums and updates in O(log n) time. Example: Efficiently handling cumulative frequency counts.<br>
+  <strong>Sparse Table:</strong> Ideal for static range queries where the data does not change, offering O(1) query time after O(n log n) preprocessing. Example: Finding the minimum value in a range for immutable data.<br>
+  <strong>Applications:</strong> Array query algorithms are used in many areas. They help search and sort data quickly in databases, make fast decisions in real-time systems like traffic and stock trading, and power search engines to find web information quickly. They also make it easier to study large data in big data and help predict things like weather or science models.<br>
+  <strong>Implications:</strong> They reduce the time complexity of range queries and updates, ensuring real-time performance in applications like stock analysis, leaderboards, or monitoring systems. These algorithms enable systems to handle large datasets effectively, ensuring that operations remain fast even as the data size grows. Structures like Fenwick trees and sparse tables optimize memory usage compared to naive approaches, which is crucial for resource-constrained environments.<br>
+  <strong>Principles of Array Query Algorithms:</strong><br>
+  - <strong>Divide and Conquer:</strong> Breaking down a problem into smaller subproblems, solving them independently, and combining the solutions (e.g., merge sort).<br>
+  - <strong>Greedy Strategy:</strong> Building a solution piece by piece, always choosing the next piece that offers the most immediate benefit (e.g., quicksort partitioning).<br>
+  - <strong>Dynamic Programming:</strong> Solving problems by storing solutions to subproblems to avoid redundant calculations (e.g., in binary search trees).<br>
+  - <strong>Hashing:</strong> Using a hash table to map data to indices, enabling efficient O(1) search and insert operations.<br>
+  - <strong>Optimization:</strong> Algorithms like binary search or hash-based solutions are used to optimize searching within sorted or unsorted arrays.
 </p>
