@@ -131,7 +131,110 @@ Optimization: Tries enhance search operations by decomposing strings into indivi
 <strong>2. Machine Learning:</strong></br> Efficient manipulation of arrays is essential in machine learning tasks, including feature selection and nearest neighbor searches.</br>
 <strong>3. Data Analysis:</strong></br> Array query algorithms enable swift data retrieval and aggregation, which are crucial in data analysis and business intelligence endeavors.</br></p>
 <p>6.Differentiate between tree and graphs and their traversals. The applications of each</p>
-  <p>Ans:</p>
+  <p>Ans:<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree vs Graph Comparison</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Difference Between Trees and Graphs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspect</th>
+                <th>Tree</th>
+                <th>Graph</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Definition</strong></td>
+                <td>A hierarchical data structure with a root node and parent-child relationships.</td>
+                <td>A collection of nodes (vertices) connected by edges, which can be directed or undirected.</td>
+            </tr>
+            <tr>
+                <td><strong>Structure</strong></td>
+                <td>A special type of graph that is acyclic and connected.</td>
+                <td>A general data structure with no restriction on cycles or connectivity.</td>
+            </tr>
+            <tr>
+                <td><strong>Number of Edges</strong></td>
+                <td>n - 1 edges for n vertices.</td>
+                <td>Up to n(n-1)/2 edges in an undirected graph for n vertices.</td>
+            </tr>
+            <tr>
+                <td><strong>Cycles</strong></td>
+                <td>Contains no cycles (acyclic).</td>
+                <td>May contain cycles (cyclic) or be acyclic.</td>
+            </tr>
+            <tr>
+                <td><strong>Path Uniqueness</strong></td>
+                <td>Only one unique path exists between any two nodes.</td>
+                <td>Multiple paths between two nodes may exist.</td>
+            </tr>
+            <tr>
+                <td><strong>Connectivity</strong></td>
+                <td>Always connected.</td>
+                <td>Can be connected or disconnected.</td>
+            </tr>
+            <tr>
+                <td><strong>Root</strong></td>
+                <td>Has a root node (in rooted trees).</td>
+                <td>No root; traversal can start from any node.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+Traversals
+Tree Traversals
+Depth-First Traversal (DFS):
+Preorder: Visit the root → Traverse left subtree → Traverse right subtree.
+Inorder: Traverse left subtree → Visit the root → Traverse right subtree.
+Postorder: Traverse left subtree → Traverse right subtree → Visit the root.
+Breadth-First Traversal (BFS):
+Level-order traversal: Visit nodes level by level from top to bottom.
+Graph Traversals
+Depth-First Search (DFS):
+Explore as far as possible along one branch before backtracking.
+Used in pathfinding and connectivity analysis.
+Breadth-First Search (BFS):
+Explore all neighbors of a node before moving to the next level.
+Used in shortest path finding in unweighted graphs.
+Applications
+Trees
+Binary Search Tree (BST): Efficient searching, insertion, and deletion (used in databases, file systems).
+Heaps: Priority queues for algorithms like Dijkstra’s or heapsort.
+Tries: Used in prefix matching and dictionary implementation (e.g., autocomplete).
+Decision Trees: Machine learning for classification and regression tasks.
+Hierarchical Representation: Organization charts, file systems, XML/JSON parsing.
+Graphs
+Social Networks: Represent relationships and connections among individuals.
+Web Crawling: Represent web pages as nodes and hyperlinks as edges.
+Transportation Networks: Model roads and traffic systems.
+Telecommunications: Represent and optimize communication networks.
+Electrical Circuits: Analyze the flow and connections in circuit networks.
+</p>
 <p>7.Deliberate on sorting and searching algorithms, the technique behind each and they connect to real world</p>
   <p>Ans:Sorting and Searching Algorithms: Techniques and Practical Applications</br></p>
 
@@ -247,31 +350,24 @@ Application Example: Road networks characterized by positive distances.</br>
 <strong>Telecommunications:</strong></br>
 Minimum Spanning Trees (MST) facilitate reduced cabling expenses while ensuring connectivity.</br>  
 Shortest path algorithms are employed to decrease signal transmission delays.</br>  
-
 <strong>Urban Planning:</strong></br> 
-
 Spanning trees are utilized to optimize utility configurations, such as power distribution networks.</br>  
 Shortest paths improve public transportation systems by reducing travel times.</br> 
-
 <strong>Supply Chain Management: </strong></br>
 MST contributes to lowering the costs associated with constructing infrastructure for warehouses or suppliers.</br>
 Shortest paths are used to enhance the efficiency of delivery routes.</br>  
-
 <strong>Finance:</strong></br>
 Spanning trees play a role in optimizing investment portfolios.</br> 
 Shortest path algorithms are instrumental in identifying arbitrage opportunities in currency trading.</br></p>
 <p>9.Discuss about the different studied algorithm design techniques.</br></p>
 <p>Ans:<strong>Algorithm Design Techniques</strong></br>
-
 <strong>1. Divide and Conquer:</strong></br>
   The problem is divided into smaller subproblems that are solved independently and recursively, then combined to solve the original problem.</br>
-  
-<strong>Process:</strong></br>
+   <strong>Process:</strong></br>
   1. Divide: Split the problem into smaller subproblems of the same type.</br>
   2. Conquer: Solve each subproblem recursively.</br>
   3. Combine: Merge the solutions of the subproblems to form the final solution.</br>
-
-<strong>Examples:</strong></br>
+    <strong>Examples:</strong></br>
   - Merge Sort: Divides the array into halves, sorts them recursively, and merges the sorted halves.</br>
   - Quick Sort: Partitions the array around a pivot, then recursively sorts the partitions.</br>
   - Binary Search: Repeatedly divides the search space in half to find an element in a sorted array.</br>
@@ -279,63 +375,49 @@ Shortest path algorithms are instrumental in identifying arbitrage opportunities
 <strong> Applications:</strong></br>  
   - Sorting, searching, and matrix multiplication.</br>
 
-<strong>2. Dynamic Programming (DP): </strong></br> 
+  <strong>2. Dynamic Programming (DP): </strong></br> 
   Dynamic Programming is used to solve problems by breaking them into overlapping subproblems, solving each subproblem once, and storing the solutions . DP is typically used when the problem exhibits both optimal substructure and overlapping subproblems.</br>
 
-<strong>Process:</strong></br>
+  <strong>Process:</strong></br>
   1. Break the problem into smaller subproblems.</br>
   2. Solve each subproblem once and store the result.</br>
   3. Reuse the stored results to avoid redundant calculations.</br>
-
-<strong>Examples:</strong></br>
+   <strong>Examples:</strong></br>
   - Fibonacci Sequence: Store intermediate results to avoid recalculating.</br>
   - Knapsack Problem: Find the maximum value achievable with a set of items under a weight constraint.</br>
   - Applications:</br>
   - Optimization problems, sequence alignment, and resource allocation.</br>
-
-<strong>3. Greedy Algorithms:</strong></br>  
-  Greedy algorithms build a solution by choosing the locally optimal solution at each step, hoping to find a global optimum. These algorithms do not always guarantee the best solution, but they are often efficient.</br>
-
-<strong>Process:</strong></br>
+   <strong>3. Greedy Algorithms:</strong></br>  
+   Greedy algorithms build a solution by choosing the locally optimal solution at each step, hoping to find a global optimum. These algorithms do not always guarantee the best solution, but they are often efficient.</br>
+   <strong>Process:</strong></br>
   1. Select the best possible choice at each step.</br>
   2. Once a choice is made, it is final, and the algorithm proceeds to the next step.</br>
-
-<strong>Examples:</strong></br>
+   <strong>Examples:</strong></br>
   - Prim’s Algorithm: Finds the Minimum Spanning Tree (MST) by adding the smallest edge at each step.</br>
   - Kruskal’s Algorithm: Adds edges in increasing order of weight to form the MST.</br>
   - Huffman Coding: Constructs the optimal prefix-free code for data compression.</br>
-
-<strong> Applications:</strong></br>
+   <strong> Applications:</strong></br>
   - Network design, scheduling, data compression, and resource allocation.</br>
-
-<strong>4. Backtracking:</strong></br>
-  Backtracking is a trial-and-error approach where decisions are made incrementally. When a partial solution does not lead to a valid solution, the algorithm "backtracks" and tries alternative paths.</br>
-
-<strong>Process:</strong></br>
+   <strong>4. Backtracking:</strong></br>
+    Backtracking is a trial-and-error approach where decisions are made incrementally. When a partial solution does not lead to a valid solution, the algorithm "backtracks" and tries alternative paths.</br>
+    <strong>Process:</strong></br>
   1. Build a solution step by step.</br>
   2. If a step leads to an invalid solution, backtrack and try a different option.</br>
   3. Continue until a solution is found or all options have been explored.</br>
-
-<strong>Examples:</strong></br>
+   <strong>Examples:</strong></br>
   - N-Queens Problem: Place N queens on an N×N chessboard such that no two queens threaten each other.</br>
   - Sudoku Solver: Try placing numbers in cells, backtrack if an inconsistency is found.</br>
   - Subset Sum Problem: Find subsets of numbers that sum to a given target.</br>
-
-<strong> Applications:</strong></br>  
+    <strong> Applications:</strong></br>  
   - Constraint satisfaction problems, combinatorial optimization, and puzzles.</br>
-
-<strong>5. Recursive Algorithms:</strong><br>
-  Recursive algorithms solve problems by solving smaller instances of the same problem. Each recursive call reduces the problem's size until a base case is reached.</br>
-
+   <strong>5. Recursive Algorithms:</strong><br> Recursive algorithms solve problems by solving smaller instances of the same problem. Each recursive call reduces the problem's size until a base case is reached.</br>
 <strong>Process:</strong><br>
   1. Break the problem down into smaller subproblems of the same type.<br>
   2. Solve the subproblem recursively.<br>
   3. Combine the results to form the final solution.<br>
-
-<strong>Examples:</strong><br>
+   <strong>Examples:</strong><br>
   - Factorial Computation: Compute the factorial of a number by recursively multiplying it by the factorial of its predecessor.<br>
   - Tower of Hanoi: Move disks from one peg to another using a recursive strategy.<br>
   - Fibonacci Sequence: Calculate Fibonacci numbers recursively.<br>
-
-<strong>Applications:</strong><br>
+  <strong>Applications:</strong><br>
   Divide and conquer problems, mathematical computations, and tree/graph traversal.</br> </p>
