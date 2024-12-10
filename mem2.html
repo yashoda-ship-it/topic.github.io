@@ -9,17 +9,47 @@
 </p>
 
 <p><strong>2.</strong>What is space and time efficiency? Why are they important? Explain the different class of problems and orders of growth
-  <strong></br>Ans:</br>Space Efficiency:</strong>It Refers to how much memory (or storage) an algorithm uses while solving a problem.
-</br><strong>Example:</strong> An algorithm that requires less RAM is more space-efficient.</br><strong> Time Efficiency:</strong>It Refers to how much time an algorithm takes to solve a problem as the input size increases.</br><strong>Example:</strong>
-An algorithm that runs faster as data grows is time-efficient.</br></br><strong>Why are They Important?</strong></br>
-<strong>Resource Management:</strong></br>Efficient algorithms save memory and time, which is crucial for limited resources in real-world systems.
-</br><strong>Scalability:</strong></br>With increasing input sizes, efficient algorithms ensure performance doesn’t degrade.
-</br><strong>Real-Time Applications:</strong></br>
-Faster, efficient solutions are vital in applications like GPS, healthcare, AI, and large-scale data processing.</br>
-<strong></br>Different Classes of Problems</strong></br><strong>Computational Problems: </strong>Problems requiring algorithms for problem-solving (sorting, searching).</br>
-<strong>Optimization Problems:</strong> Finding the best solution out of many possibilities (shortest path, resource allocation).</br>
-<strong>Decision Problems:</strong> Determining whether a given condition is true or false for a problem.</br>
-<strong>Search Problems:</strong> Locating specific information from a large dataset (like finding a word in a dictionary).</br></p>
+  <strong></br>Ans:</br>Time Efficiency measures the computational time required to execute an algorithm and represents the number of basic operations performed by an algorithm
+
+</br>Space Efficiency measures the memory (storage) required by an algorithm,tracking how much memory is the input size and determining how much additional memory is needed to solve a problem
+
+</br>A good algorithm executes quickly and saves space in the process. we should find a good medium of space and time (space and time complexity).In the world of computer science to perform better, we need to write algorithms that are time efficient and use less memory. It should be resource optimized,solving larger problems with limited computing power and giving Impact on users experience and system performance
+
+</br>Complexity Classes and Orders of Growth
+
+</br>Big O Notation (Worst-Case Complexity) Describes the upper bound of algorithm's growth rate:
+
+</br>O(1) - Constant Time
+
+</br>It has fixed runtime regardless of input size Examples: Array access, simple arithmetic operations
+
+</br>O(log n) - Logarithmic Time
+
+</br>it Runtime grows logarithmically Examples: balanced tree operations
+
+</br>O(n) - Linear Time
+
+</br>Runtime grows linearly with input size Examples: Linear traversing an array
+
+</br>O(n log n) - Linearithmic Time
+
+</br>Efficient sorting algorithms Examples: Merge sort, heap sort
+
+</br>O(n²) - Quadratic Time
+
+</br>Nested iterations Examples: Bubble sort, simple nested loops
+
+</br>O(2ⁿ) - Exponential Time
+
+</br>Runtime doubles with each input addition Examples: Recursive Fibonacci, brute-force combinatorial problems
+
+</br>O(n!) - Factorial Time
+
+</br>Extremely inefficient Examples: Traveling salesman problem (brute force)
+
+</br>Visualization of Growth Rates CopyO(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)
+
+we generally choose algorithms with lower complexity classes looking between time and space efficiency and optimize based on specific problem constraints,</p>
 
 <p> <strong>3. </strong>Take away from different design principles from chapter 2
  <strong></br>Modularity:</strong> Simplifies complex problems into smaller tasks.
