@@ -3,24 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Introduction</title>
+  <title>DAA Course Overview</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Custom Styles */
-    h2 {
-      font-size: 2.5rem; /* Increased headline height */
-      letter-spacing: 1px;
+    h1, h2, h3 {
+      color: #4a90e2; /* Blue for headings */
     }
-    h4, h5 {
-      color: #ff6f61; /* Colorful subtopics (coral shade) */
+    .section-title {
+      border-bottom: 2px solid #4a90e2;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
     }
-    ul.list-group li {
-      background-color: #f9f9f9;
-      border-left: 5px solid #6c757d; /* Grey highlight on the left */
+    ul li {
+      line-height: 1.7; /* Better readability */
     }
-    ol.list-group-numbered li {
-      background-color: #f1f8e9;
-      border-left: 5px solid #43a047; /* Green highlight on the left */
+    .key-topic-title {
+      color: #e67e22; /* Orange for subheadings */
     }
-    .problem-defini
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- Main Container -->
+  <div class="container mt-5">
+    <!-- Header -->
+    <div class="text-center mb-4">
+      <h1 class="text-primary"><strong>Design and Analysis of Algorithms (DAA)</strong></h1>
+      <p class="text-muted">Learn to create efficient algorithms and analyze their performance.</p>
+    </div>
+
+    <!-- Key Topics Section -->
+    <div>
+      <h2 class="section-title">Key Topics</h2>
+
+      <!-- Algorithm Analysis -->
+      <h4 class="key-topic-title">1. Algorithm Analysis</h4>
+      <ul>
+        <li><strong>Asymptotic Notations:</strong> Big-O, Big-Theta, Big-Omega.</li>
+        <li><strong>Time and Space Complexity:</strong> Learn to evaluate algorithm efficiency.</li>
+      </ul>
+
+      <!-- Algorithm Design Techniques -->
+      <h4 class="key-topic-title">2. Algorithm Design Techniques</h4>
+      <ul>
+        <li><strong>Divide and Conquer:</strong> Merge Sort, Quick Sort.</li>
+        <li><strong>Greedy Algorithms:</strong> Kruskal's, Huffman Encoding.</li>
+        <li><strong>Dynamic Programming:</strong> Knapsack Problem, Longest Common Subsequence (LCS).</li>
+        <li><strong>Backtracking & Branch and Bound:</strong> N-Queens, TSP.</li>
+        <li><strong>Randomized Algorithms:</strong> Randomized Quick Sort.</li>
+      </ul>
+
+      <!-- Graph Algorithms -->
+      <h4 class="key-topic-title">3. Graph Algorithms</h4>
+      <ul>
+        <li><strong>Traversal:</strong> DFS, BFS.</li>
+        <li><strong>Shortest Path:</strong> Dijkstra’s, Bellman-Ford.</li>
+        <li><strong>Minimum Spanning Tree:</strong> Kruskal’s, Prim’s.</li>
+      </ul>
+
+      <!-- Complexity Theory -->
+      <h4 class="key-topic-title">4. Complexity Theory</h4>
+      <ul>
+        <li><strong>P vs NP:</strong> Introduction to NP-Complete and NP-Hard problems.</li>
+      </ul>
+
+      <!-- String Matching -->
+      <h4 class="key-topic-title">5. String Matching</h4>
+      <ul>
+        <li><strong>Algorithms:</strong> Knuth-Morris-Pratt (KMP), Rabin-Karp.</li>
+      </ul>
+
+      <!-- Miscellaneous -->
+      <h4 class="key-topic-title">6. Miscellaneous</h4>
+      <ul>
+        <li><strong>Approximation Algorithms:</strong> Useful for optimization problems.</li>
+        <li><strong>Network Flow:</strong> Applications in graph problems.</li>
+        <li><strong>Computational Geometry:</strong> Algorithms for geometric data.</li>
+      </ul>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="mt-5">
+      <h2 class="section-title">Benefits</h2>
+      <ul>
+        <li>Builds <strong>problem-solving</strong> and <strong>optimization skills</strong>.</li>
+        <li>Prepares for <strong>technical interviews</strong> and real-world challenges.</li>
+        <li>Provides a foundation for <strong>advanced computer science</strong> and competitive programming.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
