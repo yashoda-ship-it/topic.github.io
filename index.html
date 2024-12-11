@@ -5,71 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">                                                                                                                                                                                                                                                                                                                                                  
-  
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(45% - 20px);
+            max-width: calc(45% - 20px);
+            box-sizing: border-box;
+        }
+        .card h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        .card ul, .card dl {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .card a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .quote {
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-    <header> <h1> Algorithm Course Project              
-        <h3>Hello, we are team C1 - C Division👋</h3>    
-        <p>we are passionate about technology and problem-solving. Here's a glimpse of our work:</p>
+    <header>
+        <h1>Algorithm Course Project</h1>
+        <h3>Hello, we are team C1 - C Division👋</h3>
+        <p>We are passionate about technology and problem-solving. Here's a glimpse of our work:</p>
     </header>
 
-    
-            
-        
+    <div class="container">
+        <div class="card">
+            <h2>🌐 Find Me Online</h2>
+            <ul>
+                <li><a href="https://github.com/yashoda-ship-it" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
 
-        <h2>🌐 Find Me Online</h2>
-        <ul>
-            <li><a href="https://github.com/yashoda-ship-it" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
-        </ul>
+        <div class="card">
+            <h2>Portfolio Details</h2>
+            <dl>
+                <dt>Course Name</dt>
+                <dd>Algorithmic Problem Solving</dd>
 
-        <h2>Portfolio Topic</h2>
-        <dl>
-            <dt>Course Name</dt>
-            <dd>Algorithmic Problem Solving</dd>
+                <dt>Course Code</dt>
+                <dd>Course Code Placeholder</dd>
 
-            <dt>Course Code</dt>
-            <dd>Course Code Placeholder</dd>
+                <dt>Name</dt>
+                <dd>Shubha C.S., Yashoda Talawar, Preeti Kotabagi</dd>
 
-            <dt>Name</dt>
-            <dd>Shubha C.S. ,Yashoda Talawar, Preeti Kotabagi</dd>
+                <dt>SRN</dt>
+                <dd>01FE23BCS118, 01FE23BCS141, 01FE23BCS170</dd>
 
-            <dt>SRN</dt>
-            <dd>01FE23BCS118, 01FE23BCS141, 01FE23BCS170</dd>
+                <dt>Course Instructor</dt>
+                <dd>Prakash Hegade</dd>
 
-            <dt>Course Instructor</dt>
-            <dd>Prakash Hegade</dd>
+                <dt>University</dt>
+                <dd>KLE Technological University, Hubli</dd>
 
-            <dt>University</dt>
-            <dd>KLE Technological University, Hubli</dd>
+                <dt>Portfolio Topic/Domain</dt>
+                <dd>Google</dd>
+            </dl>
+        </div>
 
-            <dt>Portfolio Topic/Domain</dt>
-            <dd>Google</dd>
+        <div class="card">
+            <h2>Course Project Links</h2>
+            <ul>
+                <li><a href="introduction.html" target="_blank">Project Introduction</a></li>
+                <li><a href="sdg.html" target="_blank">SDG Mapping</a></li>
+                <li><a href="refine.html" target="_blank">Refined Business Cases</a></li>
+            </ul>
+        </div>
 
-            <dt>Course Project Introduction</dt>
-            <dd><a href="introduction.html" target="_blank">Click here to view Introduction of our project</a></dd>
+        <div class="card">
+            <h2>Course Reflections</h2>
+            <ul>
+                <li><a href="mem1.html" target="_blank">Shubha's Reflections</a></li>
+                <li><a href="mem2.html" target="_blank">Yashoda Talawar's Reflections</a></li>
+                <li><a href="mem3.html" target="_blank">Preeti Kotabagi's Reflections</a></li>
+            </ul>
+        </div>
+    </div>
 
-            <!-- Link to SDG Page -->
-            <dt>SDG Mapping</dt>
-            <dd><a href="sdg.html" target="_blank">Click here to view SDG Mapping</a></dd>
-
-            <!-- Link to Refine Page -->
-            <dt>Refined Business Cases</dt>
-            <dd><a href="refine.html" target="_blank">Click here to view Refined Business Cases</a></dd>
-
-            <!-- Link to Mem1 Page -->
-            <dt>Course Reflections </dt>
-            <dd><a href="mem1.html" target="_blank">Shubha's Reflections</a></dd>
-        
-            <!-- Link to Mem1 Page -->
-            <dd><a href="mem2.html" target="_blank">Yashoda Talawar Reflections</a></dd>
-    
-            <!-- Link to Mem1 Page -->
-            <dd><a href="mem3.html" target="_blank">Preeti Kotabagi Reflections</a></dd>
-        
-
-        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
-    </section>
+    <div class="quote">
+        “The only way to do great work is to love what you do.” – Steve Jobs
+    </div>
 </body>
 </html>
