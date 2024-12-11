@@ -62,12 +62,31 @@
             font-size: 1.2em;
             color: #666;
         }
+        .portfolio-details {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .portfolio-details dt {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #ff416c;
+        }
+        .portfolio-details dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Algorithm Course Project</h1>
         <nav>
+            <a href="#portfolio-details">Portfolio Details</a>
             <a href="#introduction">Introduction Overview</a>
             <a href="#project">Project Overview</a>
             <a href="#business">Business Use Cases</a>
@@ -75,9 +94,35 @@
         </nav>
     </header>
 
+    <div class="content portfolio-details" id="portfolio-details">
+        <h2>Portfolio Details</h2>
+        <dl>
+            <dt>Course Name</dt>
+            <dd>Algorithmic Problem Solving</dd>
+
+            <dt>Course Code</dt>
+            <dd>Course Code Placeholder</dd>
+
+            <dt>Name</dt>
+            <dd>Shubha C.S., Yashoda Talawar, Preeti Kotabagi</dd>
+
+            <dt>SRN</dt>
+            <dd>01FE23BCS118, 01FE23BCS141, 01FE23BCS170</dd>
+
+            <dt>Course Instructor</dt>
+            <dd>Prakash Hegade</dd>
+
+            <dt>University</dt>
+            <dd>KLE Technological University, Hubli</dd>
+
+            <dt>Portfolio Topic/Domain</dt>
+            <dd>Google</dd>
+        </dl>
+    </div>
+
     <div class="content" id="introduction">
         <h2>Introduction Overview</h2>
-        <p>We are Team C1 of C Division, we are passionate about technology and problem-solving. Here's a glimpse of our work.</p>
+        <p>We are Team C1 - C Division, passionate about technology and problem-solving.</p>
         <a href="introduction.html" target="_blank">View Introduction</a>
     </div>
 
@@ -107,4 +152,3 @@
     </div>
 </body>
 </html>
-
