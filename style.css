@@ -1,110 +1,75 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Global Styles */
+/* General Body Styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px; /* Adding padding to the body to prevent sticking at the top */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Aligns content towards the top */
-    min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Main Container */
-section {
-    background-color: white;
-    padding: 2rem;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 30px; /* Adding margin to ensure there's space from the top */
+/* Header Styling */
+.h2 {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+  padding: 15px;
+  color: white;
+  background: linear-gradient(90deg, #4a90e2, #9013fe);
+  border-radius: 8px;
 }
 
-/* Header */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
+/* Paragraph Styling */
+.para {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #4a90e2;
+  margin-top: 15px;
 }
 
-header h1 {
-    font-size: 2rem;
-    margin: 0;
+/* List Styling */
+ul, ol {
+  margin: 20px;
+  padding-left: 40px;
+  color: #333;
 }
 
-header p {
-    margin: 1rem 0 0;
-}
-
-/* Section Titles */
-h2 {
-    color: #4CAF50;
-    margin-bottom: 1rem;
-}
-
-/* List Items */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
+/* Unordered List */
 ul li {
-    background-color: #e7f7e7;
-    margin-bottom: 0.5rem;
-    padding: 0.75rem;
-    border-radius: 5px;
+  margin: 10px 0;
+  padding: 8px;
+  border-left: 4px solid #9013fe;
+  background: #f0f0ff;
+  border-radius: 5px;
 }
 
-/* Links */
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
+/* Ordered List */
+ol li {
+  margin: 10px 0;
+  padding: 8px;
+  background: #e6f7ff;
+  border-left: 4px solid #4a90e2;
+  border-radius: 5px;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Bold Highlights */
+strong {
+  color: #9013fe;
 }
 
-/* Definition List */
-dl dt {
-    font-weight: bold;
-    color: #333;
-    margin-top: 1rem;
+/* Problem Definition Styling */
+.problem-definition {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff4e5;
+  border-left: 6px solid #ff8c00;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-dl dd {
-    margin-left: 1.5rem;
-    color: #666;
-}
-
-/* Blockquote */
-blockquote {
-    font-style: italic;
-    color: #555;
-    border-left: 4px solid #4CAF50;
-    padding-left: 1rem;
-    margin-top: 2rem;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    section {
-        padding: 1.5rem;
-    }
-
-    header {
-        padding: 1.5rem;
-    }
+/* Page Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
