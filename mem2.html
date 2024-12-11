@@ -3,154 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Reflections</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">                                                                                                                                                                                                                                                                                                                                                  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f5f5f5;
+            color: #333;
         }
-        .course-reflections {
-            background-color: #d1e7dd;
+        header {
+            background-color: #4CAF50;
+            color: white;
             padding: 20px;
             text-align: center;
+        }
+        header h1 {
             margin: 0;
         }
-        .question {
-            background-color: #ffffff;
-            padding: 10px;
-            margin: 10px auto;
-            max-width: 800px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
         }
-        .question:nth-child(odd) {
-            background-color: #f8f9fa;
-        }
-        .question p {
-            margin: 0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
+        .card {
+            background: white;
             border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(45% - 20px);
+            max-width: calc(45% - 20px);
+            box-sizing: border-box;
         }
-        th {
-            background-color: #f4f4f4;
+        .card h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
         }
-        ul {
+        .card ul, .card dl {
             margin: 0;
-            padding-left: 20px;
+            padding: 0;
+            list-style: none;
+        }
+        .card a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .quote {
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Algorithm Course Project</h1>
+        <h3>Hello, we are team C1 - C Division👋</h3>
+        <p>We are passionate about technology and problem-solving. Here's a glimpse of our work:</p>
+    </header>
 
-<h2 class="course-reflections">Course Reflections</h2>
+    <div class="container">
+        <div class="card">
+            <h2>🌐 Find Me Online</h2>
+            <ul>
+                <li><a href="https://github.com/yashoda-ship-it" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
 
-<div class="question">
-    <h3>Mem 2 - Yashoda Talawar<br>Roll number: 357</h3>
-    <p><strong>1.</strong> What are the kinds of problems we see in nature?<br>
-        <strong>Ans:</strong><br>
-        <strong>Iteration:</strong> Repeating tasks, like summing a list of numbers, problems like calculating compound interest.<br>
-        <strong>Recursion:</strong> Scenarios like Fibonacci sequence generation or solving the Tower of Hanoi involve recursive calls and factorial.<br>
-        <strong>Backtracking:</strong> Exploring possibilities to find a solution, like solving a maze, n-queens, or generating all possible permutations using backtracking to explore solutions.</p>
-</div>
+        <div class="card">
+            <h2>Portfolio Details</h2>
+            <dl>
+                <dt>Course Name</dt>
+                <dd>Algorithmic Problem Solving</dd>
 
-<div class="question">
-    <p><strong>2.</strong> What is space and time efficiency? Why are they important? Explain the different class of problems and orders of growth.<br>
-        <strong>Ans:</strong><br>
-        Time Efficiency measures the computational time required to execute an algorithm and represents the number of basic operations performed by an algorithm.<br>
-        Space Efficiency measures the memory (storage) required by an algorithm, tracking how much memory is the input size and determining how much additional memory is needed to solve a problem.<br>
-        A good algorithm executes quickly and saves space in the process. We should find a good medium of space and time (space and time complexity). In the world of computer science to perform better, we need to write algorithms that are time efficient and use less memory. It should be resource-optimized, solving larger problems with limited computing power and giving an impact on user experience and system performance.<br>
-        <strong>Complexity Classes and Orders of Growth:</strong><br>
-        <strong>Big O Notation (Worst-Case Complexity):</strong> Describes the upper bound of an algorithm's growth rate:<br>
-        - <strong>O(1)</strong> - Constant Time: Fixed runtime regardless of input size (e.g., array access, simple arithmetic operations).<br>
-        - <strong>O(log n)</strong> - Logarithmic Time: Runtime grows logarithmically (e.g., balanced tree operations).<br>
-        - <strong>O(n)</strong> - Linear Time: Runtime grows linearly with input size (e.g., traversing an array).<br>
-        - <strong>O(n log n)</strong> - Linearithmic Time: Efficient sorting algorithms like merge sort, heap sort.<br>
-        - <strong>O(n²)</strong> - Quadratic Time: Nested iterations (e.g., bubble sort).<br>
-        - <strong>O(2ⁿ)</strong> - Exponential Time: Runtime doubles with each input addition (e.g., recursive Fibonacci).<br>
-        - <strong>O(n!)</strong> - Factorial Time: Extremely inefficient (e.g., traveling salesman problem brute force).<br>
-        Visualization of Growth Rates: <em>O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)</em></p>
-</div>
+                <dt>Course Code</dt>
+                <dd>Course Code Placeholder</dd>
 
-<div class="question">
-    <p><strong>3.</strong> Take away from different design principles from chapter 2:<br>
-        <strong>Ans:</strong><br>
-        <strong>Modularity:</strong> Simplifies complex problems into smaller tasks.<br>
-        <strong>Abstraction:</strong> Hides implementation details to focus on solving the problem.<br>
-        <strong>Efficiency:</strong> Optimizing time and space complexities to improve performance.<br>
-        <strong>Reusability:</strong> Algorithms like dynamic programming can be applied across multiple domains.</p>
-</div>
+                <dt>Name</dt>
+                <dd>Shubha C.S., Yashoda Talawar, Preeti Kotabagi</dd>
 
-<div class="question">
-    <p><strong>4.</strong> The hierarchical data and how different tree data structures solve and optimize over problem scenarios:<br>
-        <strong>Ans:</strong><br>
-        <strong>General Tree:</strong> Represents basic parent-child relationships but lacks specific balancing properties.<br>
-        <strong>Binary Search Tree (BST):</strong> Organizes data such that left children are smaller and right children are larger than the parent. It offers efficient searching and insertion with an average time complexity of O(log n), but performance can degrade to O(n) if unbalanced.<br>
-        <strong>AVL Tree:</strong> A self-balancing BST ensuring all operations (search, insert, delete) are consistently O(log n). It's ideal for real-time systems due to its guaranteed balance.<br>
-        <strong>Heap:</strong> Maintains the property where the root is always the maximum or minimum value. It's commonly used in priority queues and task scheduling, with insertion and deletion at O(log n) and fast root access at O(1).<br>
-        <strong>Trie:</strong> Optimized for prefix-based searches, where each branch represents a character. It's widely used in autocomplete and dictionary lookups, offering fast search but higher memory usage.<br>
-        <strong>Choosing the right tree:</strong><br>
-        - <strong>Trie:</strong> For prefix-based searches or autocomplete.<br>
-        - <strong>Heap:</strong> For priority queues and scheduling.<br>
-        - <strong>AVL/Red-Black Trees:</strong> For frequent searching and updates in ordered data.<br>
-        - <strong>General Tree:</strong> For simple parent-child relationships without balancing needs.</p>
-</div>
+                <dt>SRN</dt>
+                <dd>01FE23BCS118, 01FE23BCS141, 01FE23BCS170</dd>
 
-<div class="question">
-    <p><strong>5.</strong> The need for array query algorithms and their implications. Their applications and principles need to be discussed:<br>
-        <strong>Ans:</strong><br>
-        Array query algorithms are essential for efficiently performing operations like range queries, updates, and aggregations on array data. These algorithms optimize scenarios where frequent queries or updates need to be processed quickly, such as in real-time systems or large-scale data analysis.<br>
-        <strong>Segment Trees:</strong> Used for range queries (e.g., range sum, range minimum). Enable efficient query and update operations in O(log n). Example: Finding the sum of elements in a specific range in stock market analysis.<br>
-        <strong>Fenwick Tree (Binary Indexed Tree):</strong> Optimizes prefix sums and updates in O(log n) time. Example: Efficiently handling cumulative frequency counts.<br>
-        <strong>Sparse Table:</strong> Ideal for static range queries where the data does not change, offering O(1) query time after O(n log n) preprocessing. Example: Finding the minimum value in a range for immutable data.<br>
-        <strong>Applications:</strong> Array query algorithms are used in many areas. They help search and sort data quickly in databases, make fast decisions in real-time systems like traffic and stock trading, and power search engines to find web information quickly. They also make it easier to study large data in big data and help predict things like weather or science models.<br>
-        <strong>Implications:</strong> They reduce the time complexity of range queries and updates, ensuring real-time performance in applications like stock analysis, leaderboards, or monitoring systems. These algorithms enable systems to handle large datasets effectively, ensuring that operations remain fast even as the data size grows. Structures like Fenwick trees and sparse tables optimize memory usage compared to naive approaches, which is crucial for resource-constrained environments.<br>
-        <strong>Principles of Array Query Algorithms:</strong><br>
-        - <strong>Divide and Conquer:</strong> Breaking down a problem into smaller subproblems, solving them independently, and combining the solutions (e.g., merge sort).<br>
-        - <strong>Greedy Strategy:</strong> Building a solution piece by piece, always choosing the next piece that offers the most immediate benefit (e.g., quicksort partitioning).<br>
-        - <strong>Dynamic Programming:</strong> Solving problems by storing solutions to subproblems to avoid redundant calculations (e.g., in binary search trees).<br>
-        - <strong>Hashing:</strong> Using a hash table to map data to indices, enabling efficient O(1) search and insert operations.<br>
-        - <strong>Optimization:</strong> Algorithms like binary search or hash-based solutions are used to optimize searching within sorted or unsorted arrays.</p>
-</div>
+                <dt>Course Instructor</dt>
+                <dd>Prakash Hegade</dd>
 
-<div class="question">
-    <p><strong>6.</strong> Differentiate between tree and graphs and their traversals. The applications of each:<br>
-        <strong>Ans:</strong><br>
-        <table>
-            <tr>
-                <th>Aspect</th>
-                <th>Tree</th>
-                <th>Graph</th>
-            </tr>
-            <tr>
-                <td>Structure</td>
-                <td>A tree has a hierarchical structure with one parent per node (except root). It has no cycles or loops.</td>
-                <td>A graph can have multiple connections, loops, and cycles between nodes.</td>
-            </tr>
-            <tr>
-                <td>Path Between Nodes</td>
-                <td>There is always a single path between any two nodes.</td>
-                <td>There can be multiple paths or no connection between nodes.</td>
-            </tr>
-            <tr>
-                <td>Traversals</td>
-                <td>
-                    <ul>
-                        <li><strong>Preorder:</strong> Visit node, then left and right children.</li>
-                        <li><strong>Inorder:</strong> Visit left child, node, then right child.</li>
-                        <li><strong>Postorder:</strong> Visit left and right children, then node.</li>
-                        <li><strong>Level-order:</strong> Visit nodes level by level.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li><strong>Breadth-First Search (BFS):</strong> Explore all neighbors before deeper nodes.</li>
-                        <li><strong>Depth-First Search (DFS):</strong> Explore as far as possible along branches before backtracking.</
+                <dt>University</dt>
+                <dd>KLE Technological University, Hubli</dd>
+
+                <dt>Portfolio Topic/Domain</dt>
+                <dd>Google</dd>
+            </dl>
+        </div>
+
+        <div class="card">
+            <h2>Course Project Links</h2>
+            <ul>
+                <li><a href="introduction.html" target="_blank">Project Introduction</a></li>
+                <li><a href="sdg.html" target="_blank">SDG Mapping</a></li>
+                <li><a href="refine.html" target="_blank">Refined Business Cases</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Course Reflections</h2>
+            <ul>
+                <li><a href="mem1.html" target="_blank">Shubha's Reflections</a></li>
+                <li><a href="mem2.html" target="_blank">Yashoda Talawar's Reflections</a></li>
+                <li><a href="mem3.html" target="_blank">Preeti Kotabagi's Reflections</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="quote">
+        “The only way to do great work is to love what you do.” – Steve Jobs
+    </div>
+</body>
+</html>
