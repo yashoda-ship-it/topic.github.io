@@ -3,126 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">                                                                                                                                                                                                                                                                                                                                                  
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Course Reflections</title>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
         }
-        header {
+        .header {
+            text-align: center;
             background-color: #4CAF50;
             color: white;
+            padding: 20px 0;
+        }
+        .section {
             padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-        }
-        .card {
-            background: white;
-            border: 1px solid #ddd;
+            margin: 15px 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            padding: 20px;
-            flex: 1 1 calc(45% - 20px);
-            max-width: calc(45% - 20px);
-            box-sizing: border-box;
         }
-        .card h2 {
-            color: #4CAF50;
-            margin-bottom: 10px;
+        .section:nth-child(odd) {
+            background-color: #f9f9f9;
         }
-        .card ul, .card dl {
-            margin: 0;
-            padding: 0;
-            list-style: none;
+        .section:nth-child(even) {
+            background-color: #e6f7ff;
         }
-        .card a {
-            color: #4CAF50;
-            text-decoration: none;
+        .section strong {
+            display: block;
+            margin-top: 15px;
+            font-size: 1.1em;
+            color: #333;
         }
-        .quote {
-            text-align: center;
-            margin-top: 20px;
-            font-style: italic;
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Algorithm Course Project</h1>
-        <h3>Hello, we are team C1 - C Division👋</h3>
-        <p>We are passionate about technology and problem-solving. Here's a glimpse of our work:</p>
-    </header>
-
-    <div class="container">
-        <div class="card">
-            <h2>🌐 Find Me Online</h2>
-            <ul>
-                <li><a href="https://github.com/yashoda-ship-it" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Portfolio Details</h2>
-            <dl>
-                <dt>Course Name</dt>
-                <dd>Algorithmic Problem Solving</dd>
-
-                <dt>Course Code</dt>
-                <dd>Course Code Placeholder</dd>
-
-                <dt>Name</dt>
-                <dd>Shubha C.S., Yashoda Talawar, Preeti Kotabagi</dd>
-
-                <dt>SRN</dt>
-                <dd>01FE23BCS118, 01FE23BCS141, 01FE23BCS170</dd>
-
-                <dt>Course Instructor</dt>
-                <dd>Prakash Hegade</dd>
-
-                <dt>University</dt>
-                <dd>KLE Technological University, Hubli</dd>
-
-                <dt>Portfolio Topic/Domain</dt>
-                <dd>Google</dd>
-            </dl>
-        </div>
-
-        <div class="card">
-            <h2>Course Project Links</h2>
-            <ul>
-                <li><a href="introduction.html" target="_blank">Project Introduction</a></li>
-                <li><a href="sdg.html" target="_blank">SDG Mapping</a></li>
-                <li><a href="refine.html" target="_blank">Refined Business Cases</a></li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Course Reflections</h2>
-            <ul>
-                <li><a href="mem1.html" target="_blank">Shubha's Reflections</a></li>
-                <li><a href="mem2.html" target="_blank">Yashoda Talawar's Reflections</a></li>
-                <li><a href="mem3.html" target="_blank">Preeti Kotabagi's Reflections</a></li>
-            </ul>
-        </div>
+    <div class="header">
+        <h2>Course Reflections</h2>
+        <h3>Mem 2 - Yashoda Talawar</br>Roll number: 357</h3>
     </div>
 
-    <div class="quote">
-        “The only way to do great work is to love what you do.” – Steve Jobs
+    <div class="section">
+        <strong>1. What are the kinds of problems we see in nature?</strong>
+        <p>
+            <strong>Iteration:</strong> Repeating tasks, like summing a list of numbers, problems like calculating compound interest.
+            <br><strong>Recursion:</strong> Scenarios like Fibonacci sequence generation or solving the Tower of Hanoi involve recursive calls and factorial.
+            <br><strong>Backtracking:</strong> Exploring possibilities to find a solution, like solving a maze, n-queens, or generating all possible permutations using backtracking to explore solutions.
+        </p>
+    </div>
+
+    <div class="section">
+        <strong>2. What is space and time efficiency? Why are they important? Explain the different class of problems and orders of growth.</strong>
+        <p>
+            <strong>Time Efficiency:</strong> Measures the computational time required to execute an algorithm and represents the number of basic operations performed by an algorithm.
+            <br><strong>Space Efficiency:</strong> Measures the memory (storage) required by an algorithm, tracking how much memory is the input size and determining how much additional memory is needed to solve a problem.
+            <br><strong>Complexity Classes and Orders of Growth:</strong>
+            <ul>
+                <li><strong>O(1):</strong> Constant Time: Fixed runtime regardless of input size (e.g., array access).</li>
+                <li><strong>O(log n):</strong> Logarithmic Time: Runtime grows logarithmically (e.g., binary search).</li>
+                <li><strong>O(n):</strong> Linear Time: Runtime grows linearly with input size (e.g., traversing an array).</li>
+                <li><strong>O(n log n):</strong> Linearithmic Time: Efficient sorting algorithms like merge sort.</li>
+                <li><strong>O(n²):</strong> Quadratic Time: Nested iterations (e.g., bubble sort).</li>
+                <li><strong>O(2ⁿ):</strong> Exponential Time: Runtime doubles with each input addition (e.g., recursive Fibonacci).</li>
+                <li><strong>O(n!):</strong> Factorial Time: Extremely inefficient (e.g., traveling salesman problem brute force).</li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="section">
+        <strong>3. Takeaway from different design principles from Chapter 2:</strong>
+        <p>
+            <strong>Modularity:</strong> Simplifies complex problems into smaller tasks.
+            <br><strong>Abstraction:</strong> Hides implementation details to focus on solving the problem.
+            <br><strong>Efficiency:</strong> Optimizing time and space complexities to improve performance.
+            <br><strong>Reusability:</strong> Algorithms like dynamic programming can be applied across multiple domains.
+        </p>
+    </div>
+
+    <div class="section">
+        <strong>4. Importance of algorithms in solving problems:</strong>
+        <p>
+            Algorithms are step-by-step instructions used to solve specific problems. They are essential in:
+            <ul>
+                <li>Finding optimal solutions efficiently.</li>
+                <li>Reducing time and memory requirements for computational problems.</li>
+                <li>Improving decision-making and data analysis processes.</li>
+                <li>Enhancing programming logic and implementation accuracy.</li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="section">
+        <strong>5. My overall learning from this course:</strong>
+        <p>
+            The course provided a solid foundation in understanding computational thinking and problem-solving techniques. I gained insights into:
+            <ul>
+                <li>Classifying problems into categories like iterative, recursive, and backtracking solutions.</li>
+                <li>Analyzing time and space complexities for optimal algorithm design.</li>
+                <li>Understanding various algorithm design principles for modular, reusable, and efficient code.</li>
+            </ul>
+        </p>
     </div>
 </body>
 </html>
