@@ -44,6 +44,13 @@
             border-left: 5px solid #31708f;
             border-radius: 5px;
         }
+        .plan-highlight {
+            background: #fce8e6;
+            padding: 10px;
+            border-left: 5px solid #d9534f;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
         .footer {
             text-align: center;
             margin-top: 20px;
@@ -60,26 +67,33 @@
         <h2>Solutions/Plans:</h2>
 
         <h3>Fire Response Optimization with Graph Algorithms</h3>
-        <ul>
-            <li><strong>Use Dijkstra’s Algorithm:</strong> Calculate the shortest paths for fire trucks to fire sites, minimizing response time. By creating a weighted graph of roads and assigning weights based on travel time, this algorithm can quickly identify optimal routes, ensuring fire trucks reach the site as soon as possible.</li>
-            <li><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with unpredictable road conditions, such as blocked roads. This algorithm accounts for negative weight edges, representing delays or detours, and recalculates paths dynamically to adapt to real-time conditions.</li>
-        </ul>
+        <div class="plan-highlight">
+            <ul>
+                <li><strong>Use Dijkstra’s Algorithm:</strong> Calculate the shortest paths for fire trucks to fire sites, minimizing response time. By creating a weighted graph of roads and assigning weights based on travel time, this algorithm can quickly identify optimal routes, ensuring fire trucks reach the site as soon as possible.</li>
+                <li><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with unpredictable road conditions, such as blocked roads. This algorithm accounts for negative weight edges, representing delays or detours, and recalculates paths dynamically to adapt to real-time conditions.</li>
+            </ul>
+        </div>
 
         <h3>Risk Assessment Using Greedy Algorithms</h3>
-        <ul>
-            <li><strong>Deploy Sensors:</strong> Place sensors in fire-prone zones and use Greedy Algorithms to prioritize high-risk areas for inspection. The algorithm evaluates risk levels based on historical fire data and ensures resources are allocated efficiently to maximize coverage.</li>
-            <li><strong>Optimize Sensor Placement:</strong> Utilize Backtracking to ensure all critical areas are covered efficiently. This approach explores all possible configurations of sensor placement to achieve the best coverage with minimal overlap, ensuring no high-risk zones are left unmonitored.</li>
-        </ul>
+        <div class="plan-highlight">
+            <ul>
+                <li><strong>Deploy Sensors:</strong> Place sensors in fire-prone zones and use Greedy Algorithms to prioritize high-risk areas for inspection. The algorithm evaluates risk levels based on historical fire data and ensures resources are allocated efficiently to maximize coverage.</li>
+                <li><strong>Optimize Sensor Placement:</strong> Utilize Backtracking to ensure all critical areas are covered efficiently. This approach explores all possible configurations of sensor placement to achieve the best coverage with minimal overlap, ensuring no high-risk zones are left unmonitored.</li>
+            </ul>
+        </div>
 
         <h3>Predictive Monitoring with Divide and Conquer</h3>
-        <ul>
-            <li><strong>Analyze IoT Data:</strong> Use Merge Sort to prioritize regions based on risk intensity. The algorithm sorts regions by their risk scores, allowing emergency teams to focus on the most vulnerable areas first.</li>
-            <li><strong>Locate Anomalies:</strong> Use Binary Search to quickly identify and address anomalies. After sorting sensor data, this algorithm pinpoints unusual readings efficiently, enabling prompt intervention before situations escalate.</li>
-        </ul>
+        <div class="plan-highlight">
+            <ul>
+                <li><strong>Analyze IoT Data:</strong> Use Merge Sort to prioritize regions based on risk intensity. The algorithm sorts regions by their risk scores, allowing emergency teams to focus on the most vulnerable areas first.</li>
+                <li><strong>Locate Anomalies:</strong> Use Binary Search to quickly identify and address anomalies. After sorting sensor data, this algorithm pinpoints unusual readings efficiently, enabling prompt intervention before situations escalate.</li>
+            </ul>
+        </div>
     </div>
 
     <div class="footer">&copy; 2024 Emergency Fire Detection Plans | Designed with care</div>
 </body>
 </html>
+
 
 
