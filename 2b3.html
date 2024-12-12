@@ -1,1 +1,74 @@
-erg
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Driving Cars Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e1f5fe;
+            color: #333;
+            margin: 20px;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        h1, h2 {
+            color: #01579b;
+        }
+        .plan {
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 5px solid #0288d1;
+            background-color: #e0f7fa;
+            border-radius: 4px;
+        }
+        .plan:nth-of-type(odd) {
+            background-color: #b3e5fc; /* Light blue for odd sections */
+        }
+        .plan:nth-of-type(even) {
+            background-color: #81d4fa; /* Slightly darker blue for even sections */
+        }
+        .highlight {
+            background-color: #ffffe0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Self-Driving Cars Solutions</h1>
+
+        <div class="plan">
+            <h2>1. Route Optimization with Graph Algorithms</h2>
+            <p>Use <span class="highlight">Dijkstra’s Algorithm</span> for real-time route calculations. This algorithm ensures safe and efficient navigation by finding the shortest path from the car’s current location to its destination, considering obstacles and road conditions in real-time.</p>
+            <p>Employ the <span class="highlight">Floyd-Warshall Algorithm</span> to precompute all-pairs shortest paths for robust navigation maps. This approach ensures that the self-driving car can quickly adapt to changes in the environment, providing a comprehensive navigation map that is updated dynamically based on real-time sensor data.</p>
+        </div>
+
+        <div class="plan">
+            <h2>2. Obstacle Detection with Sorting and Searching</h2>
+            <p>Use <span class="highlight">Quick Sort</span> to prioritize obstacles by proximity. This sorting algorithm allows the self-driving car to quickly identify and address immediate threats, ensuring safe navigation through urban environments.</p>
+            <p>Employ <span class="highlight">Binary Search</span> to quickly check maps for known hazards. This searching technique efficiently locates obstacles within the map, helping the car avoid hazards and navigate safely.</p>
+        </div>
+
+        <div class="plan">
+            <h2>3. Decision Making with Dynamic Programming</h2>
+            <p>Apply the <span class="highlight">Knapsack Problem</span> to balance energy efficiency, travel time, and passenger preferences. This dynamic programming approach enables the self-driving car to make optimal decisions regarding route selection based on multiple criteria, such as fuel efficiency and passenger comfort.</p>
+        </div>
+    </div>
+</body>
+</html>
