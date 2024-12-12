@@ -7,43 +7,61 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #e0f7fa;
             color: #333;
             margin: 20px;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #00796b;
         }
         .highlight {
             background-color: #ffffe0;
-            padding: 2px 4px;
+            padding: 2px 6px;
             border-radius: 4px;
-        }
-        h1 {
-            color: #2c3e50;
+            font-weight: bold;
+            color: #d32f2f;
         }
         .plan {
             margin-top: 20px;
         }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
-    <h1>Road Condition Sensors Solutions</h1>
+    <div class="container">
+        <h1>Road Condition Sensors Solutions</h1>
 
-    <div class="plan">
-        <h2>1. Data Sorting and Prioritization with Sorting Algorithms</h2>
-        <p>Use <span class="highlight">Heap Sort</span> to rank roads based on the severity of damage. This algorithm efficiently prioritizes repairs by sorting road conditions from the most severe to the least, enabling maintenance crews to address critical issues first.</p>
-        <p>Additionally, <span class="highlight">Merge Sort</span> can be used to organize sensor data for trend analysis. This sorting algorithm is effective for dividing and conquering large datasets, allowing for a structured approach to identifying recurring road problems and predicting future damages.</p>
-    </div>
+        <div class="plan">
+            <h2>1. Data Sorting and Prioritization with Sorting Algorithms</h2>
+            <p>Use <span class="highlight">Heap Sort</span> to rank roads based on the severity of damage. This algorithm efficiently prioritizes repairs by sorting road conditions from the most severe to the least, enabling maintenance crews to address critical issues first.</p>
+            <p>Additionally, <span class="highlight">Merge Sort</span> can be used to organize sensor data for trend analysis. This sorting algorithm is effective for dividing and conquering large datasets, allowing for a structured approach to identifying recurring road problems and predicting future damages.</p>
+        </div>
 
-    <div class="plan">
-        <h2>2. Real-Time Monitoring with Dynamic Programming</h2>
-        <p>Employ the <span class="highlight">Knapsack Problem</span> to allocate limited resources such as funds or repair crews to the most critical areas. This approach ensures that resources are used efficiently, focusing on the roads that need immediate attention.</p>
-        <p>Use the <span class="highlight">Longest Common Subsequence (LCS)</span> algorithm to compare road conditions over time. LCS helps in predicting which areas will degrade next based on past sensor data, facilitating proactive maintenance planning.</p>
-    </div>
+        <div class="plan">
+            <h2>2. Real-Time Monitoring with Dynamic Programming</h2>
+            <p>Employ the <span class="highlight">Knapsack Problem</span> to allocate limited resources such as funds or repair crews to the most critical areas. This approach ensures that resources are used efficiently, focusing on the roads that need immediate attention.</p>
+            <p>Use the <span class="highlight">Longest Common Subsequence (LCS)</span> algorithm to compare road conditions over time. LCS helps in predicting which areas will degrade next based on past sensor data, facilitating proactive maintenance planning.</p>
+        </div>
 
-    <div class="plan">
-        <h2>3. Optimized Maintenance Routes Using Graph Algorithms</h2>
-        <p>The <span class="highlight">Floyd-Warshall Algorithm</span> can be used to precompute the shortest paths for maintenance crews. This algorithm is crucial for ensuring efficient access to damaged road sections, minimizing travel time, and maximizing resource utilization.</p>
-        <p>Utilize <span class="highlight">DFS (Depth-First Search) or BFS (Breadth-First Search)</span> to map damaged road sections systematically. These graph traversal algorithms help in identifying and prioritizing inspection routes, ensuring thorough coverage and maintenance.</p>
+        <div class="plan">
+            <h2>3. Optimized Maintenance Routes Using Graph Algorithms</h2>
+            <p>The <span class="highlight">Floyd-Warshall Algorithm</span> can be used to precompute the shortest paths for maintenance crews. This algorithm is crucial for ensuring efficient access to damaged road sections, minimizing travel time, and maximizing resource utilization.</p>
+            <p>Utilize <span class="highlight">DFS (Depth-First Search) or BFS (Breadth-First Search)</span> to map damaged road sections systematically. These graph traversal algorithms help in identifying and prioritizing inspection routes, ensuring thorough coverage and maintenance.</p>
+        </div>
     </div>
 </body>
 </html>
+
 
