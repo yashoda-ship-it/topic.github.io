@@ -8,13 +8,15 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            margin: 20px;
+            background-color: #f8f9fa;
+            padding: 20px;
         }
         h2, h3 {
-            color: #007bff; /* Blue color for headers */
+            color: #007bff; /* Bold blue header text */
         }
         p {
             margin-bottom: 20px;
+            line-height: 1.6;
         }
         table {
             width: 100%;
@@ -26,14 +28,32 @@
             padding: 10px;
         }
         th {
-            background-color: #f8f9fa;
-            color: #343a40; /* Darker font color for table headers */
+            background-color: #007bff;
+            color: white;
         }
         table tbody tr:nth-child(even) {
             background-color: #f2f2f2;
         }
         table tbody tr:nth-child(odd) {
             background-color: #ffffff;
+        }
+        .content-block {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .content-block h3 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -43,72 +63,67 @@
 
         <h3>Mem 2 - Yashoda Talawar <br> Roll number: 357</h3>
 
-        <p>
-            <strong>1.</strong> What are the kinds of problems we see in nature?<br>
-            <strong>Ans:</strong><br>
-            <strong>Iteration:</strong> Repeating tasks, like summing a list of numbers, problems like calculating compound interest.<br>
-            <strong>Recursion:</strong> Scenarios like Fibonacci sequence generation or solving the Tower of Hanoi involve recursive calls and factorial.<br>
-            <strong>Backtracking:</strong> Exploring possibilities to find a solution, like solving a maze, n-queens, or generating all possible permutations using backtracking to explore solutions.
-        </p>
+        <div class="content-block">
+            <p><strong>1. What are the kinds of problems we see in nature?</strong></p>
+            <p>
+                <strong>Ans:</strong><br>
+                <strong>Iteration:</strong> Repeating tasks like summing a list of numbers or calculating compound interest.<br>
+                <strong>Recursion:</strong> Scenarios like generating the Fibonacci sequence or solving the Tower of Hanoi involve recursive calls.<br>
+                <strong>Backtracking:</strong> Solving problems like mazes, n-queens, or generating permutations using backtracking.
+            </p>
+        </div>
 
-        <p>
-            <strong>2.</strong> What is space and time efficiency? Why are they important? Explain the different class of problems and orders of growth.<br>
-            <strong>Ans:</strong><br>
-            Time Efficiency measures the computational time required to execute an algorithm and represents the number of basic operations performed by an algorithm.<br>
-            Space Efficiency measures the memory (storage) required by an algorithm, tracking how much memory is the input size and determining how much additional memory is needed to solve a problem.<br>
-            A good algorithm executes quickly and saves space in the process. We should find a good medium of space and time (space and time complexity). In the world of computer science to perform better, we need to write algorithms that are time efficient and use less memory. It should be resource-optimized, solving larger problems with limited computing power and giving an impact on user experience and system performance.<br>
-            <strong>Complexity Classes and Orders of Growth:</strong><br>
-            <strong>Big O Notation (Worst-Case Complexity):</strong> Describes the upper bound of an algorithm's growth rate:<br>
-            - <strong>O(1)</strong> - Constant Time: Fixed runtime regardless of input size (e.g., array access, simple arithmetic operations).<br>
-            - <strong>O(log n)</strong> - Logarithmic Time: Runtime grows logarithmically (e.g., balanced tree operations).<br>
-            - <strong>O(n)</strong> - Linear Time: Runtime grows linearly with input size (e.g., traversing an array).<br>
-            - <strong>O(n log n)</strong> - Linearithmic Time: Efficient sorting algorithms like merge sort, heap sort.<br>
-            - <strong>O(n²)</strong> - Quadratic Time: Nested iterations (e.g., bubble sort).<br>
-            - <strong>O(2ⁿ)</strong> - Exponential Time: Runtime doubles with each input addition (e.g., recursive Fibonacci).<br>
-            - <strong>O(n!)</strong> - Factorial Time: Extremely inefficient (e.g., traveling salesman problem brute force).<br>
-            Visualization of Growth Rates: *O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)*
-        </p>
+        <div class="content-block">
+            <p><strong>2. What is space and time efficiency? Why are they important? Explain different class of problems and orders of growth.</strong></p>
+            <p>
+                <strong>Ans:</strong><br>
+                Time Efficiency measures the computational time required to execute an algorithm. Space Efficiency measures the memory (storage) required. A good algorithm should strike a balance between time and space efficiency.<br>
+                <strong>Big O Notation (Complexity Classes):</strong>
+                <ul>
+                    <li><strong>O(1)</strong> - Constant Time: Fixed runtime (e.g., simple arithmetic).</li>
+                    <li><strong>O(log n)</strong> - Logarithmic Time: Efficient for searching (e.g., binary search).</li>
+                    <li><strong>O(n)</strong> - Linear Time: Traversing an array (e.g., linear search).</li>
+                    <li><strong>O(n log n)</strong> - Linearithmic Time: Sorting (e.g., merge sort).</li>
+                    <li><strong>O(n²)</strong> - Quadratic Time: Nested loops (e.g., bubble sort).</li>
+                    <li><strong>O(2ⁿ)</strong> - Exponential Time: Recursive solutions like Fibonacci.</li>
+                    <li><strong>O(n!)</strong> - Factorial Time: Inefficient algorithms (e.g., brute-force).</li>
+                </ul>
+            </p>
+        </div>
 
-        <p>
-            <strong>3.</strong> Take away from different design principles from chapter 2:<br>
-            <strong>Modularity:</strong> Simplifies complex problems into smaller tasks.<br>
-            <strong>Abstraction:</strong> Hides implementation details to focus on solving the problem.<br>
-            <strong>Efficiency:</strong> Optimizing time and space complexities to improve performance.<br>
-            <strong>Reusability:</strong> Algorithms like dynamic programming can be applied across multiple domains.
-        </p>
+        <div class="content-block">
+            <p><strong>3. Take away from different design principles from chapter 2:</strong></p>
+            <p>
+                <strong>Modularity:</strong> Breaking down complex problems into smaller, manageable tasks.<br>
+                <strong>Abstraction:</strong> Hiding implementation details to focus on solving the problem.<br>
+                <strong>Efficiency:</strong> Optimizing time and space complexities.<br>
+                <strong>Reusability:</strong> Using solutions like dynamic programming for different domains.
+            </p>
+        </div>
 
-        <p>
-            <strong>4.</strong> The hierarchical data and how different tree data structures solve and optimize over problem scenarios:<br>
-            <strong>General Tree:</strong> Represents basic parent-child relationships but lacks specific balancing properties.<br>
-            <strong>Binary Search Tree (BST):</strong> Organizes data such that left children are smaller and right children are larger than the parent. It offers efficient searching and insertion with an average time complexity of O(log n), but performance can degrade to O(n) if unbalanced.<br>
-            <strong>AVL Tree:</strong> A self-balancing BST ensuring all operations (search, insert, delete) are consistently O(log n). It's ideal for real-time systems due to its guaranteed balance.<br>
-            <strong>Heap:</strong> Maintains the property where the root is always the maximum or minimum value. It's commonly used in priority queues and task scheduling, with insertion and deletion at O(log n) and fast root access at O(1).<br>
-            <strong>Trie:</strong> Optimized for prefix-based searches, where each branch represents a character. It's widely used in autocomplete and dictionary lookups, offering fast search but higher memory usage.<br>
-            <strong>Choosing the right tree:</strong><br>
-            - <strong>Trie:</strong> For prefix-based searches or autocomplete.<br>
-            - <strong>Heap:</strong> For priority queues and scheduling.<br>
-            - <strong>AVL/Red-Black Trees:</strong> For frequent searching and updates in ordered data.<br>
-            - <strong>General Tree:</strong> For simple parent-child relationships without balancing needs.
-        </p>
+        <div class="content-block">
+            <p><strong>4. The hierarchical data and how different tree data structures solve and optimize problems:</strong></p>
+            <p>
+                <strong>General Tree:</strong> Represents parent-child relationships but lacks balance.<br>
+                <strong>Binary Search Tree (BST):</strong> Efficient searching with balanced properties (O(log n) on average).<br>
+                <strong>AVL Tree:</strong> Self-balancing for consistent O(log n) operations.<br>
+                <strong>Heap:</strong> Used in priority queues, ensuring fast insert/delete operations.<br>
+                <strong>Trie:</strong> Optimized for prefix-based searches like autocomplete.
+            </p>
+        </div>
 
-        <p>
-            <strong>5.</strong> The need for array query algorithms and their implications. Their applications and principles need to be discussed:<br>
-            <strong>Ans:</strong> Array query algorithms are essential for efficiently performing operations like range queries, updates, and aggregations on array data. These algorithms optimize scenarios where frequent queries or updates need to be processed quickly, such as in real-time systems or large-scale data analysis.<br>
-            <strong>Segment Trees:</strong> Used for range queries (e.g., range sum, range minimum). Enable efficient query and update operations in O(log n). Example: Finding the sum of elements in a specific range in stock market analysis.<br>
-            <strong>Fenwick Tree (Binary Indexed Tree):</strong> Optimizes prefix sums and updates in O(log n) time. Example: Efficiently handling cumulative frequency counts.<br>
-            <strong>Sparse Table:</strong> Ideal for static range queries where the data does not change, offering O(1) query time after O(n log n) preprocessing. Example: Finding the minimum value in a range for immutable data.<br>
-            <strong>Applications:</strong> Array query algorithms are used in many areas. They help search and sort data quickly in databases, make fast decisions in real-time systems like traffic and stock trading, and power search engines to find web information quickly. They also make it easier to study large data in big data and help predict things like weather or science models.<br>
-            <strong>Implications:</strong> They reduce the time complexity of range queries and updates, ensuring real-time performance in applications like stock analysis, leaderboards, or monitoring systems. These algorithms enable systems to handle large datasets effectively, ensuring that operations remain fast even as the data size grows. Structures like Fenwick trees and sparse tables optimize memory usage compared to naive approaches, which is crucial for resource-constrained environments.<br>
-            <strong>Principles of Array Query Algorithms:</strong><br>
-            - <strong>Divide and Conquer:</strong> Breaking down a problem into smaller subproblems, solving them independently, and combining the solutions (e.g., merge sort).<br>
-            - <strong>Greedy Strategy:</strong> Building a solution piece by piece, always choosing the next piece that offers the most immediate benefit (e.g., quicksort partitioning).<br>
-            - <strong>Dynamic Programming:</strong> Solving problems by storing solutions to subproblems to avoid redundant calculations (e.g., in binary search trees).<br>
-            - <strong>Hashing:</strong> Using a hash table to map data to indices, enabling efficient O(1) search and insert operations.<br>
-            - <strong>Optimization:</strong> Algorithms like binary search or hash-based solutions are used to optimize searching within sorted or unsorted arrays.
-        </p>    
+        <div class="content-block">
+            <p><strong>5. The need for array query algorithms and their implications:</strong></p>
+            <p>
+                <strong>Segment Trees:</strong> Efficient range queries like sum or min operations in O(log n).<br>
+                <strong>Fenwick Tree (BIT):</strong> Prefix sums and updates in O(log n).<br>
+                <strong>Sparse Table:</strong> Static range queries in O(1) after preprocessing (O(n log n)).<br>
+                <strong>Applications:</strong> Used in real-time systems, databases, stock analysis, and big data.
+            </p>
+        </div>
 
-        <p><strong>6.</strong> Differentiate between tree and graphs and their traversals. The applications of each<br>
-            <strong>Ans:</strong>
+        <div class="content-block">
+            <p><strong>6. Differentiate between trees and graphs and their traversals:</strong></p>
             <table class="table">
                 <thead>
                     <tr>
@@ -120,28 +135,28 @@
                 <tbody>
                     <tr>
                         <td>Structure</td>
-                        <td>A tree has a hierarchical structure with one parent per node (except root). It has no cycles or loops.</td>
-                        <td>A graph can have multiple connections, loops, and cycles between nodes.</td>
+                        <td>A tree has a hierarchical structure, no cycles.</td>
+                        <td>A graph can have cycles and multiple connections.</td>
                     </tr>
                     <tr>
                         <td>Path Between Nodes</td>
-                        <td>There is always a single path between any two nodes.</td>
-                        <td>There can be multiple paths or no connection between nodes.</td>
+                        <td>Single path between nodes.</td>
+                        <td>Multiple paths between nodes.</td>
                     </tr>
                     <tr>
                         <td>Traversals</td>
                         <td>
                             <ul>
-                                <li><strong>Preorder:</strong> Visit node, then left and right children.</li>
-                                <li><strong>Inorder:</strong> Visit left child, node, then right child.</li>
-                                <li><strong>Postorder:</strong> Visit left and right children, then node.</li>
-                                <li><strong>Level-order:</strong> Visit nodes level by level.</li>
+                                <li>Preorder</li>
+                                <li>Inorder</li>
+                                <li>Postorder</li>
+                                <li>Level-order</li>
                             </ul>
                         </td>
                         <td>
                             <ul>
-                                <li><strong>Breadth-First Search (BFS):</strong> Explore all neighbors before deeper nodes.</li>
-                                <li><strong>Depth-First Search (DFS):</strong> Explore as far as possible along branches before backtracking.</li>
+                                <li>BFS</li>
+                                <li>DFS</li>
                             </ul>
                         </td>
                     </tr>
@@ -149,23 +164,27 @@
                         <td>Applications</td>
                         <td>
                             <ul>
-                                <li>Binary Search Trees for fast searching/insertion.</li>
-                                <li>Heaps for managing priorities and sorting.</li>
-                                <li>Tries for autocomplete and dictionary lookups.</li>
-                                <li>Representing hierarchical data like file systems and family trees.</li>
+                                <li>File systems, family trees</li>
+                                <li>Priority queues</li>
+                                <li>Prefix searches</li>
                             </ul>
                         </td>
                         <td>
                             <ul>
-                                <li>Social networks to represent friendships.</li>
-                                <li>Maps for finding routes.</li>
-                                <li>Web crawling to explore the internet.</li>
-                                <li>Electric circuits to represent connections.</li>
+                                <li>Social networks</li>
+                                <li>Maps, routing</li>
+                                <li>Web crawling</li>
                             </ul>
                         </td>
                     </tr>
                 </tbody>
             </table>
-        </p> 
+        </div>
 
-        <p><strong>7.</strong> Deliberate on sorting and searching algorithms, the technique behind each and
+        <div class="content-block">
+            <p><strong>7. Sorting and searching algorithms:</strong></p>
+            <p>Detailed discussion on sorting and searching algorithms would go here...</p>
+        </div>
+    </div>
+</body>
+</html>
