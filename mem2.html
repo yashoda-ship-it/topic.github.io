@@ -4,29 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Reflections</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 20px;
         }
         h2, h3 {
-            color: #333;
+            color: #007bff; /* Blue color for headers */
         }
         p {
             margin-bottom: 20px;
         }
-        ul {
-            margin-left: 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #343a40; /* Darker font color for table headers */
+        }
+        table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        table tbody tr:nth-child(odd) {
+            background-color: #ffffff;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Course Reflections</h2>
+        <h2 class="text-center">Course Reflections</h2>
 
-        <h3>Mem 2 - Yashoda Talawar<br>Roll number: 357</h3>
-        
+        <h3>Mem 2 - Yashoda Talawar <br> Roll number: 357</h3>
+
         <p>
             <strong>1.</strong> What are the kinds of problems we see in nature?<br>
             <strong>Ans:</strong><br>
@@ -91,10 +107,9 @@
             - <strong>Optimization:</strong> Algorithms like binary search or hash-based solutions are used to optimize searching within sorted or unsorted arrays.
         </p>    
 
-        <p>
-            <strong>6.</strong> Differentiate between tree and graphs and their traversals.<br>
+        <p><strong>6.</strong> Differentiate between tree and graphs and their traversals. The applications of each<br>
             <strong>Ans:</strong>
-            <table class="table table-bordered">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Aspect</th>
@@ -151,10 +166,6 @@
                     </tr>
                 </tbody>
             </table>
-        </p>
+        </p> 
 
-        <p>
-            <strong>7.</strong> Deliberate on sorting and searching algorithms, the technique behind each and they connect to real world.<br>
-            <strong>Ans:</strong> Sorting algorithms are used to arrange a collection of items in a particular order, typically ascending or descending. The choice of algorithm depends on the size of the dataset and the environment in which it is used.<br>
-            <strong>Bubble Sort:</strong> Repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. <strong>Real-World Connection:</strong> Used in scenarios where data exchange operations are frequent, such as in iterative optimization processes like improving image quality.<br>
-            <strong>Selection Sort:</strong> Finds the smallest (or largest) element and places it in the correct position, repeating for all elements.<strong
+        <p><strong>7.</strong> Deliberate on sorting and searching algorithms, the technique behind each and
