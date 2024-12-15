@@ -2,12 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpo<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traffic Management</title>
+    <title>Emergency Fire Detection</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,11 +22,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            color: #0275d8;
+            color: #d9534f;
             text-align: center;
         }
         h2 {
-            color: #5cb85c;
+            color: #0275d8;
             margin-top: 20px;
         }
         ul {
@@ -49,9 +45,9 @@
             border-radius: 5px;
         }
         .plan-highlight {
-            background: #e7f8e6;
+            background: #fce8e6;
             padding: 10px;
-            border-left: 5px solid #5cb85c;
+            border-left: 5px solid #d9534f;
             border-radius: 5px;
             margin-bottom: 15px;
         }
@@ -65,41 +61,50 @@
 </head>
 <body>
     <div class="container">
-        <h1>Traffic Management</h1>
-        <p class="highlight">Efficient traffic management is critical to reducing congestion and enhancing mobility in urban areas. Using IoT-based sensors and advanced algorithms, traffic systems can optimize vehicle flow, reduce travel times, and improve safety on roads.</p>
+        <h1>Emergency Fire Detection</h1>
+        <p class="highlight">Fire detection systems are crucial for early intervention and minimizing damage. Using IoT-based temperature and smoke sensors, these systems can detect fires in their initial stages. Efficient response plans rely on optimizing fire truck routes and analyzing high-risk areas.</p>
 
         <h2>Solutions/Plans:</h2>
 
-        <h3>Traffic Flow Optimization with Graph Algorithms</h3>
+        <h3>Fire Response Optimization with Graph Algorithms</h3>
+        <ul>
+            <li><strong>Use Dijkstra’s Algorithm:</strong> Calculate the shortest paths for fire trucks to fire sites, minimizing response time. By creating a weighted graph of roads and assigning weights based on travel time, this algorithm can quickly identify optimal routes, ensuring fire trucks reach the site as soon as possible.</li>
+            <li><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with unpredictable road conditions, such as blocked roads. This algorithm accounts for negative weight edges, representing delays or detours, and recalculates paths dynamically to adapt to real-time conditions.</li>
+        </ul>
         <div class="plan-highlight">
             <ul>
-                <li><strong>Use Dijkstra’s Algorithm:</strong> Identify the shortest routes for vehicles, minimizing travel times. By modeling road networks as weighted graphs, this algorithm helps find optimal paths, reducing congestion in real-time.
-                </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/b8144b489b1135701c4721c40681bc3f"><strong>C++</strong></a></li>
-                <li><strong>Implement Bellman-Ford Algorithm:</strong> Adapt to dynamic road conditions, such as accidents or roadblocks. This algorithm recalculates routes by considering negative weight edges representing delays, ensuring smoother traffic flow.
-                 </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/5301985969e09457bcced90a3b0d9e60"><strong>C++</strong></a></li>
+                <li><strong>Use Dijkstra’s Algorithm:</strong> Calculate the shortest paths for fire trucks to fire sites, minimizing response time. By creating a weighted graph of roads and assigning weights based on travel time, this algorithm can quickly identify optimal routes, ensuring fire trucks reach the site as soon as possible.</li>
+                <li><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with unpredictable road conditions, such as blocked roads. This algorithm accounts for negative weight edges, representing delays or detours, and recalculates paths dynamically to adapt to real-time conditions.</li>
             </ul>
         </div>
 
-        <h3>Congestion Monitoring Using Greedy Algorithms</h3>
+        <h3>Risk Assessment Using Greedy Algorithms</h3>
+        <ul>
+            <li><strong>Deploy Sensors:</strong> Place sensors in fire-prone zones and use Greedy Algorithms to prioritize high-risk areas for inspection. The algorithm evaluates risk levels based on historical fire data and ensures resources are allocated efficiently to maximize coverage.</li>
+            <li><strong>Optimize Sensor Placement:</strong> Utilize Backtracking to ensure all critical areas are covered efficiently. This approach explores all possible configurations of sensor placement to achieve the best coverage with minimal overlap, ensuring no high-risk zones are left unmonitored.</li>
+        </ul>
         <div class="plan-highlight">
             <ul>
-                <li><strong>Deploy Sensors:</strong> Install traffic sensors at key intersections and use Greedy Algorithms to prioritize signal adjustments. This approach ensures real-time response to congestion, improving flow efficiency.
-                </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/dd10eea2392eb073d6f7f26e64f744da"><strong>C++</strong></a></li>
-                <li><strong>Optimize Traffic Signals:</strong> Utilize Backtracking to fine-tune signal timings. This ensures synchronization across intersections, minimizing vehicle wait times and enhancing overall road capacity.
-                </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/dd10eea2392eb073d6f7f26e64f744da"><strong>C++</strong></a></li>    
+                <li><strong>Deploy Sensors:</strong> Place sensors in fire-prone zones and use Greedy Algorithms to prioritize high-risk areas for inspection. The algorithm evaluates risk levels based on historical fire data and ensures resources are allocated efficiently to maximize coverage.</li>
+                <li><strong>Optimize Sensor Placement:</strong> Utilize Backtracking to ensure all critical areas are covered efficiently. This approach explores all possible configurations of sensor placement to achieve the best coverage with minimal overlap, ensuring no high-risk zones are left unmonitored.</li>
             </ul>
         </div>
 
-        <h3>Predictive Traffic Analysis with Divide and Conquer</h3>
+        <h3>Predictive Monitoring with Divide and Conquer</h3>
+        <ul>
+            <li><strong>Analyze IoT Data:</strong> Use Merge Sort to prioritize regions based on risk intensity. The algorithm sorts regions by their risk scores, allowing emergency teams to focus on the most vulnerable areas first.</li>
+            <li><strong>Locate Anomalies:</strong> Use Binary Search to quickly identify and address anomalies. After sorting sensor data, this algorithm pinpoints unusual readings efficiently, enabling prompt intervention before situations escalate.</li>
+        </ul>
         <div class="plan-highlight">
             <ul>
-                <li><strong>Analyze Traffic Data:</strong> Use Merge Sort to organize and prioritize congestion hotspots. Sorted data enables authorities to allocate resources effectively to the most critical areas.
-                </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/f2a69c81aec263e867ab13fd1803eb43"><strong>C++</strong></a></li> 
-                <li><strong>Locate Patterns:</strong> Use Binary Search to identify recurring congestion points. This allows traffic planners to implement targeted solutions to reduce bottlenecks.
-                 </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/2189d963466fbce7c560f13e63b3be42"><strong>C++</strong></a></li>     
+                <li><strong>Analyze IoT Data:</strong> Use Merge Sort to prioritize regions based on risk intensity. The algorithm sorts regions by their risk scores, allowing emergency teams to focus on the most vulnerable areas first.</li>
+                <li><strong>Locate Anomalies:</strong> Use Binary Search to quickly identify and address anomalies. After sorting sensor data, this algorithm pinpoints unusual readings efficiently, enabling prompt intervention before situations escalate.</li>
             </ul>
         </div>
     </div>
 
+    <div class="footer">&copy; 2024 Emergency Fire Detection Plans | Designed with care</div>
 </body>
+</html>
+
 
