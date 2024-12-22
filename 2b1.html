@@ -3,31 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Case: Emergency Fire Detection</title>
+    <title>Portfolio Case: Emergency Fire Detection and Management</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
             line-height: 1.6;
-            background-color: #f9f9f9;
+            margin: 20px;
         }
-        header {
-            background: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        section {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        h1, h2, h3 {
+            color: #333;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin-bottom: 20px;
         }
         table, th, td {
             border: 1px solid #ddd;
@@ -36,113 +25,76 @@
             padding: 10px;
             text-align: left;
         }
-        .graph-container {
-            display: flex;
-            justify-content: center;
+        .graph {
+            text-align: center;
             margin: 20px 0;
         }
-        .graph {
-            width: 80%;
-            height: 400px;
-            background: #eaeaea;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            color: #666;
+        .highlight {
+            color: #007BFF;
+            font-weight: bold;
+        }
+        svg {
+            border: 1px solid #ddd;
+            margin: 20px auto;
         }
     </style>
 </head>
 <body>
-
-<header>
     <h1>Portfolio Case: Emergency Fire Detection and Management</h1>
-</header>
 
-<section>
-    <h2>Overview</h2>
-    <p><strong>Sub-task:</strong> Fire Alert System</p>
-    <p><strong>SDG Goal:</strong> 11 - Sustainable Cities and Communities</p>
-    <p><strong>Target:</strong> 11.5 - Reduce the number of deaths and affected individuals by disasters.</p>
-    <p><strong>Indicator:</strong> 11.5.1 - Number of deaths, missing persons, and directly affected persons attributed to disasters.</p>
-</section>
+    <h2>Sub-task: Fire Alert System</h2>
+    <p><span class="highlight">SDG Goal:</span> 11 - Sustainable Cities and Communities</p>
+    <p><span class="highlight">Target:</span> 11.5 - Reduce the number of deaths and affected individuals by disasters.</p>
+    <p><span class="highlight">Indicator:</span> 11.5.1 - Number of deaths, missing persons, and directly affected persons attributed to disasters.</p>
 
-<section>
     <h2>Business Case</h2>
-    <p>The fire department of the city monitors emergency fire incidents using a combination of IoT devices, data structures, and algorithms to ensure quick detection and response. The system processes real-time data from sensors and determines the shortest path for fire engines to reach the incident site.</p>
-</section>
+    <p>
+        The fire department of the city monitors emergency fire incidents using a combination of IoT devices, data structures, and algorithms to ensure quick detection and response. 
+        The system processes real-time data from sensors and determines the shortest path for fire engines to reach the incident site.
+    </p>
 
-<section>
-    <h2>Data Representation</h2>
-    <ul>
-        <li><strong>Sensor Nodes:</strong> Represented as graph vertices.</li>
-        <li><strong>Connections Between Nodes:</strong> Represented as graph edges with weights corresponding to distance or time required.</li>
-        <li><strong>Fire Station Locations:</strong> Marked as priority vertices for routing.</li>
-    </ul>
-</section>
+    <h2>Graph Representation</h2>
+    <div class="graph">
+        <p><strong>Figure 1: Emergency Response Map</strong></p>
+        <svg width="600" height="400">
+            <!-- Nodes -->
+            <circle cx="100" cy="200" r="20" fill="blue" />
+            <circle cx="300" cy="100" r="20" fill="green" />
+            <circle cx="300" cy="300" r="20" fill="red" />
+            <circle cx="500" cy="200" r="20" fill="orange" />
 
-<section>
-    <h2>Real-World Data Used</h2>
-    <ul>
-        <li><strong>Sensor Data:</strong> Locations of IoT sensors in MB format.</li>
-        <li><strong>Population Density:</strong> Used to prioritize response based on risk level.</li>
-        <li><strong>Historical Fire Incident Data:</strong> Helps train prediction models.</li>
-    </ul>
-</section>
+            <!-- Labels -->
+            <text x="90" y="195" fill="white" font-size="14">S1</text>
+            <text x="290" y="95" fill="white" font-size="14">S2</text>
+            <text x="290" y="295" fill="white" font-size="14">F</text>
+            <text x="490" y="195" fill="white" font-size="14">S3</text>
 
-<section>
-    <h2>Algorithms and Techniques Used</h2>
-    <ul>
-        <li>Dijkstra's Algorithm: Determine the optimal path for fire engines.</li>
-        <li>Heap Data Structure: Efficient priority queue implementation in Dijkstra's algorithm.</li>
-        <li>A* Algorithm: Enhanced routing with heuristic information.</li>
-        <li>Kruskal’s Algorithm: Construct the optimal network of fire response units.</li>
-        <li>Binary Search Tree (BST): Efficient storage and retrieval of historical incident data.</li>
-    </ul>
-</section>
+            <!-- Edges -->
+            <line x1="100" y1="200" x2="300" y2="100" stroke="black" stroke-width="2" />
+            <line x1="100" y1="200" x2="300" y2="300" stroke="black" stroke-width="2" />
+            <line x1="300" y1="100" x2="500" y2="200" stroke="black" stroke-width="2" />
+            <line x1="300" y1="300" x2="500" y2="200" stroke="black" stroke-width="2" />
 
-<section>
+            <!-- Distances -->
+            <text x="180" y="140" fill="black" font-size="12">120</text>
+            <text x="180" y="270" fill="black" font-size="12">200</text>
+            <text x="400" y="140" fill="black" font-size="12">180</text>
+            <text x="400" y="270" fill="black" font-size="12">240</text>
+        </svg>
+    </div>
+
     <h2>Process Flow</h2>
     <ol>
-        <li><strong>Detection:</strong> Sensors detect abnormal temperature or smoke levels.</li>
-        <li><strong>Data Aggregation:</strong> Sensor data is aggregated and processed.</li>
-        <li><strong>Response Planning:</strong>
+        <li><span class="highlight">Detection:</span> Sensors detect abnormal temperature or smoke levels.</li>
+        <li><span class="highlight">Data Aggregation:</span> Sensor data is aggregated and processed.</li>
+        <li><span class="highlight">Response Planning:</span>
             <ul>
                 <li>Use Dijkstra's algorithm to find the quickest route from the nearest fire station to the fire location.</li>
                 <li>Calculate risk levels based on nearby population density using weighted factors.</li>
             </ul>
         </li>
-        <li><strong>Execution:</strong> Fire engines are dispatched, and routes are continuously updated based on real-time traffic data.</li>
+        <li><span class="highlight">Execution:</span> Fire engines are dispatched, and the routes are continuously updated based on real-time traffic data.</li>
     </ol>
-</section>
-
-<section>
-    <h2>Data Example for Graph</h2>
-    <p>The city is represented as a weighted graph where vertices are locations and edges denote paths between them. The weights correspond to travel time or distance.</p>
-    <div class="graph-container">
-        <div class="graph">Graph Visualization (Placeholder)</div>
-    </div>
-</section>
-
-<section>
-    <h2>Optimization</h2>
-    <ul>
-        <li><strong>Dynamic Traffic Updates:</strong> Use BFS/DFS to reroute fire engines dynamically.</li>
-        <li><strong>Data Compression:</strong> Compress historical data using Huffman coding for efficient storage.</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Figures and Graphs</h2>
-    <figure>
-        <img src="city_map_placeholder.png" alt="City Design Plan" style="width:100%; height:auto;">
-        <figcaption>Figure 1: City Design Plan</figcaption>
-    </figure>
-    <div class="graph-container">
-        <div class="graph">Graph Visualization (Dijkstra's Algorithm)</div>
-    </div>
-</section>
-
 </body>
 </html>
 
