@@ -3,68 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Road Condition Sensors Solutions</title>
+    <title>Road Condition Monitoring and Management System</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e0f7fa;
-            color: #333;
-            margin: 20px;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
+            margin: 0;
             padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f4f4f4;
         }
         h1, h2 {
-            color: #00796b;
+            color: #333;
         }
-        .highlight {
-            background-color: #ffffe0;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
-            color: #d32f2f;
+        h3 {
+            color: #555;
         }
-        .plan {
-            margin-top: 20px;
+        .container {
+            margin: 20px 0;
         }
-        p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 5px 0;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
+    <h1>Portfolio Case: Road Condition Monitoring and Management</h1>
     <div class="container">
-        <h1>Road Condition Sensors Solutions</h1>
-
-        <div class="plan">
-            <h2>1. Data Sorting and Prioritization with Sorting Algorithms</h2>
-            <p>Use <span class="highlight">Heap Sort</span> to rank roads based on the severity of damage. This algorithm efficiently prioritizes repairs by sorting road conditions from the most severe to the least, enabling maintenance crews to address critical issues first.
-            </br></br> <a href="https://gist.github.com/yashoda-ship-it/109aba51e4287c4c21c7f11c1c832e26"><strong>C++</strong></a></p>
-            <p>Additionally, <span class="highlight">Merge Sort</span> can be used to organize sensor data for trend analysis. This sorting algorithm is effective for dividing and conquering large datasets, allowing for a structured approach to identifying recurring road problems and predicting future damages.
-            </br></br> <a href="https://gist.github.com/yashoda-ship-it/6715ad44a619eae29c41df259a79819d"><strong>C++</strong></a></p>
+        <h2>Business Case</h2>
+        <div class="section">
+            <p>The city's road maintenance department employs IoT sensors and advanced algorithms to monitor and maintain road conditions. The system collects real-time data from road sensors, evaluates road quality, detects damages, and prioritizes repairs to ensure smooth traffic flow and reduce accidents.</p>
         </div>
-
-        <div class="plan">
-            <h2>2. Real-Time Monitoring with Dynamic Programming</h2>
-            <p>Employ the <span class="highlight">Knapsack Problem</span> to allocate limited resources such as funds or repair crews to the most critical areas. This approach ensures that resources are used efficiently, focusing on the roads that need immediate attention.
-            </br></br> <a href="https://gist.github.com/yashoda-ship-it/4fbf336403d081cbb3588ce462144bcb"><strong>C++</strong></a></p>
-            <p>Use the <span class="highlight">Longest Common Subsequence (LCS)</span> algorithm to compare road conditions over time. LCS helps in predicting which areas will degrade next based on past sensor data, facilitating proactive maintenance planning.
-            </br></br> <a href="https://gist.github.com/yashoda-ship-it/f59cb32ee6b7c6a85005d55da4cdba14"><strong>C++</strong></a></p>
+    </div>
+    
+    <div class="container">
+        <h2>Data Representation</h2>
+        <div class="section">
+            <h3>1. Sensor Nodes</h3>
+            <p>Represent road segments as graph vertices.</p>
+            <h3>2. Road Connections</h3>
+            <p>Represent connections between road segments with graph edges, weighted by factors like distance, quality, and traffic.</p>
+            <h3>3. Repair Priority Queue</h3>
+            <p>Use a priority queue to rank road segments based on their condition (e.g., potholes, cracks, wear).</p>
         </div>
+    </div>
+    
+    <div class="container">
+        <h2>Real-World Data Used</h2>
+        <div class="section">
+            <ul>
+                <li><strong>Sensor Data:</strong> Real-time road condition data in MBs, including vibration, cracks, and temperature.</li>
+                <li><strong>Traffic Flow:</strong> Data on traffic density and patterns to prioritize high-traffic roads.</li>
+                <li><strong>Weather Data:</strong> To analyze road wear caused by weather (rain, snow, etc.).</li>
+                <li><strong>Historical Maintenance Data:</strong> Helps predict areas prone to faster degradation.</li>
+            </ul>
+        </div>
+    </div>
 
-        <div class="plan">
-            <h2>3. Optimized Maintenance Routes Using Graph Algorithms</h2>
-            <p>The <span class="highlight">Floyd-Warshall Algorithm</span> can be used to precompute the shortest paths for maintenance crews. This algorithm is crucial for ensuring efficient access to damaged road sections, minimizing travel time, and maximizing resource utilization.
-            </br></br> <a href=""><strong>C++</strong></a></p>                
-            <p>Utilize <span class="highlight">DFS (Depth-First Search) or BFS (Breadth-First Search)</span> to map damaged road sections systematically. These graph traversal algorithms help in identifying and prioritizing inspection routes, ensuring thorough coverage and maintenance.
-            </br></br> <a href="https://gist.github.com/yashoda-ship-it/d7581d6d78e4c19a0059c6849176d268"><strong>C++</strong></a></p>                
+    <div class="container">
+        <h2>Algorithms and Techniques Used</h2>
+        <div class="section">
+            <ul>
+                <li><strong>Shortest Path Algorithm:</strong> Dijkstra’s or A* algorithm to reroute traffic during road repairs.</li>
+                <li><strong>Heap Data Structure:</strong> For efficient priority queue implementation for repair tasks.</li>
+                <li><strong>Kruskal’s Algorithm:</strong> To plan an optimal network for sensor deployment.</li>
+                <li><strong>Binary Search Tree (BST):</strong> To store historical road condition data for efficient retrieval.</li>
+                <li><strong>Dynamic Programming:</strong> For budgeting and scheduling multiple repair tasks efficiently.</li>
+                <li><strong>Machine Learning:</strong> Predict road damage trends using historical data and real-time input.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Process Flow</h2>
+        <div class="section">
+            <ul>
+                <li><strong>Monitoring:</strong> Sensors detect vibrations, temperature changes, and cracks.</li>
+                <li><strong>Data Aggregation:</strong> Sensor data is processed and stored.</li>
+                <li><strong>Damage Detection:</strong> Use K-Means Clustering to classify road segments based on condition. Segments are labeled as Good, Moderate, or Poor.</li>
+                <li><strong>Response Planning:</strong> High-priority roads are identified using weighted factors (traffic, damage severity, weather). Repairs are scheduled using dynamic programming.</li>
+                <li><strong>Execution:</strong> Traffic is rerouted, and repairs are performed.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Graph Representation</h2>
+        <div class="section">
+            <h3>Example: Road Network</h3>
+            <p>Nodes: Road segments</p>
+            <p>Edges: Weighted connections between road segments based on distance, condition, and traffic.</p>
+            <pre>
+Example:
+
+1. Road-1 -> Road-2 (Weight: 8)
+2. Road-2 -> Road-3 (Weight: 12)
+            </pre>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Optimization</h2>
+        <div class="section">
+            <ul>
+                <li><strong>Dynamic Routing:</strong> Use BFS or DFS to reroute vehicles dynamically.</li>
+                <li><strong>Efficient Repair Scheduling:</strong> Use Knapsack Algorithm to allocate resources effectively.</li>
+                <li><strong>Data Compression:</strong> Use Huffman Coding to compress historical maintenance data for efficient storage.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Visualization</h2>
+        <div class="section">
+            <ul>
+                <li><strong>Graph 1:</strong> Road network with weights based on road conditions and traffic.</li>
+                <li><strong>Graph 2:</strong> Priority queue visualization showing road segments ranked for repairs.</li>
+            </ul>
         </div>
     </div>
 </body>
