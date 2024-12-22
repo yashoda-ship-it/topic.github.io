@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Case: Emergency Fire Detection and Management</title>
+    <title>Emergency Fire Detection and Management</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,10 +37,16 @@
             border: 1px solid #ddd;
             margin: 20px auto;
         }
+        .code-section {
+            background: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid #007BFF;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
-    <h1>Portfolio Case: Emergency Fire Detection and Management</h1>
+    <h1>Emergency Fire Detection and Management</h1>
 
     <h2>Sub-task: Fire Alert System</h2>
     <p><span class="highlight">SDG Goal:</span> 11 - Sustainable Cities and Communities</p>
@@ -49,13 +55,21 @@
 
     <h2>Business Case</h2>
     <p>
-        The fire department of the city monitors emergency fire incidents using a combination of IoT devices, data structures, and algorithms to ensure quick detection and response. 
-        The system processes real-time data from sensors and determines the shortest path for fire engines to reach the incident site.
+        The fire department monitors emergency fire incidents using IoT devices, data structures, and algorithms to ensure quick detection and response. 
+        The system processes real-time data from sensors and determines the shortest path for fire engines to reach the incident site. 
+        Population density and historical incident data help in prioritizing high-risk zones.
     </p>
 
-    <h2>Graph Representation</h2>
+    <h2>Data Representation</h2>
+    <p>Data is represented using graphs where:</p>
+    <ul>
+        <li><strong>Sensor Nodes:</strong> Represented as vertices in the graph.</li>
+        <li><strong>Connections:</strong> Represented as edges with weights corresponding to distance or time required.</li>
+        <li><strong>Fire Station Locations:</strong> Marked as priority vertices for routing fire engines.</li>
+    </ul>
+
+    <h3>Graph Example</h3>
     <div class="graph">
-        <p><strong>Figure 1: Emergency Response Map</strong></p>
         <svg width="600" height="400">
             <!-- Nodes -->
             <circle cx="100" cy="200" r="20" fill="blue" />
@@ -83,18 +97,58 @@
         </svg>
     </div>
 
+    <h2>Algorithms Used</h2>
+    <p>Key algorithms for fire detection and management:</p>
+    <ul>
+        <li><span class="highlight">Dijkstra's Algorithm:</span> Used to find the shortest path between fire stations and the fire incident location.</li>
+        <li><span class="highlight">A* Algorithm:</span> Enhances Dijkstra by adding heuristics for faster routing.</li>
+        <li><span class="highlight">Kruskal's Algorithm:</span> Builds the optimal sensor network by minimizing the connection costs.</li>
+        <li><span class="highlight">Binary Search Tree (BST):</span> Efficiently stores and retrieves historical fire incident data.</li>
+        <li><span class="highlight">Huffman Coding:</span> Compresses historical data for efficient storage.</li>
+    </ul>
+
+    <h3>Dijkstra's Algorithm Code Example</h3>
+    <div class="code-section">
+        <pre>
+def dijkstra(graph, start):
+    import heapq
+    pq = []  # Priority queue
+    heapq.heappush(pq, (0, start))
+    distances = {node: float('inf') for node in graph}
+    distances[start] = 0
+
+    while pq:
+        current_distance, current_node = heapq.heappop(pq)
+
+        for neighbor, weight in graph[current_node]:
+            distance = current_distance + weight
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+                heapq.heappush(pq, (distance, neighbor))
+
+    return distances
+        </pre>
+    </div>
+
     <h2>Process Flow</h2>
     <ol>
-        <li><span class="highlight">Detection:</span> Sensors detect abnormal temperature or smoke levels.</li>
-        <li><span class="highlight">Data Aggregation:</span> Sensor data is aggregated and processed.</li>
-        <li><span class="highlight">Response Planning:</span>
+        <li><strong>Detection:</strong> Sensors detect abnormal temperature or smoke levels.</li>
+        <li><strong>Data Aggregation:</strong> Sensor data is aggregated and processed in real-time.</li>
+        <li><strong>Response Planning:</strong>
             <ul>
-                <li>Use Dijkstra's algorithm to find the quickest route from the nearest fire station to the fire location.</li>
-                <li>Calculate risk levels based on nearby population density using weighted factors.</li>
+                <li>Use Dijkstra's algorithm to find the quickest route to the fire site.</li>
+                <li>Calculate risk levels based on nearby population density.</li>
             </ul>
         </li>
-        <li><span class="highlight">Execution:</span> Fire engines are dispatched, and the routes are continuously updated based on real-time traffic data.</li>
+        <li><strong>Execution:</strong> Fire engines are dispatched, and routes are updated dynamically.</li>
     </ol>
+
+    <h2>Optimization Techniques</h2>
+    <ul>
+        <li><strong>Dynamic Routing:</strong> BFS/DFS algorithms dynamically adjust routes based on traffic data.</li>
+        <li><strong>Data Compression:</strong> Huffman coding reduces storage requirements for historical data.</li>
+        <li><strong>Heuristics:</strong> A* Algorithm improves response time by estimating target proximity.</li>
+    </ul>
 </body>
 </html>
 
