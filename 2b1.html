@@ -7,147 +7,169 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 20px;
         }
         h1, h2, h3 {
             color: #333;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
         th, td {
+            border: 1px solid #ddd;
             padding: 10px;
-            text-align: left;
-        }
-        .graph {
             text-align: center;
-            margin: 20px 0;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        svg {
+            margin: 20px auto;
+            display: block;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .chart-title {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
         }
         .highlight {
             color: #007BFF;
             font-weight: bold;
-        }
-        svg {
-            border: 1px solid #ddd;
-            margin: 20px auto;
-        }
-        .code-section {
-            background: #f4f4f4;
-            padding: 15px;
-            border-left: 4px solid #007BFF;
-            margin: 20px 0;
         }
     </style>
 </head>
 <body>
     <h1>Emergency Fire Detection and Management</h1>
 
-    <h2>Sub-task: Fire Alert System</h2>
-    <p><span class="highlight">SDG Goal:</span> 11 - Sustainable Cities and Communities</p>
-    <p><span class="highlight">Target:</span> 11.5 - Reduce the number of deaths and affected individuals by disasters.</p>
-    <p><span class="highlight">Indicator:</span> 11.5.1 - Number of deaths, missing persons, and directly affected persons attributed to disasters.</p>
+    <!-- Section 1: Overview -->
+    <h2>Overview</h2>
+    <p><strong>Objective:</strong> Create a robust system for detecting fires using IoT devices and optimizing emergency response times through data structures and algorithms.</p>
+    <p><strong>SDG Goal:</strong> Sustainable Cities and Communities (Goal 11).</p>
+    <p><strong>Target:</strong> Reduce disaster-related deaths and affected individuals.</p>
 
-    <h2>Business Case</h2>
-    <p>
-        The fire department monitors emergency fire incidents using IoT devices, data structures, and algorithms to ensure quick detection and response. 
-        The system processes real-time data from sensors and determines the shortest path for fire engines to reach the incident site. 
-        Population density and historical incident data help in prioritizing high-risk zones.
-    </p>
-
+    <!-- Section 2: Data Representation -->
     <h2>Data Representation</h2>
-    <p>Data is represented using graphs where:</p>
+    <p>The system is modeled as a graph, where:</p>
     <ul>
-        <li><strong>Sensor Nodes:</strong> Represented as vertices in the graph.</li>
-        <li><strong>Connections:</strong> Represented as edges with weights corresponding to distance or time required.</li>
-        <li><strong>Fire Station Locations:</strong> Marked as priority vertices for routing fire engines.</li>
+        <li><strong>Vertices:</strong> IoT sensor nodes or fire stations.</li>
+        <li><strong>Edges:</strong> Routes with weights indicating travel time or distance.</li>
+        <li><strong>Population Density:</strong> Added as a factor to prioritize response.</li>
     </ul>
 
-    <h3>Graph Example</h3>
-    <div class="graph">
-        <svg width="600" height="400">
-            <!-- Nodes -->
-            <circle cx="100" cy="200" r="20" fill="blue" />
-            <circle cx="300" cy="100" r="20" fill="green" />
-            <circle cx="300" cy="300" r="20" fill="red" />
-            <circle cx="500" cy="200" r="20" fill="orange" />
+    <!-- Graph Example -->
+    <div class="container">
+        <div class="box">
+            <svg width="400" height="300">
+                <!-- Nodes -->
+                <circle cx="50" cy="150" r="20" fill="blue"></circle>
+                <circle cx="200" cy="50" r="20" fill="green"></circle>
+                <circle cx="200" cy="250" r="20" fill="red"></circle>
+                <circle cx="350" cy="150" r="20" fill="orange"></circle>
 
-            <!-- Labels -->
-            <text x="90" y="195" fill="white" font-size="14">S1</text>
-            <text x="290" y="95" fill="white" font-size="14">S2</text>
-            <text x="290" y="295" fill="white" font-size="14">F</text>
-            <text x="490" y="195" fill="white" font-size="14">S3</text>
+                <!-- Edges -->
+                <line x1="50" y1="150" x2="200" y2="50" stroke="black" stroke-width="2"></line>
+                <line x1="50" y1="150" x2="200" y2="250" stroke="black" stroke-width="2"></line>
+                <line x1="200" y1="50" x2="350" y2="150" stroke="black" stroke-width="2"></line>
+                <line x1="200" y1="250" x2="350" y2="150" stroke="black" stroke-width="2"></line>
 
-            <!-- Edges -->
-            <line x1="100" y1="200" x2="300" y2="100" stroke="black" stroke-width="2" />
-            <line x1="100" y1="200" x2="300" y2="300" stroke="black" stroke-width="2" />
-            <line x1="300" y1="100" x2="500" y2="200" stroke="black" stroke-width="2" />
-            <line x1="300" y1="300" x2="500" y2="200" stroke="black" stroke-width="2" />
-
-            <!-- Distances -->
-            <text x="180" y="140" fill="black" font-size="12">120</text>
-            <text x="180" y="270" fill="black" font-size="12">200</text>
-            <text x="400" y="140" fill="black" font-size="12">180</text>
-            <text x="400" y="270" fill="black" font-size="12">240</text>
-        </svg>
+                <!-- Labels -->
+                <text x="40" y="145" fill="white" font-size="14">S1</text>
+                <text x="190" y="45" fill="white" font-size="14">S2</text>
+                <text x="190" y="245" fill="white" font-size="14">F</text>
+                <text x="340" y="145" fill="white" font-size="14">S3</text>
+            </svg>
+            <p class="chart-title">Graph Representation of Fire Detection System</p>
+        </div>
+        <div class="box">
+            <h3>Real-World Data Used</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sensor Data</td>
+                        <td>Temperature, smoke levels</td>
+                        <td>Fire detection</td>
+                    </tr>
+                    <tr>
+                        <td>Population Density</td>
+                        <td>People per km<sup>2</sup></td>
+                        <td>Risk prioritization</td>
+                    </tr>
+                    <tr>
+                        <td>Historical Data</td>
+                        <td>Past fire incidents</td>
+                        <td>Training prediction models</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <h2>Algorithms Used</h2>
-    <p>Key algorithms for fire detection and management:</p>
-    <ul>
-        <li><span class="highlight">Dijkstra's Algorithm:</span> Used to find the shortest path between fire stations and the fire incident location.</li>
-        <li><span class="highlight">A* Algorithm:</span> Enhances Dijkstra by adding heuristics for faster routing.</li>
-        <li><span class="highlight">Kruskal's Algorithm:</span> Builds the optimal sensor network by minimizing the connection costs.</li>
-        <li><span class="highlight">Binary Search Tree (BST):</span> Efficiently stores and retrieves historical fire incident data.</li>
-        <li><span class="highlight">Huffman Coding:</span> Compresses historical data for efficient storage.</li>
-    </ul>
-
-    <h3>Dijkstra's Algorithm Code Example</h3>
-    <div class="code-section">
-        <pre>
-def dijkstra(graph, start):
-    import heapq
-    pq = []  # Priority queue
-    heapq.heappush(pq, (0, start))
-    distances = {node: float('inf') for node in graph}
-    distances[start] = 0
-
-    while pq:
-        current_distance, current_node = heapq.heappop(pq)
-
-        for neighbor, weight in graph[current_node]:
-            distance = current_distance + weight
-            if distance < distances[neighbor]:
-                distances[neighbor] = distance
-                heapq.heappush(pq, (distance, neighbor))
-
-    return distances
-        </pre>
+    <!-- Section 3: Algorithms -->
+    <h2>Algorithms</h2>
+    <div class="container">
+        <div class="box">
+            <h3>Shortest Path: Dijkstra's Algorithm</h3>
+            <p>Finds the optimal route for fire engines from the nearest station to the fire location.</p>
+        </div>
+        <div class="box">
+            <h3>Network Optimization: Kruskal's Algorithm</h3>
+            <p>Constructs the minimal spanning tree to reduce overall sensor connection costs.</p>
+        </div>
+        <div class="box">
+            <h3>Dynamic Routing: A* Algorithm</h3>
+            <p>Incorporates heuristics for real-time pathfinding based on traffic data.</p>
+        </div>
+        <div class="box">
+            <h3>Data Compression: Huffman Coding</h3>
+            <p>Compresses historical fire data to reduce storage requirements.</p>
+        </div>
     </div>
 
+    <!-- Section 4: Process Flow -->
     <h2>Process Flow</h2>
+    <p>The emergency fire detection system follows these steps:</p>
     <ol>
-        <li><strong>Detection:</strong> Sensors detect abnormal temperature or smoke levels.</li>
-        <li><strong>Data Aggregation:</strong> Sensor data is aggregated and processed in real-time.</li>
-        <li><strong>Response Planning:</strong>
-            <ul>
-                <li>Use Dijkstra's algorithm to find the quickest route to the fire site.</li>
-                <li>Calculate risk levels based on nearby population density.</li>
-            </ul>
-        </li>
-        <li><strong>Execution:</strong> Fire engines are dispatched, and routes are updated dynamically.</li>
+        <li>IoT sensors detect abnormal conditions (temperature, smoke).</li>
+        <li>Data is aggregated and sent to the central system.</li>
+        <li>Algorithms calculate the quickest route for fire response.</li>
+        <li>Fire engines are dispatched with dynamic route updates.</li>
     </ol>
 
+    <!-- Section 5: Optimization -->
     <h2>Optimization Techniques</h2>
     <ul>
-        <li><strong>Dynamic Routing:</strong> BFS/DFS algorithms dynamically adjust routes based on traffic data.</li>
-        <li><strong>Data Compression:</strong> Huffman coding reduces storage requirements for historical data.</li>
-        <li><strong>Heuristics:</strong> A* Algorithm improves response time by estimating target proximity.</li>
+        <li><strong>Real-Time Updates:</strong> Routes are dynamically adjusted using BFS/DFS algorithms.</li>
+        <li><strong>Risk Prioritization:</strong> High-risk zones are prioritized based on population density.</li>
+        <li><strong>Storage Optimization:</strong> Huffman coding minimizes storage overhead.</li>
     </ul>
 </body>
 </html>
