@@ -3,108 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Fire Detection</title>
+    <title>Portfolio Case: Emergency Fire Detection</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
+            margin: 20px;
             line-height: 1.6;
-            margin: 0;
-            padding: 20px;
+            background-color: #f9f9f9;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #d9534f;
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
             text-align: center;
         }
-        h2 {
-            color: #0275d8;
-            margin-top: 20px;
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        ul {
-            background: #f1f1f1;
-            padding: 15px;
-            border-radius: 5px;
-            list-style-type: disc;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
-        ul li {
-            margin-bottom: 10px;
+        table, th, td {
+            border: 1px solid #ddd;
         }
-        .highlight {
-            background: #d9edf7;
+        th, td {
             padding: 10px;
-            border-left: 5px solid #31708f;
-            border-radius: 5px;
+            text-align: left;
         }
-        .plan-highlight {
-            background: #fce8e6;
-            padding: 10px;
-            border-left: 5px solid #d9534f;
-            border-radius: 5px;
-            margin-bottom: 15px;
+        .graph-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
         }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
+        .graph {
+            width: 80%;
+            height: 400px;
+            background: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
             color: #666;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Emergency Fire Detection</h1>
-        <p class="highlight">Fire detection systems are crucial for early intervention and minimizing damage. Using IoT-based temperature and smoke sensors, these systems can detect fires in their initial stages. Efficient response plans rely on optimizing fire truck routes and analyzing high-risk areas.</p>
 
-        <h2>Solutions/Plans:</h2>
+<header>
+    <h1>Portfolio Case: Emergency Fire Detection and Management</h1>
+</header>
 
-        <h3>Fire Response Optimization with Graph Algorithms</h3>
-        <ul>
-            <li><strong>Use Dijkstra’s Algorithm:</strong> Calculate the shortest paths for fire trucks to fire sites, minimizing response time. By creating a weighted graph of roads and assigning weights based on travel time, this algorithm can quickly identify optimal routes, ensuring fire trucks reach the site as soon as possible.</li>
-            <li><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with unpredictable road conditions, such as blocked roads. This algorithm accounts for negative weight edges, representing delays or detours, and recalculates paths dynamically to adapt to real-time conditions.</li>
-        </ul>
-        <div class="plan-highlight">
+<section>
+    <h2>Overview</h2>
+    <p><strong>Sub-task:</strong> Fire Alert System</p>
+    <p><strong>SDG Goal:</strong> 11 - Sustainable Cities and Communities</p>
+    <p><strong>Target:</strong> 11.5 - Reduce the number of deaths and affected individuals by disasters.</p>
+    <p><strong>Indicator:</strong> 11.5.1 - Number of deaths, missing persons, and directly affected persons attributed to disasters.</p>
+</section>
+
+<section>
+    <h2>Business Case</h2>
+    <p>The fire department of the city monitors emergency fire incidents using a combination of IoT devices, data structures, and algorithms to ensure quick detection and response. The system processes real-time data from sensors and determines the shortest path for fire engines to reach the incident site.</p>
+</section>
+
+<section>
+    <h2>Data Representation</h2>
+    <ul>
+        <li><strong>Sensor Nodes:</strong> Represented as graph vertices.</li>
+        <li><strong>Connections Between Nodes:</strong> Represented as graph edges with weights corresponding to distance or time required.</li>
+        <li><strong>Fire Station Locations:</strong> Marked as priority vertices for routing.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Real-World Data Used</h2>
+    <ul>
+        <li><strong>Sensor Data:</strong> Locations of IoT sensors in MB format.</li>
+        <li><strong>Population Density:</strong> Used to prioritize response based on risk level.</li>
+        <li><strong>Historical Fire Incident Data:</strong> Helps train prediction models.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Algorithms and Techniques Used</h2>
+    <ul>
+        <li>Dijkstra's Algorithm: Determine the optimal path for fire engines.</li>
+        <li>Heap Data Structure: Efficient priority queue implementation in Dijkstra's algorithm.</li>
+        <li>A* Algorithm: Enhanced routing with heuristic information.</li>
+        <li>Kruskal’s Algorithm: Construct the optimal network of fire response units.</li>
+        <li>Binary Search Tree (BST): Efficient storage and retrieval of historical incident data.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Process Flow</h2>
+    <ol>
+        <li><strong>Detection:</strong> Sensors detect abnormal temperature or smoke levels.</li>
+        <li><strong>Data Aggregation:</strong> Sensor data is aggregated and processed.</li>
+        <li><strong>Response Planning:</strong>
             <ul>
-                <li><strong>Use Dijkstra’s Algorithm:</strong> Calculate the shortest paths for fire trucks to fire sites, minimizing response time. By creating a weighted graph of roads and assigning weights based on travel time, this algorithm can quickly identify optimal routes, ensuring fire trucks reach the site as soon as possible.</li>
-                <li><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with unpredictable road conditions, such as blocked roads. This algorithm accounts for negative weight edges, representing delays or detours, and recalculates paths dynamically to adapt to real-time conditions.</li>
+                <li>Use Dijkstra's algorithm to find the quickest route from the nearest fire station to the fire location.</li>
+                <li>Calculate risk levels based on nearby population density using weighted factors.</li>
             </ul>
-        </div>
+        </li>
+        <li><strong>Execution:</strong> Fire engines are dispatched, and routes are continuously updated based on real-time traffic data.</li>
+    </ol>
+</section>
 
-        <h3>Risk Assessment Using Greedy Algorithms</h3>
-        <ul>
-            <li><strong>Deploy Sensors:</strong> Place sensors in fire-prone zones and use Greedy Algorithms to prioritize high-risk areas for inspection. The algorithm evaluates risk levels based on historical fire data and ensures resources are allocated efficiently to maximize coverage.</li>
-            <li><strong>Optimize Sensor Placement:</strong> Utilize Backtracking to ensure all critical areas are covered efficiently. This approach explores all possible configurations of sensor placement to achieve the best coverage with minimal overlap, ensuring no high-risk zones are left unmonitored.</li>
-        </ul>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Deploy Sensors:</strong> Place sensors in fire-prone zones and use Greedy Algorithms to prioritize high-risk areas for inspection. The algorithm evaluates risk levels based on historical fire data and ensures resources are allocated efficiently to maximize coverage.</li>
-                <li><strong>Optimize Sensor Placement:</strong> Utilize Backtracking to ensure all critical areas are covered efficiently. This approach explores all possible configurations of sensor placement to achieve the best coverage with minimal overlap, ensuring no high-risk zones are left unmonitored.</li>
-            </ul>
-        </div>
-
-        <h3>Predictive Monitoring with Divide and Conquer</h3>
-        <ul>
-            <li><strong>Analyze IoT Data:</strong> Use Merge Sort to prioritize regions based on risk intensity. The algorithm sorts regions by their risk scores, allowing emergency teams to focus on the most vulnerable areas first.</li>
-            <li><strong>Locate Anomalies:</strong> Use Binary Search to quickly identify and address anomalies. After sorting sensor data, this algorithm pinpoints unusual readings efficiently, enabling prompt intervention before situations escalate.</li>
-        </ul>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Analyze IoT Data:</strong> Use Merge Sort to prioritize regions based on risk intensity. The algorithm sorts regions by their risk scores, allowing emergency teams to focus on the most vulnerable areas first.</li>
-                <li><strong>Locate Anomalies:</strong> Use Binary Search to quickly identify and address anomalies. After sorting sensor data, this algorithm pinpoints unusual readings efficiently, enabling prompt intervention before situations escalate.</li>
-            </ul>
-        </div>
+<section>
+    <h2>Data Example for Graph</h2>
+    <p>The city is represented as a weighted graph where vertices are locations and edges denote paths between them. The weights correspond to travel time or distance.</p>
+    <div class="graph-container">
+        <div class="graph">Graph Visualization (Placeholder)</div>
     </div>
+</section>
 
-    <div class="footer">&copy; 2024 Emergency Fire Detection Plans | Designed with care</div>
+<section>
+    <h2>Optimization</h2>
+    <ul>
+        <li><strong>Dynamic Traffic Updates:</strong> Use BFS/DFS to reroute fire engines dynamically.</li>
+        <li><strong>Data Compression:</strong> Compress historical data using Huffman coding for efficient storage.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Figures and Graphs</h2>
+    <figure>
+        <img src="city_map_placeholder.png" alt="City Design Plan" style="width:100%; height:auto;">
+        <figcaption>Figure 1: City Design Plan</figcaption>
+    </figure>
+    <div class="graph-container">
+        <div class="graph">Graph Visualization (Dijkstra's Algorithm)</div>
+    </div>
+</section>
+
 </body>
 </html>
+
 
 
