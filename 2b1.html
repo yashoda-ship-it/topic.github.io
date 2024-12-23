@@ -3,107 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Fire Detection</title>
+    <title>Refined Business Cases</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        .header-box {
+            background-color: #D63176; /* Dark pink background for the header box */
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .content-section {
+            margin: 20px 0;
+        }
+        .business-case {
             background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .footer-bg {
+            background-color: #D4F1A2; /* Light green background for the footer */
             padding: 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #d9534f;
-            text-align: center;
-        }
-        h2 {
-            color: #0275d8;
-            margin-top: 20px;
-        }
-        ul {
-            background: #f1f1f1;
-            padding: 15px;
-            border-radius: 5px;
-            list-style-type: disc;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        .highlight {
-            background: #d9edf7;
+        h1, h3 {
+            background-color: #f06292; /* Light pink background for h1 and h3 */
+            color: white;
             padding: 10px;
-            border-left: 5px solid #31708f;
             border-radius: 5px;
-        }
-        .plan-highlight {
-            background: #fce8e6;
-            padding: 10px;
-            border-left: 5px solid #d9534f;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Emergency Fire Detection</h1>
-        <p class="highlight">Fire detection systems are crucial for early intervention and minimizing damage. Using IoT-based temperature and smoke sensors, these systems can detect fires in their initial stages. Efficient response plans rely on optimizing fire truck routes and analyzing high-risk areas.</p>
 
-        <h2>Solutions/Plans:</h2>
+  <!-- Header Box -->
+  <div class="header-box">
+    <h1>Welcome to our city</h1>
+    <h3>Business Cases</h3>
+  </div>
 
-        <h3>Fire Response Optimization with Graph Algorithms</h3>
+  <div class="container">
+    <!-- Business Case Section 1 -->
+    <div class="content-section">
+      <a href="sdg3.html"><h4>1. Shubha C.S.</h4></a>
+      <div class="business-case">
         <ul>
-            <li><strong>Use Dijkstra’s Algorithm:</strong> Calculate the shortest paths for fire trucks to fire sites, minimizing response time. By creating a weighted graph of roads and assigning weights based on travel time, this algorithm can quickly identify optimal routes, ensuring fire trucks reach the site as soon as possible.</li>
-            <li><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with unpredictable road conditions, such as blocked roads. This algorithm accounts for negative weight edges, representing delays or detours, and recalculates paths dynamically to adapt to real-time conditions.</li>
+          <li><strong><div class="traffic-link"><a href="1b1.html">Traffic Management:</a></div> Utilizing real-time data for optimizing traffic flow and reducing congestion.</li>
+          <li><strong><div class="traffic-link"><a href="1b2.html">Smart Street Lighting:</a></div> Energy-efficient lighting systems controlled by IoT sensors.</li>
+          <li><strong><div class="traffic-link"><a href="1b3.html">Water and Waste Management:</a></div> Smart sensors to monitor water usage and waste collection efficiency.</li>
+          <li><strong><div class="traffic-link"><a href="1b4.html">Public Safety:</a></div> Integration of surveillance systems and alert systems for better public safety.</li>
+            <li><strong><div class="traffic-link"><a href="1b5.html">Energy Management:</a></div> .</li>
         </ul>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Use Dijkstra’s Algorithm:</strong> Calculate the shortest paths for fire trucks to fire sites, minimizing response time. By creating a weighted graph of roads and assigning weights based on travel time, this algorithm can quickly identify optimal routes, ensuring fire trucks reach the site as soon as possible.</li>
-                <li><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with unpredictable road conditions, such as blocked roads. This algorithm accounts for negative weight edges, representing delays or detours, and recalculates paths dynamically to adapt to real-time conditions.</li>
-            </ul>
-        </div>
-
-        <h3>Risk Assessment Using Greedy Algorithms</h3>
-        <ul>
-            <li><strong>Deploy Sensors:</strong> Place sensors in fire-prone zones and use Greedy Algorithms to prioritize high-risk areas for inspection. The algorithm evaluates risk levels based on historical fire data and ensures resources are allocated efficiently to maximize coverage.</li>
-            <li><strong>Optimize Sensor Placement:</strong> Utilize Backtracking to ensure all critical areas are covered efficiently. This approach explores all possible configurations of sensor placement to achieve the best coverage with minimal overlap, ensuring no high-risk zones are left unmonitored.</li>
-        </ul>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Deploy Sensors:</strong> Place sensors in fire-prone zones and use Greedy Algorithms to prioritize high-risk areas for inspection. The algorithm evaluates risk levels based on historical fire data and ensures resources are allocated efficiently to maximize coverage.</li>
-                <li><strong>Optimize Sensor Placement:</strong> Utilize Backtracking to ensure all critical areas are covered efficiently. This approach explores all possible configurations of sensor placement to achieve the best coverage with minimal overlap, ensuring no high-risk zones are left unmonitored.</li>
-            </ul>
-        </div>
-
-        <h3>Predictive Monitoring with Divide and Conquer</h3>
-        <ul>
-            <li><strong>Analyze IoT Data:</strong> Use Merge Sort to prioritize regions based on risk intensity. The algorithm sorts regions by their risk scores, allowing emergency teams to focus on the most vulnerable areas first.</li>
-            <li><strong>Locate Anomalies:</strong> Use Binary Search to quickly identify and address anomalies. After sorting sensor data, this algorithm pinpoints unusual readings efficiently, enabling prompt intervention before situations escalate.</li>
-        </ul>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Analyze IoT Data:</strong> Use Merge Sort to prioritize regions based on risk intensity. The algorithm sorts regions by their risk scores, allowing emergency teams to focus on the most vulnerable areas first.</li>
-                <li><strong>Locate Anomalies:</strong> Use Binary Search to quickly identify and address anomalies. After sorting sensor data, this algorithm pinpoints unusual readings efficiently, enabling prompt intervention before situations escalate.</li>
-            </ul>
-        </div>
+      </div>
     </div>
 
-    <div class="footer">&copy; 2024 Emergency Fire Detection Plans | Designed with care</div>
+    <!-- Business Case Section 2 -->
+    <div class="content-section">
+      <a href="sdg1.html"><h4>2. Yashoda Talawar</h4></a>
+      <div class="business-case">
+        <ul>
+          <li><strong><div class="traffic-link"><a href="2b1.html">Emergency Fire Detection:</a></div> Fire detection systems are crucial for early intervention and minimizing damage. Using IoT-based temperature and smoke sensors, these systems can detect fires in their initial stages. Efficient response plans rely on optimizing fire truck routes and analyzing high-risk areas</li>
+          <li><strong><div class="traffic-link"><a href="2b2.html">Road Condition Sensors:</a></div> Real-time monitoring of road conditions to enhance safety.</li>
+          <li><strong><div class="traffic-link"><a href="2b3.html">Self-Driving Cars:</a></div> Autonomous vehicle systems for smart transportation.</li>
+          <li><strong><div class="traffic-link"><a href="2b4.html">Solar Panels:</a></div> Integration of solar energy systems to reduce reliance on non-renewable energy sources.</li>
+          <li><strong><div class="traffic-link"><a href="2b5.html">Drones:</a></div> Drone-based surveillance and delivery systems for improved urban operations.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Business Case Section 3 -->
+    <div class="content-section">
+      <a href="sdg2.html"><h4>3. Preeti Kotabagi</h4></a>
+      <div class="business-case">
+        <ul>
+          <li><strong><div class="traffic-link"><a href="3b1.html">Body Cameras:</a></div> Deployment of body cameras for public safety and surveillance.</li>
+          <li><strong><div class="traffic-link"><a href="3b2.html">Wearable Detection:</a></div> Wearable devices for real-time health monitoring.</li>
+          <li><strong><div class="traffic-link"><a href="3b3.html">Fleet Management:</a></div> Efficient management of logistics and freight systems.</li>
+          <li><strong><div class="traffic-link"><a href="3b4.html">Smart Logistics/Freight:</a></div> Optimizing supply chain operations using smart logistics systems.</li>
+          <li><strong><div class="traffic-link"><a href="3b5.html">Surveillance Cameras:</a></div> Enhanced surveillance systems for security in public spaces.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (for collapsible components if any) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
