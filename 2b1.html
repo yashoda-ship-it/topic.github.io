@@ -3,107 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Fire Detection</title>
+    <title>Emergency Fire Detection Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
         .container {
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
+            width: 90%;
+            margin: 20px auto;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
         }
         h1 {
-            color: #d9534f;
-            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
         }
         h2 {
-            color: #0275d8;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            color: #0073e6;
+        }
+        h3 {
+            font-size: 1.4rem;
             margin-top: 20px;
+            color: #005bb5;
         }
-        ul {
-            background: #f1f1f1;
-            padding: 15px;
-            border-radius: 5px;
-            list-style-type: disc;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
-        ul li {
-            margin-bottom: 10px;
+        table, th, td {
+            border: 1px solid #ddd;
         }
-        .highlight {
-            background: #d9edf7;
+        th, td {
             padding: 10px;
-            border-left: 5px solid #31708f;
-            border-radius: 5px;
-        }
-        .plan-highlight {
-            background: #fce8e6;
-            padding: 10px;
-            border-left: 5px solid #d9534f;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        .footer {
             text-align: center;
+        }
+        th {
+            background-color: #f4f4f9;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .reflection {
+            font-style: italic;
             margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Emergency Fire Detection</h1>
-        <p class="highlight">Fire detection systems are crucial for early intervention and minimizing damage. Using IoT-based temperature and smoke sensors, these systems can detect fires in their initial stages. Efficient response plans rely on optimizing fire truck routes and analyzing high-risk areas.</p>
+        <h1>Emergency Fire Detection Portfolio</h1>
+        <p><strong>Sub-task:</strong> Fire Detection and Response Optimization</p>
+        <p><strong>SDG Goal:</strong> 11 | <strong>Target:</strong> 11.5 | <strong>Indicator:</strong> 11.5.2</p>
 
-        <h2>Solutions/Plans:</h2>
+        <h2>Introduction</h2>
+        <p>
+            The fire detection project aims to minimize damage by using IoT-based temperature and smoke sensors for early-stage fire identification. The focus is on efficient response plans to optimize fire truck routes and prioritize high-risk areas.
+        </p>
 
-        <h3>Fire Response Optimization with Graph Algorithms</h3>
+        <h2>Business Case 1: Fire Response Optimization</h2>
+        <h3>Objective</h3>
+        <p>Calculate the shortest paths for fire trucks to fire sites, minimizing response time.</p>
+
+        <h3>Approach</h3>
         <ul>
-            <li><strong>Use Dijkstra’s Algorithm:</strong> Calculate the shortest paths for fire trucks to fire sites, minimizing response time. By creating a weighted graph of roads and assigning weights based on travel time, this algorithm can quickly identify optimal routes, ensuring fire trucks reach the site as soon as possible.</li>
-            <li><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with unpredictable road conditions, such as blocked roads. This algorithm accounts for negative weight edges, representing delays or detours, and recalculates paths dynamically to adapt to real-time conditions.</li>
+            <li>Use Dijkstra’s Algorithm to create a weighted graph of roads and assign weights based on travel time.</li>
+            <li>Implement the Bellman-Ford Algorithm to handle unpredictable road conditions such as detours or roadblocks.</li>
         </ul>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Use Dijkstra’s Algorithm:</strong> Calculate the shortest paths for fire trucks to fire sites, minimizing response time. By creating a weighted graph of roads and assigning weights based on travel time, this algorithm can quickly identify optimal routes, ensuring fire trucks reach the site as soon as possible.</li>
-                <li><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with unpredictable road conditions, such as blocked roads. This algorithm accounts for negative weight edges, representing delays or detours, and recalculates paths dynamically to adapt to real-time conditions.</li>
-            </ul>
-        </div>
 
-        <h3>Risk Assessment Using Greedy Algorithms</h3>
-        <ul>
-            <li><strong>Deploy Sensors:</strong> Place sensors in fire-prone zones and use Greedy Algorithms to prioritize high-risk areas for inspection. The algorithm evaluates risk levels based on historical fire data and ensures resources are allocated efficiently to maximize coverage.</li>
-            <li><strong>Optimize Sensor Placement:</strong> Utilize Backtracking to ensure all critical areas are covered efficiently. This approach explores all possible configurations of sensor placement to achieve the best coverage with minimal overlap, ensuring no high-risk zones are left unmonitored.</li>
-        </ul>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Deploy Sensors:</strong> Place sensors in fire-prone zones and use Greedy Algorithms to prioritize high-risk areas for inspection. The algorithm evaluates risk levels based on historical fire data and ensures resources are allocated efficiently to maximize coverage.</li>
-                <li><strong>Optimize Sensor Placement:</strong> Utilize Backtracking to ensure all critical areas are covered efficiently. This approach explores all possible configurations of sensor placement to achieve the best coverage with minimal overlap, ensuring no high-risk zones are left unmonitored.</li>
-            </ul>
-        </div>
+        <h3>Graph Representation</h3>
+        <table>
+            <tr>
+                <th>Location</th>
+                <th>Fire Station 1</th>
+                <th>Zone A</th>
+                <th>Zone B</th>
+                <th>Zone C</th>
+            </tr>
+            <tr>
+                <td>Fire Station 1</td>
+                <td>0</td>
+                <td>120</td>
+                <td>200</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>Zone A</td>
+                <td>120</td>
+                <td>0</td>
+                <td>150</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Zone B</td>
+                <td>200</td>
+                <td>150</td>
+                <td>0</td>
+                <td>240</td>
+            </tr>
+            <tr>
+                <td>Zone C</td>
+                <td>180</td>
+                <td>100</td>
+                <td>240</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <p><strong>Figure 1:</strong> Weighted graph for fire response optimization</p>
+        <img src="fire_response_graph.png" alt="Weighted Graph">
 
-        <h3>Predictive Monitoring with Divide and Conquer</h3>
+        <h2>Business Case 2: Risk Assessment</h2>
+        <h3>Objective</h3>
+        <p>Deploy sensors in high-risk zones and allocate resources efficiently.</p>
+
+        <h3>Approach</h3>
         <ul>
-            <li><strong>Analyze IoT Data:</strong> Use Merge Sort to prioritize regions based on risk intensity. The algorithm sorts regions by their risk scores, allowing emergency teams to focus on the most vulnerable areas first.</li>
-            <li><strong>Locate Anomalies:</strong> Use Binary Search to quickly identify and address anomalies. After sorting sensor data, this algorithm pinpoints unusual readings efficiently, enabling prompt intervention before situations escalate.</li>
+            <li>Deploy IoT Sensors in fire-prone areas identified through historical fire data.</li>
+            <li>Use the Greedy Algorithm to prioritize high-risk areas for efficient resource allocation.</li>
+            <li>Optimize sensor placement using Backtracking to maximize coverage while minimizing overlap.</li>
         </ul>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Analyze IoT Data:</strong> Use Merge Sort to prioritize regions based on risk intensity. The algorithm sorts regions by their risk scores, allowing emergency teams to focus on the most vulnerable areas first.</li>
-                <li><strong>Locate Anomalies:</strong> Use Binary Search to quickly identify and address anomalies. After sorting sensor data, this algorithm pinpoints unusual readings efficiently, enabling prompt intervention before situations escalate.</li>
-            </ul>
-        </div>
+
+        <h3>Sensor Deployment Summary</h3>
+        <table>
+            <tr>
+                <th>Area</th>
+                <th>Risk Level</th>
+                <th>Sensors Deployed</th>
+            </tr>
+            <tr>
+                <td>Industrial Zone</td>
+                <td>High</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Residential Zone</td>
+                <td>Medium</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Forest Area</td>
+                <td>High</td>
+                <td>15</td>
+            </tr>
+        </table>
+        <p><strong>Figure 2:</strong> Coverage map for sensor deployment</p>
+        <img src="sensor_coverage_map.png" alt="Sensor Coverage Map">
+
+        <h2>Business Case 3: Predictive Monitoring</h2>
+        <h3>Objective</h3>
+        <p>Use historical and real-time IoT data to prioritize regions based on risk intensity.</p>
+
+        <h3>Approach</h3>
+        <ul>
+            <li>Merge Sort: Sort regions by risk scores based on IoT data to ensure emergency teams focus on the most vulnerable areas.</li>
+            <li>Binary Search: Identify anomalies in sensor readings to trigger early interventions.</li>
+        </ul>
+
+        <h3>Risk Scores</h3>
+        <table>
+            <tr>
+                <th>Region</th>
+                <th>Risk Score</th>
+            </tr>
+            <tr>
+                <td>Industrial Zone</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Forest Area</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>Residential Zone</td>
+                <td>60</td>
+            </tr>
+        </table>
+
+        <h3>Results</h3>
+        <p>
+            Efficient resource allocation was achieved through Merge Sort prioritization. Binary Search helped in promptly addressing anomalies.
+        </p>
+
+        <h2>Reflection</h2>
+        <p class="reflection">
+            This project emphasized the practical application of algorithms such as Dijkstra’s and Merge Sort in solving real-life challenges. The integration of IoT sensors and data algorithms demonstrates a scalable approach to disaster management. Further improvements could include real-time machine learning models for predictive analysis.
+        </p>
     </div>
-
-    <div class="footer">&copy; 2024 Emergency Fire Detection Plans | Designed with care</div>
 </body>
 </html>
 
