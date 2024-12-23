@@ -1,42 +1,43 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refined Business Cases</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         /* Global Styles */
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f7f7f7;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f2f2f2;
             color: #333;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
         /* Header Box */
         .header-box {
-            background-color: #ff6f61;  /* Soft coral color */
+            background-color: #4A90E2;  /* Soft blue */
             color: white;
-            padding: 50px 20px;
+            padding: 40px 0;
             text-align: center;
             border-radius: 10px;
-            box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
         }
 
         h1 {
-            font-size: 3.5em;
+            font-size: 3em;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         h3 {
             font-size: 1.8em;
             font-weight: 600;
-            letter-spacing: 1px;
         }
 
         /* Content Section */
@@ -45,22 +46,16 @@
             padding: 30px 50px;
             background-color: #ffffff;
             border-radius: 15px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             margin-bottom: 50px;
         }
 
         .business-case {
-            background-color: #ffffff;
-            padding: 30px;
+            background-color: #fff;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .business-case:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
         .business-case ul {
@@ -77,59 +72,59 @@
 
         /* Link Styling */
         .traffic-link {
-            color: #2c3e50; /* Darker blue-gray for a more neutral look */
-            font-weight: 600;
+            color: #2c3e50; /* Dark blue-gray */
+            font-weight: 500;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .traffic-link:hover {
-            color: #ff6f61;  /* Match with header color */
-            text-decoration: underline;
+            color: #4A90E2; /* Matching the header blue */
+            text-decoration: none;
         }
 
-        /* SDG Mapping Link */
+        /* SDG Mapping Button */
         .sdg-link {
-            font-size: 1.2em;
-            margin-top: 15px;
+            font-size: 1.1em;
             display: inline-block;
-            background: #f5b7b1; /* Soft pastel pink */
+            background: #e1e1e1; /* Light gray */
             color: #333;
-            padding: 10px 20px;
-            border-radius: 30px;
-            transition: background 0.3s ease, transform 0.3s ease;
+            padding: 10px 18px;
+            border-radius: 25px;
+            border: 2px solid #ccc;
+            transition: background-color 0.3s ease, transform 0.3s ease;
             text-decoration: none;
-            border: 2px solid #f5b7b1;
+            margin-top: 20px;
         }
 
         .sdg-link:hover {
-            background: #f2a7a0; /* Darker pastel pink */
+            background: #d0d0d0; /* Slightly darker gray */
             transform: scale(1.05);
         }
 
         /* Footer Styles */
         .footer-bg {
-            background-color: #dfe6e9;  /* Soft light gray */
+            background-color: #dbe1e6;  /* Soft grayish blue */
             padding: 30px;
             text-align: center;
             color: #2d3436;
-            margin-top: 40px;
-            border-radius: 15px;
+            margin-top: 50px;
+            border-radius: 10px;
         }
 
         .footer-bg p {
             margin: 0;
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-box h1 {
-                font-size: 2.8em;
+                font-size: 2.5em;
             }
 
             .header-box h3 {
-                font-size: 1.5em;
+                font-size: 1.4em;
             }
 
             .content-section {
@@ -137,7 +132,7 @@
             }
 
             .business-case {
-                padding: 20px;
+                padding: 15px;
             }
 
             .sdg-link {
@@ -168,7 +163,7 @@
         <h4>Business Cases</h4>
         <div class="business-case">
             <ul>
-                <li><strong><div class="traffic-link"><a href="1b1.html">Traffic Management:</a></div> Optimizing traffic flow using real-time data for congestion reduction.</li>
+                <li><strong><div class="traffic-link"><a href="1b1.html">Traffic Management:</a></div> Utilizing real-time data for optimizing traffic flow and reducing congestion.</li>
                 <li><strong><div class="traffic-link"><a href="1b2.html">Smart Street Lighting:</a></div> Energy-efficient lighting systems controlled by IoT sensors.</li>
                 <li><strong><div class="traffic-link"><a href="1b5.html">Energy Management:</a></div> IoT-based systems for energy conservation and management.</li>
             </ul>
@@ -204,4 +199,23 @@
         <h4>Business Cases</h4>
         <div class="business-case">
             <ul>
-                <li><strong><div class="traffic-link"><a href="3b1.html">Body Cameras:</a></div> Implement
+                <li><strong><div class="traffic-link"><a href="3b1.html">Body Cameras:</a></div> Implementing body cameras to enhance public safety and law enforcement.</li>
+                <li><strong><div class="traffic-link"><a href="3b2.html">Wearable Detection:</a></div> Real-time health monitoring systems using wearable technology.</li>
+                <li><strong><div class="traffic-link"><a href="3b3.html">Fleet Management:</a></div> Managing logistics with optimized fleet management solutions.</li>
+                <li><strong><div class="traffic-link"><a href="3b4.html">Smart Logistics/Freight:</a></div> Using technology to enhance supply chain and logistics efficiency.</li>
+                <li><strong><div class="traffic-link"><a href="3b5.html">Surveillance Cameras:</a></div> Enhancing public security with real-time surveillance systems.</li>
+            </ul>
+        </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-bg">
+    <p>&copy; 2024 Our City Business Cases. All rights reserved.</p>
+  </div>
+
+  <!-- Bootstrap JS (for collapsible components if any) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
