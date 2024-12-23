@@ -6,30 +6,114 @@
     <title>Refined Business Cases</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
         .header-box {
             background-color: #D63176; /* Dark pink background for the header box */
             color: white;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 40px 20px;
+            border-radius: 10px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        .header-box h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .header-box h3 {
+            font-size: 1.5em;
+            font-weight: lighter;
+        }
+
         .content-section {
-            margin: 20px 0;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
+
         .business-case {
             background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
+
+        h3 {
+            background-color: #f06292; /* Light pink background for h3 */
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 1.25em;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .traffic-link {
+            font-weight: bold;
+            color: #D63176;
+            text-decoration: none;
+        }
+
+        .traffic-link:hover {
+            text-decoration: underline;
+            color: #f06292;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         .footer-bg {
             background-color: #D4F1A2; /* Light green background for the footer */
             padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1em;
         }
-        h1, h3 {
-            background-color: #f06292; /* Light pink background for h1 and h3 */
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
+
+        .footer-bg p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header-box h1 {
+                font-size: 2.5em;
+            }
+
+            .header-box h3 {
+                font-size: 1.3em;
+            }
+
+            .content-section {
+                margin: 20px 10px;
+            }
+
+            .business-case {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -37,63 +121,66 @@
 
   <!-- Header Box -->
   <div class="header-box">
-    <h1>Welcome to our city</h1>
+    <h1>Welcome to Our City</h1>
     <h3>Business Cases</h3>
   </div>
 
   <div class="container">
     <!-- Business Case Section 1 -->
     <div class="content-section">
-        <h3>1. Shubha C.S.</h3> 
-            <h4> Roll.No-</h4>
-            <h4>USN-</h4>
+        <h3>1. Shubha C.S.</h3>
+        <h4> Roll.No-</h4>
+        <h4>USN-</h4>
         
-      <a href="sdg3.html"><h4>click here to view SDG mapping</h4></a>
-        <h4>Business cases</h4>
-      <div class="business-case">
-        <ul>
-          <li><strong><div class="traffic-link"><a href="1b1.html">Traffic Management:</a></div> Utilizing real-time data for optimizing traffic flow and reducing congestion.</li>
-          <li><strong><div class="traffic-link"><a href="1b2.html">Smart Street Lighting:</a></div> Energy-efficient lighting systems controlled by IoT sensors.</li>
-          
-            <li><strong><div class="traffic-link"><a href="1b5.html">Energy Management:</a></div> .</li>
-        </ul>
-      </div>
+        <a href="sdg3.html"><h4>Click here to view SDG mapping</h4></a>
+        <h4>Business Cases</h4>
+        <div class="business-case">
+            <ul>
+                <li><strong><div class="traffic-link"><a href="1b1.html">Traffic Management:</a></div> Utilizing real-time data for optimizing traffic flow and reducing congestion.</li>
+                <li><strong><div class="traffic-link"><a href="1b2.html">Smart Street Lighting:</a></div> Energy-efficient lighting systems controlled by IoT sensors.</li>
+                <li><strong><div class="traffic-link"><a href="1b5.html">Energy Management:</a></div> Smart solutions for energy conservation.</li>
+            </ul>
+        </div>
     </div>
 
     <!-- Business Case Section 2 -->
     <div class="content-section">
         <h3>2. Yashoda Talawar</h3>
         <h4> Roll.No-357</h4>
-            <h4>USN-01FE23BCS141</h4>
-      <a href="sdg1.html"><h4>Click here to view SDG Mapping </h4></a>
-        <h4>Business cases</h4>
-      <div class="business-case">
-        <ul>
-          <li><strong><div class="traffic-link"><a href="2b1.html">Emergency Fire Detection:</a></div> Fire detection systems are crucial for early intervention and minimizing damage. Using IoT-based temperature and smoke sensors, these systems can detect fires in their initial stages. Efficient response plans rely on optimizing fire truck routes and analyzing high-risk areas</li>
-          <li><strong><div class="traffic-link"><a href="2b2.html">Road Condition Sensors:</a></div> Real-time monitoring of road conditions to enhance safety.</li>
-          <li><strong><div class="traffic-link"><a href="2b3.html">Self-Driving Cars:</a></div> Autonomous vehicle systems for smart transportation.</li>
-          
-        </ul>
-      </div>
+        <h4>USN-01FE23BCS141</h4>
+        <a href="sdg1.html"><h4>Click here to view SDG Mapping</h4></a>
+        <h4>Business Cases</h4>
+        <div class="business-case">
+            <ul>
+                <li><strong><div class="traffic-link"><a href="2b1.html">Emergency Fire Detection:</a></div> Fire detection systems using IoT-based sensors for early intervention.</li>
+                <li><strong><div class="traffic-link"><a href="2b2.html">Road Condition Sensors:</a></div> Real-time monitoring of road conditions to enhance safety.</li>
+                <li><strong><div class="traffic-link"><a href="2b3.html">Self-Driving Cars:</a></div> Autonomous vehicles for smarter transportation solutions.</li>
+            </ul>
+        </div>
     </div>
 
     <!-- Business Case Section 3 -->
     <div class="content-section">
         <h3>3. Preeti Kotabagi</h3>
         <h4> Roll.No-333</h4>
-            <h4>USN-01FE23BCS170</h4>
-      <a href="sdg2.html"><h4>Click here to view SDG Mapping</h4></a>
-        <h4>Business cases</h4>
-      <div class="business-case">
-        <ul>
-          <li><strong><div class="traffic-link"><a href="3b1.html">Body Cameras:</a></div> Deployment of body cameras for public safety and surveillance.</li>
-          <li><strong><div class="traffic-link"><a href="3b2.html">Wearable Detection:</a></div> Wearable devices for real-time health monitoring.</li>
-          <li><strong><div class="traffic-link"><a href="3b3.html">Fleet Management:</a></div> Efficient management of logistics and freight systems.</li>
-          <li><strong><div class="traffic-link"><a href="3b4.html">Smart Logistics/Freight:</a></div> Optimizing supply chain operations using smart logistics systems.</li>
-          <li><strong><div class="traffic-link"><a href="3b5.html">Surveillance Cameras:</a></div> Enhanced surveillance systems for security in public spaces.</li>
-        </ul>
-      </div>
+        <h4>USN-01FE23BCS170</h4>
+        <a href="sdg2.html"><h4>Click here to view SDG Mapping</h4></a>
+        <h4>Business Cases</h4>
+        <div class="business-case">
+            <ul>
+                <li><strong><div class="traffic-link"><a href="3b1.html">Body Cameras:</a></div> Deployment of body cameras for public safety and surveillance.</li>
+                <li><strong><div class="traffic-link"><a href="3b2.html">Wearable Detection:</a></div> Real-time health monitoring using wearable devices.</li>
+                <li><strong><div class="traffic-link"><a href="3b3.html">Fleet Management:</a></div> Optimizing logistics with smart fleet management.</li>
+                <li><strong><div class="traffic-link"><a href="3b4.html">Smart Logistics/Freight:</a></div> Optimizing supply chain operations using smart logistics.</li>
+                <li><strong><div class="traffic-link"><a href="3b5.html">Surveillance Cameras:</a></div> Enhanced public security using advanced surveillance systems.</li>
+            </ul>
+        </div>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-bg">
+    <p>&copy; 2024 Our City Business Cases. All rights reserved.</p>
   </div>
 
   <!-- Bootstrap JS (for collapsible components if any) -->
