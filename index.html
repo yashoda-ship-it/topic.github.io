@@ -4,81 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm Course Project</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            color: #444;
         }
         header {
-            background: linear-gradient(to right, #ff416c, #ff4b2b);
-            color: white;
-            padding: 20px 0;
+            background: linear-gradient(to bottom right, #3f51b5, #5c6bc0);
+            color: #fff;
+            padding: 30px 0;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: 700;
         }
         header nav {
-            margin-top: 10px;
+            margin-top: 15px;
         }
         header nav a {
-            color: white;
+            color: #ffeb3b;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
+            margin: 0 20px;
+            font-weight: 500;
+            font-size: 1.1em;
         }
         header nav a:hover {
             text-decoration: underline;
         }
         .content {
-            padding: 20px;
-            text-align: center;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
         .content h2 {
-            color: #ff416c;
+            color: #3f51b5;
+            font-weight: 600;
             margin-bottom: 20px;
         }
         .content a {
             display: inline-block;
-            background-color: #ff416c;
-            color: white;
-            padding: 10px 20px;
-            margin: 10px;
+            background: #3f51b5;
+            color: #fff;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
-            transition: background 0.3s;
+            margin: 10px 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
         .content a:hover {
-            background-color: #ff4b2b;
+            background: #5c6bc0;
+            transform: translateY(-3px);
         }
         .quote {
-            margin: 40px 0;
+            margin: 40px auto;
+            text-align: center;
             font-style: italic;
-            font-size: 1.2em;
-            color: #666;
+            font-size: 1.5em;
+            color: #555;
         }
         .portfolio-details {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #f7f8fc;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
         }
         .portfolio-details dt {
             font-weight: bold;
-            margin-top: 10px;
-            color: #ff416c;
+            margin-top: 15px;
+            color: #3f51b5;
+            font-size: 1.1em;
         }
         .portfolio-details dd {
             margin-left: 20px;
             margin-bottom: 10px;
+            font-size: 1em;
+            color: #555;
+        }
+        footer {
+            background: #3f51b5;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -104,9 +123,7 @@
             <dd>Course Code Placeholder</dd>
 
             <dt>Name</dt>
-            <dd>Shubha C.S :01FE23BCS118<br> Yashoda Talawar:01FE23BCS141<br> Preeti Kotabagi:01FE23BCS170</dd>
-
-            
+            <dd>Shubha C.S :01FE23BCS118<br>Yashoda Talawar:01FE23BCS141<br>Preeti Kotabagi:01FE23BCS170</dd>
 
             <dt>Course Instructor</dt>
             <dd>Prakash Hegade</dd>
@@ -126,16 +143,15 @@
     </div>
 
     <div class="content" id="course-project-introduction">
-        
+        <h2>Course Project Introduction</h2>
         <p>Get to know more about the core objectives and background of this project.</p>
         <a href="introduction1.html" target="_blank">Course Project Introduction</a>
     </div>
 
     <div class="content" id="project">
-    
+        <h2>Project Overview</h2>
         <p>Explore the details of our course project on Algorithmic Problem Solving.</p>
-        <a href="sdg.html" target="_blank"> Project Overview </a>
-        
+        <a href="sdg.html" target="_blank">Project Overview</a>
     </div>
 
     <div class="content" id="reflections">
@@ -149,6 +165,11 @@
     <div class="quote">
         “The only way to do great work is to love what you do.” – Steve Jobs
     </div>
+
+    <footer>
+        &copy; 2024 Team C1 | Algorithmic Problem Solving | All Rights Reserved
+    </footer>
 </body>
 </html>
+
 
