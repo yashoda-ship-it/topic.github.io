@@ -327,89 +327,105 @@ Transportation Systems: Assists in determining the most cost-effective methods f
 Spanning trees facilitate the simplification of networks while preserving connectivity, effectively removing superfluous links.</br>
 <strong>2. Shortest Paths:</strong></br>
 A shortest path refers to the route connecting two vertices that has the least cumulative edge weight.</br>
-<strong>Significance of Shortest Path Algorithms:</strong></br> 
-<strong>Route Optimization:</strong></br>
-<strong>Navigation Systems:</strong> Utilized in GPS and mapping applications to identify the shortest route between destinations.</br>
-<strong>Logistics:</strong>Enhances delivery routes to minimize costs and travel durations.</br>
-<strong>Communication Networks:</strong></br>
- Identifies the most efficient pathways for data transmission in computer networks, thereby reducing latency.</br>
-<strong>Transportation Systems:</strong></br>
- Discovers the fastest routes for travel across cities or within urban environments using public transportation.</br>
-<strong>Social Networks:</strong></br>
-Determines the shortest connections between individuals, facilitating applications such as friend recommendations or influence assessments.</br>
-<strong>Algorithms for Shortest Paths:</strong></br> 
-<strong>Dijkstra’s Algorithm:<strong></br>  
-This algorithm identifies the shortest route from a single source to all vertices within a graph that features non-negative edge weights.</br> 
-Application Example: Road networks characterized by positive distances.</br> 
-<strong>Graph Algorithms in Practical Applications</strong></br>
-<strong>Telecommunications:</strong></br>
-Minimum Spanning Trees (MST) facilitate reduced cabling expenses while ensuring connectivity.</br>  
-Shortest path algorithms are employed to decrease signal transmission delays.</br>  
-<strong>Urban Planning:</strong></br> 
-Spanning trees are utilized to optimize utility configurations, such as power distribution networks.</br>  
-Shortest paths improve public transportation systems by reducing travel times.</br> 
-<strong>Supply Chain Management: </strong></br>
-MST contributes to lowering the costs associated with constructing infrastructure for warehouses or suppliers.</br>
-Shortest paths are used to enhance the efficiency of delivery routes.</br>  
-<strong>Finance:</strong></br>
-Spanning trees play a role in optimizing investment portfolios.</br> 
-Shortest path algorithms are instrumental in identifying arbitrage opportunities in currency trading.</br></p>
-<p>9.Discuss about the different studied algorithm design techniques.</br></p>
-<p>Ans:<strong>Algorithm Design Techniques</strong></br>
-<strong>1. Divide and Conquer:</strong></br>
-  The problem is divided into smaller subproblems that are solved independently and recursively, then combined to solve the original problem.</br>
-   <strong>Process:</strong></br>
-  1. Divide: Split the problem into smaller subproblems of the same type.</br>
-  2. Conquer: Solve each subproblem recursively.</br>
-  3. Combine: Merge the solutions of the subproblems to form the final solution.</br>
-    <strong>Examples:</strong></br>
-  - Merge Sort: Divides the array into halves, sorts them recursively, and merges the sorted halves.</br>
-  - Quick Sort: Partitions the array around a pivot, then recursively sorts the partitions.</br>
-  - Binary Search: Repeatedly divides the search space in half to find an element in a sorted array.</br>
-   <strong> Applications:</strong></br>  
-  - Sorting, searching, and matrix multiplication.</br>
-    <strong>2. Dynamic Programming (DP): </strong></br> 
-  Dynamic Programming is used to solve problems by breaking them into overlapping subproblems, solving each subproblem once, and storing the solutions . DP is typically used when the problem exhibits both optimal substructure and overlapping subproblems.</br>
-  <strong>Process:</strong></br>
-  1. Break the problem into smaller subproblems.</br>
-  2. Solve each subproblem once and store the result.</br>
-  3. Reuse the stored results to avoid redundant calculations.</br>
-   <strong>Examples:</strong></br>
-  - Fibonacci Sequence: Store intermediate results to avoid recalculating.</br>
-  - Knapsack Problem: Find the maximum value achievable with a set of items under a weight constraint.</br>
-  - Applications:</br>
-  - Optimization problems, sequence alignment, and resource allocation.</br>
-   <strong>3. Greedy Algorithms:</strong></br>  
-   Greedy algorithms build a solution by choosing the locally optimal solution at each step, hoping to find a global optimum. These algorithms do not always guarantee the best solution, but they are often efficient.</br>
-   <strong>Process:</strong></br>
-  1. Select the best possible choice at each step.</br>
-  2. Once a choice is made, it is final, and the algorithm proceeds to the next step.</br>
-   <strong>Examples:</strong></br>
-  - Prim’s Algorithm: Finds the Minimum Spanning Tree (MST) by adding the smallest edge at each step.</br>
-  - Kruskal’s Algorithm: Adds edges in increasing order of weight to form the MST.</br>
-  - Huffman Coding: Constructs the optimal prefix-free code for data compression.</br>
-   <strong> Applications:</strong></br>
-  - Network design, scheduling, data compression, and resource allocation.</br>
-   <strong>4. Backtracking:</strong></br>
-    Backtracking is a trial-and-error approach where decisions are made incrementally. When a partial solution does not lead to a valid solution, the algorithm "backtracks" and tries alternative paths.</br>
-    <strong>Process:</strong></br>
-  1. Build a solution step by step.</br>
-  2. If a step leads to an invalid solution, backtrack and try a different option.</br>
-  3. Continue until a solution is found or all options have been explored.</br>
-   <strong>Examples:</strong></br>
-  - N-Queens Problem: Place N queens on an N×N chessboard such that no two queens threaten each other.</br>
-  - Sudoku Solver: Try placing numbers in cells, backtrack if an inconsistency is found.</br>
-  - Subset Sum Problem: Find subsets of numbers that sum to a given target.</br>
-    <strong> Applications:</strong></br>  
-  - Constraint satisfaction problems, combinatorial optimization, and puzzles.</br>
-   <strong>5. Recursive Algorithms:</strong><br> Recursive algorithms solve problems by solving smaller instances of the same problem. Each recursive call reduces the problem's size until a base case is reached.</br>
-<strong>Process:</strong><br>
-  1. Break the problem down into smaller subproblems of the same type.<br>
-  2. Solve the subproblem recursively.<br>
-  3. Combine the results to form the final solution.<br>
-   <strong>Examples:</strong><br>
-  - Factorial Computation: Compute the factorial of a number by recursively multiplying it by the factorial of its predecessor.<br>
-  - Tower of Hanoi: Move disks from one peg to another using a recursive strategy.<br>
-  - Fibonacci Sequence: Calculate Fibonacci numbers recursively.<br>
-  <strong>Applications:</strong><br>
-  Divide and conquer problems, mathematical computations, and tree/graph traversal.</br> </p>     
+<p><strong>Significance of Shortest Path Algorithms:</strong></p>
+<p><strong>Route Optimization:</strong></p>
+<p><strong>Navigation Systems:</strong> Utilized in GPS and mapping applications to identify the shortest route between destinations.</p>
+<p><strong>Logistics:</strong> Enhances delivery routes to minimize costs and travel durations.</p>
+<p><strong>Communication Networks:</strong></p>
+<p>Identifies the most efficient pathways for data transmission in computer networks, thereby reducing latency.</p>
+<p><strong>Transportation Systems:</strong></p>
+<p>Discovers the fastest routes for travel across cities or within urban environments using public transportation.</p>
+<p><strong>Social Networks:</strong></p>
+<p>Determines the shortest connections between individuals, facilitating applications such as friend recommendations or influence assessments.</p>
+<p><strong>Algorithms for Shortest Paths:</strong></p>
+<p><strong>Dijkstra’s Algorithm:</strong></p>
+<p>This algorithm identifies the shortest route from a single source to all vertices within a graph that features non-negative edge weights.</p>
+<p><strong>Application Example:</strong> Road networks characterized by positive distances.</p>
+<p><strong>Graph Algorithms in Practical Applications:</strong></p>
+<p><strong>Telecommunications:</strong></p>
+<p>Minimum Spanning Trees (MST) facilitate reduced cabling expenses while ensuring connectivity.</p>
+<p>Shortest path algorithms are employed to decrease signal transmission delays.</p>
+<p><strong>Urban Planning:</strong></p>
+<p>Spanning trees are utilized to optimize utility configurations, such as power distribution networks.</p>
+<p>Shortest paths improve public transportation systems by reducing travel times.</p>
+<p><strong>Supply Chain Management:</strong></p>
+<p>MST contributes to lowering the costs associated with constructing infrastructure for warehouses or suppliers.</p>
+<p>Shortest paths are used to enhance the efficiency of delivery routes.</p>
+<p><strong>Finance:</strong></p>
+<p>Spanning trees play a role in optimizing investment portfolios.</p>
+<p>Shortest path algorithms are instrumental in identifying arbitrage opportunities in currency trading.</p>
+<p><strong>Discuss different studied algorithm design techniques:</strong></p>
+<p><strong>Algorithm Design Techniques:</strong></p>
+<p><strong>1. Divide and Conquer:</strong></p>
+<p>The problem is divided into smaller subproblems that are solved independently and recursively, then combined to solve the original problem.</p>
+<p><strong>Process:</strong></p>
+<ol>
+    <li><strong>Divide:</strong> Split the problem into smaller subproblems of the same type.</li>
+    <li><strong>Conquer:</strong> Solve each subproblem recursively.</li>
+    <li><strong>Combine:</strong> Merge the solutions of the subproblems to form the final solution.</li>
+</ol>
+<p><strong>Examples:</strong></p>
+<ul>
+    <li>Merge Sort: Divides the array into halves, sorts them recursively, and merges the sorted halves.</li>
+    <li>Quick Sort: Partitions the array around a pivot, then recursively sorts the partitions.</li>
+    <li>Binary Search: Repeatedly divides the search space in half to find an element in a sorted array.</li>
+</ul>
+<p><strong>Applications:</strong> Sorting, searching, and matrix multiplication.</p>
+<p><strong>2. Dynamic Programming (DP):</strong></p>
+<p>Dynamic Programming is used to solve problems by breaking them into overlapping subproblems, solving each subproblem once, and storing the solutions. DP is typically used when the problem exhibits both optimal substructure and overlapping subproblems.</p>
+<p><strong>Process:</strong></p>
+<ol>
+    <li>Break the problem into smaller subproblems.</li>
+    <li>Solve each subproblem once and store the result.</li>
+    <li>Reuse the stored results to avoid redundant calculations.</li>
+</ol>
+<p><strong>Examples:</strong></p>
+<ul>
+    <li>Fibonacci Sequence: Store intermediate results to avoid recalculating.</li>
+    <li>Knapsack Problem: Find the maximum value achievable with a set of items under a weight constraint.</li>
+</ul>
+<p><strong>Applications:</strong> Optimization problems, sequence alignment, and resource allocation.</p>
+<p><strong>3. Greedy Algorithms:</strong></p>
+<p>Greedy algorithms build a solution by choosing the locally optimal solution at each step, hoping to find a global optimum. These algorithms do not always guarantee the best solution, but they are often efficient.</p>
+<p><strong>Process:</strong></p>
+<ol>
+    <li>Select the best possible choice at each step.</li>
+    <li>Once a choice is made, it is final, and the algorithm proceeds to the next step.</li>
+</ol>
+<p><strong>Examples:</strong></p>
+<ul>
+    <li>Prim’s Algorithm: Finds the Minimum Spanning Tree (MST) by adding the smallest edge at each step.</li>
+    <li>Kruskal’s Algorithm: Adds edges in increasing order of weight to form the MST.</li>
+    <li>Huffman Coding: Constructs the optimal prefix-free code for data compression.</li>
+</ul>
+<p><strong>Applications:</strong> Network design, scheduling, data compression, and resource allocation.</p>
+<p><strong>4. Backtracking:</strong></p>
+<p>Backtracking is a trial-and-error approach where decisions are made incrementally. When a partial solution does not lead to a valid solution, the algorithm "backtracks" and tries alternative paths.</p>
+<p><strong>Process:</strong></p>
+<ol>
+    <li>Build a solution step by step.</li>
+    <li>If a step leads to an invalid solution, backtrack and try a different option.</li>
+    <li>Continue until a solution is found or all options have been explored.</li>
+</ol>
+<p><strong>Examples:</strong></p>
+<ul>
+    <li>N-Queens Problem: Place N queens on an N×N chessboard such that no two queens threaten each other.</li>
+    <li>Sudoku Solver: Try placing numbers in cells, backtrack if an inconsistency is found.</li>
+    <li>Subset Sum Problem: Find subsets of numbers that sum to a given target.</li>
+</ul>
+<p><strong>Applications:</strong> Constraint satisfaction problems, combinatorial optimization, and puzzles.</p>
+<p><strong>5. Recursive Algorithms:</strong></p>
+<p>Recursive algorithms solve problems by solving smaller instances of the same problem. Each recursive call reduces the problem's size until a base case is reached.</p>
+<p><strong>Process:</strong></p>
+<ol>
+    <li>Break the problem down into smaller subproblems of the same type.</li>
+    <li>Solve the subproblem recursively.</li>
+    <li>Combine the results to form the final solution.</li>
+</ol>
+<p><strong>Examples:</strong></p>
+<ul>
+    <li>Factorial Computation: Compute the factorial of a number by recursively multiplying it by the factorial of its predecessor.</li>
+    <li>Tower of Hanoi: Move disks from one peg to another using a recursive strategy.</li>
+    <li>Fibonacci Sequence: Calculate Fibonacci numbers recursively.</li>
+</ul>
+<p><strong>Applications:</strong> Divide and conquer problems, mathematical computations, and tree/graph traversal.</p>
