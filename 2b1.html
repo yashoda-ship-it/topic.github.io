@@ -54,6 +54,21 @@
             font-weight: bold;
             margin-top: 10px;
         }
+        .gist-links {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .gist-links li {
+            margin: 5px 0;
+        }
+        .gist-links a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .gist-links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -135,18 +150,51 @@
         <div class="box">
             <h3>Shortest Path: Dijkstra's Algorithm</h3>
             <p>Finds the optimal route for fire engines from the nearest station to the fire location using Edge Relaxation.</p>
+            <ul class="gist-links">
+                <li><a href="https://gist.github.com/yashoda-ship-it/05b380bf1a312f784fc7d2db8393fed7.js" target="_blank">Dijkstra's Algorithm Code</a></li>
+            </ul>
         </div>
         <div class="box">
             <h3>Network Optimization: Kruskal's Algorithm</h3>
             <p>Constructs the minimal spanning tree to reduce overall sensor connection costs.</p>
+            <ul class="gist-links">
+                <li><a href="https://gist.github.com/yashoda-ship-it/66023a38f25e54c051bcbe0e21c054ff.js" target="_blank">Kruskal's Algorithm Code</a></li>
+            </ul>
         </div>
         <div class="box">
-            <h3>Dynamic Routing: Divide and Conquer</h3>
-            <p>Incorporates heuristics for real-time pathfinding based on traffic data using Lazy Propagation and Sliding Window.</p>
+            <h3>Divide and Conquer: Merge Sort</h3>
+            <p>Sorts the data efficiently using the Divide and Conquer strategy.</p>
+            <ul class="gist-links">
+                <li><a href="https://gist.github.com/yashoda-ship-it/290ce4b9ee5cbaa67d33f953b0882cfc.js" target="_blank">Merge Sort Code</a></li>
+            </ul>
         </div>
         <div class="box">
             <h3>Data Optimization: Memoization</h3>
             <p>Compresses and optimizes historical fire data to reduce processing requirements.</p>
+            <ul class="gist-links">
+                <li><a href="https://gist.github.com/yashoda-ship-it/39d5ea44cdb30200f7247a32f04ff7e9.js" target="_blank">Memoization Code</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>Union-Find: Disjoint-Set Union</h3>
+            <p>Manages disjoint sets to efficiently check connectivity.</p>
+            <ul class="gist-links">
+                <li><a href="https://gist.github.com/yashoda-ship-it/e9cd585256454d6af49b995568185b7a.js" target="_blank">Union-Find Code</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>Priority Queue: Min-Heap</h3>
+            <p>Manages the fire engine dispatch order using a priority queue.</p>
+            <ul class="gist-links">
+                <li><a href="https://gist.github.com/yashoda-ship-it/dc927fbdd0720a6ba92714ce5f82f207.js" target="_blank">Priority Queue Code</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>Sliding Window: Maximum Subarray Sum</h3>
+            <p>Calculates the maximum sum of elements in a sliding window.</p>
+            <ul class="gist-links">
+                <li><a href="https://gist.github.com/yashoda-ship-it/e114b77b17be74afb1140737613169c1.js" target="_blank">Sliding Window Code</a></li>
+            </ul>
         </div>
     </div>
 
@@ -163,9 +211,10 @@
     <!-- Section 5: Optimization -->
     <h2>Optimization Techniques</h2>
     <ul>
-        <li><strong>Real-Time Updates:</strong> Routes are dynamically adjusted using Sliding Window and Dynamic Programming.</li>
-        <li><strong>Risk Prioritization:</strong> High-risk zones are prioritized based on population density using Greedy Techniques.</li>
+        <li><strong>Real-Time Updates:</strong> Routes are dynamically adjusted using Sliding Window techniques to minimize delays.</li>
+        <li><strong>Event-Driven Dispatch:</strong> Priority Queues ensure the fire engines with the highest urgency are dispatched first.</li>
     </ul>
 </body>
 </html>
+
 
