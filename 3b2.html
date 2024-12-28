@@ -1,157 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wearable Detection: Chandigarh City Management</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f5f5f5;
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+#include <cmath>
+#include <string>
+
+// Structure to represent Sensor Data
+struct SensorData {
+    float acceleration[3];  // Accelerometer data: x, y, z
+    float gyroscope[3];     // Gyroscope data: x, y, z
+    float magnetometer[3];  // Magnetometer data: x, y, z
+};
+
+// Structure to represent a Wearable Device
+struct WearableDevice {
+    int id;
+    bool isWorn;            // Wear status
+    SensorData lastData;    // Last sensor data collected
+};
+
+// Class to represent Wearable Detection System with Graph
+class WearableDetectionSystem {
+private:
+    std::unordered_map<int, WearableDevice> devices;
+    std::unordered_map<int, std::vector<int>> graph; // Graph to store connections (edges)
+
+    // Helper function to compute magnitude of a 3D vector
+    float computeMagnitude(float data[3]) {
+        return sqrt(data[0] * data[0] + data[1] * data[1] + data[2] * data[2]);
+    }
+
+public:
+    // Function to add a wearable device
+    void addDevice(int id) {
+        devices[id] = {id, false, {0, 0, 0, 0, 0, 0, 0, 0, 0}}; // Initialize with zeros
+        graph[id] = {}; // Initialize the graph node
+    }
+
+    // Function to add a connection (edge) between devices
+    void addConnection(int id1, int id2) {
+        if (devices.find(id1) != devices.end() && devices.find(id2) != devices.end()) {
+            graph[id1].push_back(id2);
+            graph[id2].push_back(id1); // Assuming undirected graph
+        } else {
+            std::cout << "Device ID not found!" << std::endl;
         }
-        h2 {
-            color: #4a90e2;
+    }
+
+    // Function to record sensor data
+    void recordSensorData(int deviceId, const SensorData& data) {
+        if (devices.find(deviceId) != devices.end()) {
+            devices[deviceId].lastData = data;
+        } else {
+            std::cout << "Device ID not found!" << std::endl;
         }
-        h1 {
-            color: #d9534f;
+    }
+
+    // Function to detect wear status
+    void detectWearStatus() {
+        const float ACCELERATION_THRESHOLD = 1.0f; // Example threshold for wearable detection
+        const float GYROSCOPE_THRESHOLD = 1.0f;    // Example threshold
+        const float MAGNETOMETER_THRESHOLD = 1.0f; // Example threshold
+
+        for (auto& device : devices) {
+            float accMag = computeMagnitude(device.second.lastData.acceleration);
+            float gyroMag = computeMagnitude(device.second.lastData.gyroscope);
+            float magMag = computeMagnitude(device.second.lastData.magnetometer);
+
+            if (accMag > ACCELERATION_THRESHOLD && gyroMag > GYROSCOPE_THRESHOLD && magMag > MAGNETOMETER_THRESHOLD) {
+                device.second.isWorn = true;  // Device is worn
+            } else {
+                device.second.isWorn = false; // Device is not worn
+            }
         }
-        h4 {
-            color: #5cb85c;
+    }
+
+    // Function to display the status of wearable devices
+    void displayDeviceStatus() {
+        std::cout << "Wearable Device Status:" << std::endl;
+        for (const auto& device : devices) {
+            std::cout << "ID: " << device.second.id
+                      << ", Worn: " << (device.second.isWorn ? "Yes" : "No") << std::endl;
         }
-        table {
-            border: 2px solid #5bc0de;
+    }
+
+    // Function to print the graph
+    void displayGraph() {
+        std::cout << "\nGraph Representation (Nodes and Edges):" << std::endl;
+        for (const auto& node : graph) {
+            std::cout << "Device " << node.first << " is connected to: ";
+            for (const auto& neighbor : node.second) {
+                std::cout << neighbor << " ";
+            }
+            std::cout << std::endl;
         }
-        thead {
-            background-color: #5bc0de;
-            color: white;
-        }
-        tbody tr:nth-child(even) {
-            background-color: #d9edf7;
-        }
-        tbody tr:nth-child(odd) {
-            background-color: #f7f7f9;
-        }
-        .text-center {
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-        a {
-            color: #0275d8;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="container mt-3">
-        <h2 class="text-center">Business Case: Wearable Detection</h2>
-        <h1 class="text-center mt-4">Wearable Detection: Chandigarh City Management</h1>
+    }
+};
 
-        <div class="mt-4">
-            <h4>Sub-task: Mayor Tour</h4>
-            <p><strong>SDG Goal:</strong> 11</p>
-            <p><strong>Target:</strong> 11.2</p>
-            <p><strong>Indicator:</strong> 11.2.1</p>
-        </div>
+int main() {
+    WearableDetectionSystem wds;
 
-        <div class="mt-4">
-            <p>The mayor of Chandigarh occasionally takes a tour of areas where wearable detection systems are used to monitor the effectiveness of surveillance and accountability in various departments. The locations visited and their numbers are represented below:</p>
+    // Add some devices
+    wds.addDevice(1);
+    wds.addDevice(2);
+    wds.addDevice(3);
 
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Sl. No.</th>
-                        <th>Detection Type</th>
-                        <th>Number</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Police Stations</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Traffic Control Centers</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Public Transport Hubs</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Emergency Response Units</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Public Markets</td>
-                        <td>7</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    // Add connections (edges) between devices
+    wds.addConnection(1, 2);
+    wds.addConnection(2, 3);
+    wds.addConnection(1, 3);
 
-        <div class="mt-4">
-            <p>The above number is drawn from the city design, and the cost was estimated for the car travel. There are several routes that connect these places, and below is the figure:</p>
+    // Simulate recording sensor data
+    SensorData data1 = {{2.0f, 1.5f, 0.8f}, {0.5f, 1.0f, 0.3f}, {1.2f, 0.9f, 1.0f}};
+    SensorData data2 = {{0.5f, 0.2f, 0.1f}, {0.1f, 0.3f, 0.05f}, {0.4f, 0.3f, 0.2f}};
+    SensorData data3 = {{1.5f, 1.8f, 0.5f}, {0.6f, 0.9f, 0.4f}, {0.8f, 1.2f, 0.7f}};
 
-            <p><strong>The cost to travel from Police Station to Traffic Control in Chandigarh is 120.</strong></p>
-        </div>
+    wds.recordSensorData(1, data1);
+    wds.recordSensorData(2, data2);
+    wds.recordSensorData(3, data3);
 
-        <div class="mt-4">
-            <h5>Mayor Travel Map</h5>
-            <div class="graph">
-                <svg width="600" height="400">
-                    <!-- Arrowhead definition -->
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-                            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-                        </marker>
-                    </defs>
+    // Detect wear status based on thresholds
+    wds.detectWearStatus();
 
-                    <!-- Edges -->
-                    <line x1="150" y1="100" x2="300" y2="50" class="edge" />
-                    <line x1="300" y1="50" x2="450" y2="100" class="edge" />
-                    <line x1="150" y1="100" x2="200" y2="250" class="edge" />
-                    <line x1="200" y1="250" x2="300" y2="350" class="edge" />
-                    <line x1="450" y1="100" x2="300" y2="350" class="edge" />
+    // Display the results
+    wds.displayDeviceStatus();
 
-                    <!-- Nodes -->
-                    <circle cx="150" cy="100" r="20" class="node" />
-                    <circle cx="300" cy="50" r="20" class="node" />
-                    <circle cx="450" cy="100" r="20" class="node" />
-                    <circle cx="200" cy="250" r="20" class="node" />
-                    <circle cx="300" cy="350" r="20" class="node" />
+    // Display the graph
+    wds.displayGraph();
 
-                    <!-- Labels -->
-                    <text x="150" y="95" class="label" text-anchor="middle">Police Station</text>
-                    <text x="300" y="45" class="label" text-anchor="middle">Traffic Control</text>
-                    <text x="450" y="95" class="label" text-anchor="middle">Public Market</text>
-                    <text x="200" y="245" class="label" text-anchor="middle">Emergency Unit</text>
-                    <text x="300" y="345" class="label" text-anchor="middle">Transport Hub</text>
-
-                    <!-- Edge Weights -->
-                    <text x="225" y="70" class="label">120</text>
-                    <text x="375" y="70" class="label">180</text>
-                    <text x="175" y="175" class="label">200</text>
-                    <text x="250" y="300" class="label">240</text>
-                    <text x="375" y="225" class="label">300</text>
-                </svg>
-            </div>
-        </div>
-
-        <div class="mt-4">
-            <p>An optimal tour is prepared for the mayor of Chandigarh using Dijkstra’s algorithm. The data generated can be found in the file <a href="#">HERE</a> and the code can be viewed <a href="https://gist.github.com/yashoda-ship-it/d73a94cb526bfaccc342ac4af54706c2">HERE</a>. The algorithms used are:</p>
-            <ol>
-                <li>Insertion Algorithm: Adding new data into std::unordered_map efficiently (O(1)).</li>
-                <li>Update Algorithm: Updating the last recorded data for wearables (O(1)).</li>
-                <li>Iteration and Counting: Counting the number of recorded logs by iterating over the wearables (O(n)).</li>
-                <li>Display Algorithm: Displaying wearable status by iterating over the std::unordered_map (O(n)).</li>
-            </ol>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    return 0;
+}
