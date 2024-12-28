@@ -38,12 +38,32 @@
             color: #0275d8;
             text-decoration: underline;
         }
+        .graph {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+        .node {
+            fill: #4a90e2;
+            stroke: #333;
+            stroke-width: 1.5;
+        }
+        .edge {
+            stroke: #333;
+            stroke-width: 1.5;
+            marker-end: url(#arrowhead);
+        }
+        .label {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            fill: #000;
+        }
     </style>
 </head>
 <body>
     <div class="container mt-3">
         <h2 class="text-center">Business Case: Traffic Management</h2>
-        <h1 class="text-center mt-4">Optimizing Traffic Flow in the City</h1>
+        <h1 class="text-center mt-4">Optimizing Traffic Flow</h1>
 
         <div class="mt-4">
             <h4>Sub-task: Optimizing Traffic Flow</h4>
@@ -53,7 +73,7 @@
         </div>
 
         <div class="mt-4">
-            <p>The city regularly faces issues of traffic congestion during peak hours, affecting both commuter satisfaction and economic productivity. To address this, the traffic management system aims to optimize vehicle flow and pedestrian safety through strategic planning and technological interventions. The roads and intersections involved are represented below:</p>
+            <p>The city regularly faces issues of traffic congestion during peak hours, which affects both commuter satisfaction and economic productivity. To address this, the traffic management system aims to optimize vehicle flow and pedestrian safety through strategic planning and technological interventions. The roads and intersections involved are represented below:</p>
 
             <table class="table table-striped">
                 <thead>
@@ -94,26 +114,66 @@
         </div>
 
         <div class="mt-4">
-            <p>The above numbers are derived from a city survey, and the average congestion cost for each zone was calculated. Below is a graphical representation of major intersections and their traffic loads:</p>
+            <p>The above numbers are derived from a city survey and the average congestion cost for each zone was calculated. Below is a graphical representation of major intersections and their traffic loads:</p>
 
-            <p><strong>Figure 1: Traffic Flow Map</strong></p>
-            <p><em>[Insert Traffic Flow Network Graph Here]</em></p>
+            <div class="graph">
+                <svg width="600" height="400">
+                    <!-- Arrowhead definition -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+                        </marker>
+                    </defs>
+
+                    <!-- Edges -->
+                    <line x1="150" y1="100" x2="300" y2="50" class="edge" />
+                    <line x1="300" y1="50" x2="450" y2="100" class="edge" />
+                    <line x1="150" y1="100" x2="200" y2="250" class="edge" />
+                    <line x1="200" y1="250" x2="300" y2="350" class="edge" />
+                    <line x1="450" y1="100" x2="300" y2="350" class="edge" />
+
+                    <!-- Nodes -->
+                    <circle cx="150" cy="100" r="20" class="node" />
+                    <circle cx="300" cy="50" r="20" class="node" />
+                    <circle cx="450" cy="100" r="20" class="node" />
+                    <circle cx="200" cy="250" r="20" class="node" />
+                    <circle cx="300" cy="350" r="20" class="node" />
+
+                    <!-- Labels -->
+                    <text x="150" y="95" class="label" text-anchor="middle">Traffic Light</text>
+                    <text x="300" y="45" class="label" text-anchor="middle">Pedestrian Crossing</text>
+                    <text x="450" y="95" class="label" text-anchor="middle">Roundabouts</text>
+                    <text x="200" y="245" class="label" text-anchor="middle">Entry/Exit</text>
+                    <text x="300" y="345" class="label" text-anchor="middle">Congestion Zones</text>
+
+                    <!-- Edge Weights -->
+                    <text x="225" y="70" class="label">120</text>
+                    <text x="375" y="70" class="label">180</text>
+                    <text x="175" y="175" class="label">200</text>
+                    <text x="250" y="300" class="label">240</text>
+                    <text x="375" y="225" class="label">300</text>
+                </svg>
+            </div>
         </div>
 
         <div class="mt-4">
-            <p>As an optimal path is critical for reducing travel time, *Dijkstra’s Algorithm* is employed to calculate the shortest travel routes between critical points. The data generated can be stored in a table that records traffic density, distance, and estimated travel time. A sample code can be found in the following <a href="#">GitHub link</a> (placeholder for implementation code).</p>
+            <p>As an optimal path is critical for reducing travel time, the <strong>Dijkstra’s Algorithm</strong> is employed to calculate the shortest travel routes between critical points. The data generated can be stored in a table that records traffic density, distance, and estimated travel time. A sample code can be found in the following <a href="#">GitHub link</a> (placeholder for implementation code).</p>
 
-            <h5>Key Components:</h5>
+            <p>The core focus is on:</p>
             <ul>
-                <li><strong>Input:</strong> Traffic density, road lengths, and signal timings.</li>
-                <li><strong>Output:</strong> Optimal paths for vehicles and pedestrians.</li>
-                <li><strong>Algorithm:</strong> Dijkstra’s Algorithm implemented on the road network graph.</li>
+                <li>Reducing congestion in high-density areas.</li>
+                <li>Ensuring safety at pedestrian crossings.</li>
+                <li>Minimizing emissions by optimizing travel routes.</li>
             </ul>
-        </div>
 
-        <div class="mt-4">
-            <h5>Reflection:</h5>
-            <p>This system could further integrate real-time traffic monitoring through IoT-enabled sensors to dynamically update travel paths and reduce response times to incidents.</p>
+            <p><strong>Key Components:</strong></p>
+            <ul>
+                <li>Input: Traffic density, road lengths, and signal timings.</li>
+                <li>Output: Optimal paths for vehicles and pedestrians.</li>
+                <li>Algorithm: Dijkstra’s Algorithm implemented on the road network graph.</li>
+            </ul>
+
+            <p><strong>Reflection:</strong> This system could further integrate real-time traffic monitoring through IoT-enabled sensors to dynamically update travel paths and reduce response times to incidents.</p>
         </div>
     </div>
 
