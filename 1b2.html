@@ -3,94 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Street Lighting</title>
+    <title>Smart Street Lighting: Chandigarh City Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #0275d8;
-            text-align: center;
+            background-color: #f5f5f5;
         }
         h2 {
+            color: #4a90e2;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        h4 {
             color: #5cb85c;
-            margin-top: 20px;
         }
-        ul {
-            background: #f1f1f1;
-            padding: 15px;
-            border-radius: 5px;
-            list-style-type: disc;
+        table {
+            border: 2px solid #5bc0de;
         }
-        ul li {
-            margin-bottom: 10px;
+        thead {
+            background-color: #5bc0de;
+            color: white;
         }
-        .highlight {
-            background: #d9edf7;
-            padding: 10px;
-            border-left: 5px solid #31708f;
-            border-radius: 5px;
+        tbody tr:nth-child(even) {
+            background-color: #d9edf7;
         }
-        .plan-highlight {
-            background: #e7f8e6;
-            padding: 10px;
-            border-left: 5px solid #5cb85c;
-            border-radius: 5px;
-            margin-bottom: 15px;
+        tbody tr:nth-child(odd) {
+            background-color: #f7f7f9;
         }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
+        .text-center {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            color: #0275d8;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Smart Street Lighting</h1>
-        <p class="highlight">Smart street lighting systems are designed to enhance energy efficiency and safety in urban areas. By integrating IoT-based sensors and adaptive control systems, these solutions reduce energy consumption and provide optimal illumination for public spaces.</p>
+    <div class="container mt-3">
+        <h2 class="text-center">Business Case: Smart Street Lighting</h2>
+        <h1 class="text-center mt-4">Smart Street Lighting: Chandigarh City Management</h1>
 
-        <h2>Solutions/Plans:</h2>
-
-        <h3>Energy Optimization with Graph Algorithms</h3>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Use Dijkstra’s Algorithm:</strong> Determine optimal energy distribution paths for streetlights. By modeling the power grid as a weighted graph, this algorithm minimizes energy loss during transmission.</li>
-                <li><strong>Implement Bellman-Ford Algorithm:</strong> Adapt to dynamic energy demands and faults. This algorithm recalculates optimal energy routes, ensuring consistent lighting even under adverse conditions.</li>
-            </ul>
+        <div class="mt-4">
+            <h4>Sub-task: Mayor Tour</h4>
+            <p><strong>SDG Goal:</strong> 11</p>
+            <p><strong>Target:</strong> 11.2</p>
+            <p><strong>Indicator:</strong> 11.2.1</p>
         </div>
 
-        <h3>Illumination Management Using Greedy Algorithms</h3>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Deploy Sensors:</strong> Install light and motion sensors to monitor real-time conditions. Greedy Algorithms prioritize high-traffic areas for increased illumination during peak hours, ensuring safety and efficiency.</li>
-                <li><strong>Optimize Lighting Schedules:</strong> Utilize Backtracking to create adaptive lighting schedules. This ensures effective coverage with minimal energy waste, balancing brightness and conservation.</li>
-            </ul>
+        <div class="mt-4">
+            <p>The mayor of Chandigarh occasionally takes a tour of areas where smart street lighting is being implemented to monitor the effectiveness of the system in improving energy efficiency and safety. The locations visited and their numbers are represented below:</p>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sl. No.</th>
+                        <th>Smart Street Lighting Type</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Residential Areas</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Major Roads</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Public Parks</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Commercial Hubs</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Transport Stations</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <h3>Predictive Maintenance with Divide and Conquer</h3>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Analyze Sensor Data:</strong> Use Merge Sort to prioritize maintenance tasks. Sorted data allows efficient scheduling of repairs and upgrades for malfunctioning streetlights.</li>
-                <li><strong>Locate Faults:</strong> Use Binary Search to quickly identify defective sensors or lights. This method ensures prompt repairs, minimizing downtime and ensuring consistent operation.</li>
-            </ul>
+        <div class="mt-4">
+            <p>The above number is drawn from the city design, and the cost was estimated for the installation and energy savings. The roads and pathways are connected by a network that facilitates optimal street lighting for each area. Below is the figure:</p>
+
+            <p><strong>The estimated energy savings from smart street lighting in the city is 25% annually.</strong></p>
+        </div>
+
+        <div class="mt-4">
+            <h5>Mayor Travel Map for Smart Lighting Locations</h5>
+
+            <div class="graph">
+                <svg width="600" height="400">
+                    <!-- Arrowhead definition -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+                        </marker>
+                    </defs>
+
+                    <!-- Edges -->
+                    <line x1="150" y1="100" x2="300" y2="50" class="edge" />
+                    <line x1="300" y1="50" x2="450" y2="100" class="edge" />
+                    <line x1="150" y1="100" x2="200" y2="250" class="edge" />
+                    <line x1="200" y1="250" x2="300" y2="350" class="edge" />
+                    <line x1="450" y1="100" x2="300" y2="350" class="edge" />
+
+                    <!-- Nodes -->
+                    <circle cx="150" cy="100" r="20" class="node" />
+                    <circle cx="300" cy="50" r="20" class="node" />
+                    <circle cx="450" cy="100" r="20" class="node" />
+                    <circle cx="200" cy="250" r="20" class="node" />
+                    <circle cx="300" cy="350" r="20" class="node" />
+
+                    <!-- Labels -->
+                    <text x="150" y="95" class="label" text-anchor="middle">Residential Areas</text>
+                    <text x="300" y="45" class="label" text-anchor="middle">Major Roads</text>
+                    <text x="450" y="95" class="label" text-anchor="middle">Public Parks</text>
+                    <text x="200" y="245" class="label" text-anchor="middle">Commercial Hubs</text>
+                    <text x="300" y="345" class="label" text-anchor="middle">Transport Stations</text>
+
+                    <!-- Edge Weights -->
+                    <text x="225" y="70" class="label">Energy Saving</text>
+                    <text x="375" y="70" class="label">Efficiency</text>
+                    <text x="175" y="175" class="label">Installation Cost</text>
+                    <text x="250" y="300" class="label">Maintenance</text>
+                    <text x="375" y="225" class="label">Return on Investment</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <p>An optimal tour is prepared for the mayor to inspect smart street lighting projects using Dijkstra’s algorithm to calculate the shortest paths for route optimization. The data generated can be found in the file <a href="#">HERE</a> and the code can be viewed <a href="https://gist.github.com/yashoda-ship-it/4eefbd7e9152c358bfebe872c71b1c24">HERE</a>. The code is implemented using Heap data structure for efficient performance. This case helped me realize how Dijkstra’s algorithm can be applied in real-world smart city projects to optimize energy resources.</p>
         </div>
     </div>
 
-    <div class="footer">&copy; 2024 Smart Street Lighting Plans | Designed with care</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
