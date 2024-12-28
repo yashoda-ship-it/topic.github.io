@@ -1,66 +1,71 @@
+Here is a corrected HTML code that includes the given information, formatted for the energy management business case:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Case: Energy Management System</title>
+    <title>Business Case: Sustainable Urban Energy Management</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #f5f5f5;
         }
-        h1, h2 {
-            color: #007bff;
+        h2 {
+            color: #4a90e2;
         }
-        h3 {
-            color: #6c757d;
+        h1 {
+            color: #d9534f;
         }
         h4 {
-            color: #28a745;
+            color: #5cb85c;
         }
         table {
-            border: 2px solid #007bff;
+            border: 2px solid #5bc0de;
         }
         thead {
-            background-color: #007bff;
+            background-color: #5bc0de;
             color: white;
         }
         tbody tr:nth-child(even) {
-            background-color: #f8f9fa;
+            background-color: #d9edf7;
         }
         tbody tr:nth-child(odd) {
-            background-color: #ffffff;
+            background-color: #f7f7f9;
         }
         .text-center {
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
         a {
-            color: #007bff;
+            color: #0275d8;
             text-decoration: underline;
         }
-        .content-section {
-            margin-bottom: 30px;
+        .graph {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-4">
-        <h2 class="text-center">Business Case: Energy Management System</h2>
-        <h3 class="text-center mt-4">Optimizing Energy Utilization</h3>
+    <div class="container mt-3">
+        <h2 class="text-center">Business Case: Sustainable Urban Energy Management</h2>
+        <h1 class="text-center mt-4">Enhancing Urban Energy Efficiency and Sustainability</h1>
 
-        <div class="content-section">
-            <h4>Subtask: Optimizing Energy Utilization</h4>
-            <p><strong>Sustainable Development Goal:</strong> SDG Goal 11</p>
+        <div class="mt-4">
+            <h4>Sub-task: Enhancing Urban Energy Efficiency and Sustainability</h4>
+            <p><strong>SDG Goal:</strong> 11</p>
             <p><strong>Target:</strong> 11.6</p>
             <p><strong>Indicator:</strong> 11.6.1</p>
         </div>
 
-        <div class="content-section">
-            <p>The global demand for energy continues to rise, and managing energy consumption efficiently has become crucial for both environmental sustainability and economic viability. The <strong>Energy Management System (EMS)</strong> aims to optimize energy usage, integrate renewable energy solutions, and reduce carbon footprints across different sectors. By improving energy efficiency and incorporating smart technologies, the system helps to build resilient, sustainable, and efficient energy networks.</p>
+        <div class="mt-4">
+            <p>Urban areas face significant challenges in managing energy efficiently, exacerbating environmental impacts and straining urban infrastructure. The Sustainable Urban Energy Management system aims to enhance energy efficiency, reduce reliance on non-renewable energy sources, and promote sustainable urban development.</p>
         </div>
 
-        <div class="content-section">
-            <h5>Energy Infrastructure and Consumption Overview</h5>
+        <div class="mt-4">
+            <h4>Energy Infrastructure and Consumption</h4>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -92,44 +97,91 @@
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Other Renewables</td>
+                        <td>Other Renewable</td>
                         <td>10</td>
                     </tr>
                 </tbody>
             </table>
-            <p>This table showcases the current energy mix, with an emphasis on renewable energy sources like solar, wind, and hydroelectric power. The <strong>Energy Management System (EMS)</strong> focuses on enhancing the share of these renewable sources and optimizing the consumption of energy to reduce dependency on non-renewable energy sources.</p>
-
-            <p><strong>Figure 1: Energy Distribution Network Map</strong></p>
-            <p><em>[Insert Energy Distribution Network Graph Here]</em></p>
         </div>
 
-        <div class="content-section">
-            <h5>Energy Optimization Strategy</h5>
-            <p>The core of the <strong>Energy Management System</strong> involves implementing a <strong>Load Balancing Algorithm</strong> that adjusts energy supply based on real-time demand and available renewable energy. Key components of the optimization strategy include:</p>
+        <div class="mt-4">
+            <h4>Energy Distribution Network Map</h4>
+            <p>The diagram below illustrates the energy distribution network and connections between renewable energy generation sites and urban consumption centers:</p>
+
+            <div class="graph">
+                <svg width="600" height="400">
+                    <!-- Energy Sources and Urban Consumption -->
+                    <rect x="50" y="30" width="150" height="40" fill="#4a90e2" stroke="black" stroke-width="1.5"/>
+                    <text x="125" y="50" font-size="16" fill="white" text-anchor="middle">Solar (25%)</text>
+
+                    <rect x="50" y="100" width="150" height="40" fill="#8e44ad" stroke="black" stroke-width="1.5"/>
+                    <text x="125" y="120" font-size="16" fill="white" text-anchor="middle">Wind (15%)</text>
+
+                    <rect x="50" y="170" width="150" height="40" fill="#3498db" stroke="black" stroke-width="1.5"/>
+                    <text x="125" y="190" font-size="16" fill="white" text-anchor="middle">Hydroelectric (20%)</text>
+
+                    <rect x="50" y="240" width="150" height="40" fill="#e74c3c" stroke="black" stroke-width="1.5"/>
+                    <text x="125" y="260" font-size="16" fill="white" text-anchor="middle">Fossil Fuels (30%)</text>
+
+                    <rect x="50" y="310" width="150" height="40" fill="#2ecc71" stroke="black" stroke-width="1.5"/>
+                    <text x="125" y="330" font-size="16" fill="white" text-anchor="middle">Other Renewable (10%)</text>
+
+                    <!-- Urban Energy Distribution -->
+                    <rect x="300" y="130" width="150" height="40" fill="#f39c12" stroke="black" stroke-width="1.5"/>
+                    <text x="375" y="150" font-size="16" fill="black" text-anchor="middle">Urban Energy Distribution</text>
+
+                    <rect x="300" y="250" width="150" height="40" fill="#1abc9c" stroke="black" stroke-width="1.5"/>
+                    <text x="375" y="270" font-size="16" fill="black" text-anchor="middle">Urban Consumption Centers</text>
+
+                    <!-- Arrows for Flow -->
+                    <line x1="200" y1="50" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <line x1="200" y1="120" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <line x1="200" y1="190" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <line x1="200" y1="260" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <line x1="200" y1="330" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <!-- Arrowhead Definition -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h4>Load Balancing Algorithm</h4>
+            <p>To optimize energy distribution, reduce energy wastage, and promote sustainable urban development, a <strong>Load Balancing Algorithm</strong> is implemented. This algorithm dynamically adjusts energy supply to match demand in real-time, prioritizing renewable energy sources.</p>
+        </div>
+
+        <div class="mt-4">
+            <h4>Core Focus</h4>
             <ul>
-                <li><strong>Minimizing Carbon Emissions:</strong> The EMS reduces reliance on fossil fuels by prioritizing renewable energy sources.</li>
-                <li><strong>Optimizing Energy Storage:</strong> Efficiency improvements in energy storage systems ensure a reliable energy supply during peak demand periods.</li>
-                <li><strong>Enhancing Energy Supply Stability:</strong> The EMS ensures a stable energy supply by adjusting to varying demands, minimizing wastage, and making use of excess renewable energy.</li>
+                <li>Reducing reliance on fossil fuels</li>
+                <li>Enhancing energy efficiency in urban infrastructure</li>
+                <li>Ensuring a stable energy supply during peak usage hours</li>
             </ul>
         </div>
 
-        <div class="content-section">
-            <h5>Key Components:</h5>
+        <div class="mt-4">
+            <h4>Key Components</h4>
             <ul>
-                <li><strong>Input:</strong> Energy consumption data, renewable energy availability, and energy storage capacity.</li>
-                <li><strong>Output:</strong> Optimized energy distribution schedules that minimize wastage and enhance efficiency.</li>
-                <li><strong>Algorithm:</strong> Load Balancing Algorithm with real-time monitoring and energy flow analysis.</li>
+                <li><strong>Input:</strong> Energy demand data, renewable energy availability, and urban infrastructure capacity</li>
+                <li><strong>Output:</strong> Optimized energy distribution schedules and urban infrastructure development plans</li>
+                <li><strong>Algorithm:</strong> Load Balancing Algorithm with real-time monitoring and urban planning considerations</li>
             </ul>
-            <p>A sample implementation of the algorithm can be found in the following <a href="#">GitHub link</a> (placeholder for implementation code).</p>
         </div>
 
-        <div class="content-section">
-            <h5>Reflection:</h5>
-            <p>The <strong>Energy Management System (EMS)</strong> plays a critical role in ensuring that energy is used efficiently, contributing to a sustainable future. Future enhancements could include the integration of <strong>smart meters</strong> for real-time energy tracking and predictive analytics to forecast energy demands based on variables such as weather patterns, population growth, and industrial activities. The system can further optimize energy consumption by reducing waste and improving the efficiency of both renewable energy production and energy storage systems.</p>
-            <p>By improving energy management, we contribute directly to <strong>SDG Goal 11</strong>, which promotes making cities and communities more sustainable, and to the overarching goal of reducing the global carbon footprint.</p>
+        <div class="mt-4">
+            <h4>Future Enhancements</h4>
+            <ul>
+                <li>Integrating smart meters for real-time energy consumption tracking</li>
+                <li>Implementing predictive analytics to forecast energy demands and renewable energy generation capacity</li>
+                <li>Collaborating with urban planners to develop sustainable and resilient urban infrastructure strategies</li>
+            </ul>
         </div>
     </div>
-<p>An optimal tour is prepared for the mayor of Chandigarh using Dijkstra’s algorithm. The data generated can be found in the file <a href="#">HERE</a> and the code can be viewed <a href="https://gist.github.com/yashoda-ship-it/74d8e346d415113999c96df284f10eeb">HERE</a> The algorithms used are : </p>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+``
