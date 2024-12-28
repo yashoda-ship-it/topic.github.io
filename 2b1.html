@@ -65,7 +65,7 @@
 
     <!-- Section 1: Overview -->
     <h2>Overview</h2>
-    <p><strong>Objective:</strong> Create a robust system for detecting fires using IoT devices and optimizing emergency response times through <span class="highlight">Dynamic Programming</span> and <span class="highlight">Memoization</span>.</p>
+    <p><strong>Objective:</strong> Create a robust system for detecting fires using IoT devices and optimizing emergency response times through <span class="highlight">Dynamic Programming</span> and <span class="highlight">Greedy Techniques</span>.</p>
     <p><strong>SDG Goal:</strong> Sustainable Cities and Communities (Goal 11).</p>
     <p><strong>Target:</strong> Reduce disaster-related deaths and affected individuals.</p>
 
@@ -74,8 +74,8 @@
     <p>The system is modeled as a graph, where:</p>
     <ul>
         <li><strong>Vertices:</strong> IoT sensor nodes or fire stations, represented using <span class="highlight">Kruskal's Algorithm</span> for network optimization.</li>
-        <li><strong>Edges:</strong> Routes with weights indicating travel time or distance, optimized through <span class="highlight">Edge Relaxation</span> techniques.</li>
-        <li><strong>Population Density:</strong> Added as a factor to prioritize response using <span class="highlight">Priority Queues</span> and <span class="highlight">Greedy Techniques</span>.</li>
+        <li><strong>Edges:</strong> Routes with weights indicating travel time or distance, optimized through <span class="highlight">Union-Find</span> for connectivity analysis.</li>
+        <li><strong>Population Density:</strong> Added as a factor to prioritize response using <span class="highlight">Greedy Techniques</span>.</li>
     </ul>
 
     <!-- Graph Example -->
@@ -116,7 +116,7 @@
                     <tr>
                         <td>Sensor Data</td>
                         <td>Temperature, smoke levels</td>
-                        <td>Fire detection using <span class="highlight">Brute Force String Search</span> for pattern matching.</td>
+                        <td>Fire detection using <span class="highlight">Brute Force</span> for pattern matching.</td>
                     </tr>
                     <tr>
                         <td>Population Density</td>
@@ -138,19 +138,19 @@
     <div class="container">
         <div class="box">
             <h3>Shortest Path: <span class="highlight">Dijkstra's Algorithm</span></h3>
-            <p>Finds the optimal route for fire engines from the nearest station to the fire location using <span class="highlight">Edge Relaxation</span>.</p>
+            <p>Finds the optimal route for fire engines from the nearest station to the fire location using <span class="highlight">Union-Find</span> for connectivity analysis.</p>
         </div>
         <div class="box">
             <h3>Network Optimization: <span class="highlight">Kruskal's Algorithm</span></h3>
             <p>Constructs the minimal spanning tree to reduce overall sensor connection costs.</p>
         </div>
         <div class="box">
-            <h3>Dynamic Routing: <span class="highlight">A* Algorithm</span></h3>
-            <p>Incorporates heuristics for real-time pathfinding based on traffic data using <span class="highlight">Lazy Propagation</span> and <span class="highlight">Sliding Window</span>.</p>
+            <h3>Data Organization: <span class="highlight">Quick Sort</span></h3>
+            <p>Used to organize sensor data efficiently for rapid access and processing.</p>
         </div>
         <div class="box">
-            <h3>Data Compression: <span class="highlight">Huffman Coding</span></h3>
-            <p>Compresses historical fire data to reduce storage requirements.</p>
+            <h3>Pattern Matching: <span class="highlight">Brute Force</span></h3>
+            <p>Detects fire-related anomalies in sensor readings by comparing against predefined patterns.</p>
         </div>
     </div>
 
@@ -158,21 +158,22 @@
     <h2>Process Flow</h2>
     <p>The emergency fire detection system follows these steps:</p>
     <ol>
-        <li>IoT sensors detect abnormal conditions (temperature, smoke) using <span class="highlight">Bit Manipulations</span>.</li>
+        <li>IoT sensors detect abnormal conditions (temperature, smoke) using <span class="highlight">Dynamic Programming</span> for optimizing detection patterns.</li>
         <li>Data is aggregated and sent to the central system via <span class="highlight">Union-Find</span> data structures for connectivity analysis.</li>
         <li>Algorithms calculate the quickest route for fire response using <span class="highlight">Shortest Path Trees</span>.</li>
-        <li>Fire engines are dispatched with dynamic route updates via <span class="highlight">Lazy Propagation</span>.</li>
+        <li>Fire engines are dispatched with dynamic route updates optimized by <span class="highlight">Greedy Techniques</span>.</li>
     </ol>
 
     <!-- Section 5: Optimization -->
     <h2>Optimization Techniques</h2>
     <ul>
-        <li><strong>Real-Time Updates:</strong> Routes are dynamically adjusted using <span class="highlight">Sliding Window</span> and <span class="highlight">Dynamic Programming</span>.</li>
+        <li><strong>Real-Time Updates:</strong> Routes are dynamically adjusted using <span class="highlight">Dynamic Programming</span> techniques.</li>
         <li><strong>Risk Prioritization:</strong> High-risk zones are prioritized based on population density using <span class="highlight">Greedy Techniques</span>.</li>
-        <li><strong>Storage Optimization:</strong> <span class="highlight">Huffman Coding</span> minimizes storage overhead for historical fire data.</li>
+        <li><strong>Storage Optimization:</strong> Historical fire data is compressed using <span class="highlight">Huffman Coding</span>.</li>
     </ul>
 </body>
 </html>
+
 
 
 
