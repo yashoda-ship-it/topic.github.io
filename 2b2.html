@@ -3,74 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Road Condition Sensors</title>
+    <title>Road Condition Monitoring System</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 20px;
+            line-height: 1.6;
         }
         h1, h2 {
             color: #2c3e50;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
         }
         table {
-            border-collapse: collapse;
             width: 100%;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
+            border-collapse: collapse;
+            margin-bottom: 20px;
         }
         th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        .figure {
-            margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 10px;
             text-align: center;
         }
-        .figure img {
-            max-width: 100%;
-            height: auto;
+        th {
+            background-color: #007BFF;
+            color: white;
         }
-        .figure-caption {
-            font-size: 0.9em;
-            color: #555;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 48%;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        svg {
+            display: block;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        .chart-title {
+            text-align: center;
+            font-weight: bold;
+        }
+        ol, ul {
+            margin-left: 20px;
+        }
+        .highlight {
+            color: #007BFF;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <h1>Road Condition Sensors</h1>
+    <h1>Road Condition Monitoring System</h1>
 
+    <!-- Section 1: Overview -->
     <h2>Overview</h2>
-    <p>
-        Road condition sensors are deployed to monitor and improve traffic flow and safety by providing real-time data on road conditions such as weather, traffic, and incidents. These sensors are a crucial part of smart city infrastructure, helping traffic management systems optimize routes and reduce accidents.
-    </p>
+    <p><strong>Objective:</strong> Enhance road safety and traffic flow using IoT sensors and advanced algorithms to monitor road conditions in real time.</p>
+    <p><strong>SDG Goal:</strong> Sustainable Cities and Communities (Goal 11).</p>
 
-    <h2>Objective</h2>
-    <p>
-        The objective is to implement an IoT-based system that continuously monitors road conditions, processes sensor data in real-time, and optimizes traffic management by providing intelligent routing recommendations. This system contributes to enhanced safety, reduced traffic congestion, and more efficient road usage.
-    </p>
-
-    <h2>SDG Goal</h2>
-    <p>Sustainable Cities and Communities (Goal 11) - By improving road safety, reducing congestion, and enhancing traffic management, this system helps in the development of sustainable, resilient urban areas.</p>
-
-    <h2>Data Representation</h2>
-    <p>The road condition monitoring system can be modeled as a graph, where:</p>
+    <!-- Section 2: Graph Representation -->
+    <h2>Graph Representation</h2>
+    <p>The system is modeled as a graph where:</p>
     <ul>
-        <li><strong>Vertices:</strong> Represent sensor nodes deployed at various road intersections or on-road segments.</li>
-        <li><strong>Edges:</strong> Represent roads connecting the nodes. Each edge can have weights that represent traffic flow, travel time, or condition severity such as icy roads or accidents.</li>
+        <li><strong>Vertices:</strong> IoT sensor nodes or monitoring stations.</li>
+        <li><strong>Edges:</strong> Roads with weights indicating traffic flow, condition severity, or travel time.</li>
     </ul>
 
-    <div class="figure">
-        <img src="road-condition-graph-example.png" alt="Graph Representation of Road Condition Sensors">
-        <p class="figure-caption">Figure 1: Graph Representation of Road Condition Sensors with Traffic and Condition Weights</p>
-    </div>
+    <svg width="400" height="300">
+        <!-- Nodes -->
+        <circle cx="50" cy="150" r="20" fill="blue"></circle>
+        <circle cx="200" cy="50" r="20" fill="green"></circle>
+        <circle cx="200" cy="250" r="20" fill="red"></circle>
+        <circle cx="350" cy="150" r="20" fill="orange"></circle>
 
-    <h2>Real-World Data Used</h2>
+        <!-- Edges -->
+        <line x1="50" y1="150" x2="200" y2="50" stroke="black" stroke-width="2"></line>
+        <line x1="50" y1="150" x2="200" y2="250" stroke="black" stroke-width="2"></line>
+        <line x1="200" y1="50" x2="350" y2="150" stroke="black" stroke-width="2"></line>
+        <line x1="200" y1="250" x2="350" y2="150" stroke="black" stroke-width="2"></line>
+
+        <!-- Labels -->
+        <text x="40" y="145" fill="white" font-size="14">S1</text>
+        <text x="190" y="45" fill="white" font-size="14">S2</text>
+        <text x="190" y="245" fill="white" font-size="14">S3</text>
+        <text x="340" y="145" fill="white" font-size="14">S4</text>
+    </svg>
+    <p class="chart-title">Graph Representation of Sensor Network</p>
+
+    <!-- Section 3: Data Representation -->
+    <h2>Data Representation</h2>
     <table>
         <thead>
             <tr>
@@ -82,95 +110,59 @@
         <tbody>
             <tr>
                 <td>Weather Data</td>
-                <td>Temperature, precipitation, visibility, humidity</td>
-                <td>Used to identify hazardous road conditions such as ice, fog, and heavy rain.</td>
+                <td>Temperature, precipitation, visibility</td>
+                <td>Identify hazardous road conditions</td>
             </tr>
             <tr>
                 <td>Traffic Flow</td>
-                <td>Vehicle density, average speed, and lane occupancy</td>
-                <td>Used to identify congestion patterns and optimize traffic lights or routing.</td>
+                <td>Vehicle density and speed</td>
+                <td>Monitor congestion and optimize flow</td>
             </tr>
             <tr>
                 <td>Incident Reports</td>
-                <td>Accidents, roadblocks, or obstacles</td>
-                <td>Used to provide real-time alerts and reroute vehicles away from affected areas.</td>
+                <td>Accidents, obstacles</td>
+                <td>Enable real-time rerouting</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>Algorithms and Data Structures</h2>
-    <p>Several algorithms and data structures are used to process the sensor data and make real-time decisions. Here are some key components:</p>
+    <!-- Section 4: Algorithms -->
+    <h2>Algorithms</h2>
+    <div class="container">
+        <div class="box">
+            <h3>Shortest Path: Dijkstra's Algorithm</h3>
+            <p>Optimizes travel routes by calculating the shortest path from one node to another.</p>
+        </div>
+        <div class="box">
+            <h3>Clustering: K-Means</h3>
+            <p>Groups sensor nodes with similar conditions to reduce data redundancy.</p>
+        </div>
+        <div class="box">
+            <h3>Data Compression: Huffman Coding</h3>
+            <p>Compresses sensor data for efficient storage and transmission.</p>
+        </div>
+        <div class="box">
+            <h3>Dynamic Routing: A* Algorithm</h3>
+            <p>Provides real-time routing by using traffic data heuristics.</p>
+        </div>
+    </div>
 
-    <ul>
-        <li>
-            <strong>Shortest Path: Bellman-Ford Algorithm</strong><br>
-            The Bellman-Ford algorithm is ideal for graphs with negative edge weights and is used to find the shortest path from a source to all other vertices, which helps in optimizing routes.
-        </li>
-        <li>
-            <strong>Clustering: K-Means</strong><br>
-            K-Means is used to group nearby sensors with similar traffic conditions, helping reduce the amount of data transmitted and processed by focusing only on key areas with high traffic or hazards.
-        </li>
-        <li>
-            <strong>Real-Time Data Filtering: Kalman Filter</strong><br>
-            The Kalman filter is applied to smooth noisy sensor data, especially for weather and traffic conditions, providing more accurate real-time updates.
-        </li>
-        <li>
-            <strong>Priority Queue: Min-Heap</strong><br>
-            Used to prioritize urgent alerts and critical incidents in real-time, ensuring that the most important data is processed first.
-        </li>
-        <li>
-            <strong>Data Compression: LZW Algorithm</strong><br>
-            The LZW algorithm is used to compress real-time sensor data to save bandwidth and storage space while maintaining accessibility for analysis and decision-making.
-        </li>
-    </ul>
-
+    <!-- Section 5: Process Flow -->
     <h2>Process Flow</h2>
-    <p>The system follows a multi-step process to manage road conditions in real-time:</p>
     <ol>
-        <li>IoT sensors gather real-time data on weather, traffic, and incidents from various locations.</li>
-        <li>The collected data is transmitted to a central processing system for analysis.</li>
-        <li>Algorithms such as Bellman-Ford and K-Means process the data, optimizing traffic routes and identifying patterns.</li>
-        <li>Traffic management systems are updated with optimized routes, alerts, and recommendations for both drivers and operators.</li>
+        <li>Sensors collect data on road conditions, weather, and traffic.</li>
+        <li>Data is transmitted to a central processing unit.</li>
+        <li>Algorithms analyze the data to detect anomalies and patterns.</li>
+        <li>Traffic systems are updated, and alerts are sent to drivers.</li>
     </ol>
 
+    <!-- Section 6: Optimization -->
     <h2>Optimization Techniques</h2>
     <ul>
-        <li>
-            <strong>Real-Time Updates:</strong> Algorithms like BFS/DFS continuously update traffic flow and incident data to keep systems up-to-date and allow for dynamic rerouting.
-        </li>
-        <li>
-            <strong>Risk Assessment:</strong> A combination of algorithms prioritizes high-risk conditions based on severity. For example, icy road conditions or accidents are flagged for immediate rerouting.
-        </li>
-        <li>
-            <strong>Storage Efficiency:</strong> Real-time data compression using LZW reduces the volume of traffic data logs while maintaining efficient retrieval and analysis.
-        </li>
+        <li><strong>Real-Time Updates:</strong> Dynamic routing with BFS/DFS ensures accurate adjustments.</li>
+        <li><strong>Risk Assessment:</strong> Prioritizes hazardous road segments based on data analysis.</li>
+        <li><strong>Data Storage:</strong> Huffman coding ensures storage efficiency without losing accuracy.</li>
     </ul>
-
-    <div class="figure">
-        <img src="optimization-techniques-graph.png" alt="Optimization Techniques Diagram for Traffic Management">
-        <p class="figure-caption">Figure 2: Optimization Techniques for Real-Time Traffic Management</p>
-    </div>
-
-    <h2>Example Data Flow</h2>
-    <p>The following diagram outlines how data flows from the sensors to traffic management systems:</p>
-    <div class="figure">
-        <img src="data-flow-diagram.png" alt="Data Flow Diagram">
-        <p class="figure-caption">Figure 3: Data Flow from Road Sensors to Traffic Management Systems</p>
-    </div>
-
-    <h2>Future Enhancements</h2>
-    <ul>
-        <li>
-            <strong>Machine Learning Integration:</strong> Future systems will integrate machine learning models to predict traffic conditions and optimize routes based on historical data.
-        </li>
-        <li>
-            <strong>Vehicle-to-Infrastructure (V2X) Communication:</strong> Enhancements in V2X communication will enable direct communication between vehicles and infrastructure to improve traffic safety and management.
-        </li>
-        <li>
-            <strong>Expanded Coverage:</strong> As more sensors are deployed, the coverage area will increase, leading to more granular data and improved routing decisions.
-        </li>
-    </ul>
-
 </body>
 </html>
 
