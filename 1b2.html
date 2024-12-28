@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Street Lighting: Chandigarh City Management</title>
+    <title>Business Case: Smart Street Lighting</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -43,107 +43,84 @@
 <body>
     <div class="container mt-3">
         <h2 class="text-center">Business Case: Smart Street Lighting</h2>
-        <h1 class="text-center mt-4">Smart Street Lighting: Chandigarh City Management</h1>
+        <h1 class="text-center mt-4">Optimizing Street Lighting for Sustainable Cities</h1>
 
         <div class="mt-4">
-            <h4>Sub-task: Mayor Tour</h4>
-            <p><strong>SDG Goal:</strong> 11</p>
-            <p><strong>Target:</strong> 11.2</p>
-            <p><strong>Indicator:</strong> 11.2.1</p>
+            <h4>Sub-task: Energy-Efficient Lighting Control</h4>
+            <p><strong>Sustainable Development Goal:</strong> SDG Goal 11</p>
+            <p><strong>Target:</strong> 11.6</p>
+            <p><strong>Indicator:</strong> 11.6.1</p>
         </div>
 
         <div class="mt-4">
-            <p>The mayor of Chandigarh occasionally takes a tour of areas where smart street lighting is being implemented to monitor the effectiveness of the system in improving energy efficiency and safety. The locations visited and their numbers are represented below:</p>
+            <p>The city faces challenges in managing street lighting efficiently, leading to high energy consumption and operational costs. The Smart Street Lighting system aims to enhance energy efficiency by incorporating automated controls and sensors for optimal illumination based on real-time conditions. The lighting infrastructure details are summarized below:</p>
 
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Sl. No.</th>
-                        <th>Smart Street Lighting Type</th>
+                        <th>Lighting Zone Type</th>
                         <th>Number</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Residential Areas</td>
-                        <td>5</td>
+                        <td>Highways</td>
+                        <td>15</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Major Roads</td>
-                        <td>8</td>
+                        <td>Residential Areas</td>
+                        <td>20</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Public Parks</td>
-                        <td>3</td>
+                        <td>Commercial Districts</td>
+                        <td>12</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Commercial Hubs</td>
-                        <td>7</td>
+                        <td>Parks and Public Spaces</td>
+                        <td>8</td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Transport Stations</td>
-                        <td>6</td>
+                        <td>Critical Junctions</td>
+                        <td>10</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="mt-4">
-            <p>The above number is drawn from the city design, and the cost was estimated for the installation and energy savings. The roads and pathways are connected by a network that facilitates optimal street lighting for each area. Below is the figure:</p>
+            <p>The above zones were identified based on energy consumption patterns and public safety requirements. Below is a graphical representation of the lighting zones and their connectivity:</p>
 
-            <p><strong>The estimated energy savings from smart street lighting in the city is 25% annually.</strong></p>
+            <p><strong>Figure 1: Smart Lighting Network Map</strong></p>
+            <p><em>[Insert Lighting Network Graph Here]</em></p>
         </div>
 
         <div class="mt-4">
-            <h5>Mayor Travel Map for Smart Lighting Locations</h5>
+            <p>To optimize lighting schedules and minimize energy wastage, a <strong>Dynamic Scheduling Algorithm</strong> is used. This algorithm takes sensor data as input and adjusts the intensity of streetlights based on factors such as traffic density, pedestrian activity, and ambient light conditions. The core focus includes:</p>
+            <ul>
+                <li>Reducing energy consumption during low-traffic periods.</li>
+                <li>Ensuring safety in critical zones.</li>
+                <li>Integrating renewable energy sources for sustainable operations.</li>
+            </ul>
 
-            <div class="graph">
-                <svg width="600" height="400">
-                    <!-- Arrowhead definition -->
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-                            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-                        </marker>
-                    </defs>
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Input:</strong> Traffic flow, pedestrian count, and ambient light levels.</li>
+                <li><strong>Output:</strong> Dynamic lighting schedules.</li>
+                <li><strong>Algorithm:</strong> Dynamic Scheduling Algorithm with sensor integration.</li>
+            </ul>
 
-                    <!-- Edges -->
-                    <line x1="150" y1="100" x2="300" y2="50" class="edge" />
-                    <line x1="300" y1="50" x2="450" y2="100" class="edge" />
-                    <line x1="150" y1="100" x2="200" y2="250" class="edge" />
-                    <line x1="200" y1="250" x2="300" y2="350" class="edge" />
-                    <line x1="450" y1="100" x2="300" y2="350" class="edge" />
-
-                    <!-- Nodes -->
-                    <circle cx="150" cy="100" r="20" class="node" />
-                    <circle cx="300" cy="50" r="20" class="node" />
-                    <circle cx="450" cy="100" r="20" class="node" />
-                    <circle cx="200" cy="250" r="20" class="node" />
-                    <circle cx="300" cy="350" r="20" class="node" />
-
-                    <!-- Labels -->
-                    <text x="150" y="95" class="label" text-anchor="middle">Residential Areas</text>
-                    <text x="300" y="45" class="label" text-anchor="middle">Major Roads</text>
-                    <text x="450" y="95" class="label" text-anchor="middle">Public Parks</text>
-                    <text x="200" y="245" class="label" text-anchor="middle">Commercial Hubs</text>
-                    <text x="300" y="345" class="label" text-anchor="middle">Transport Stations</text>
-
-                    <!-- Edge Weights -->
-                    <text x="225" y="70" class="label">Energy Saving</text>
-                    <text x="375" y="70" class="label">Efficiency</text>
-                    <text x="175" y="175" class="label">Installation Cost</text>
-                    <text x="250" y="300" class="label">Maintenance</text>
-                    <text x="375" y="225" class="label">Return on Investment</text>
-                </svg>
-            </div>
+            <p>A sample implementation of the algorithm can be found in the following <a href="#">GitHub link</a> (placeholder for implementation code).</p>
         </div>
 
         <div class="mt-4">
-            <p>An optimal tour is prepared for the mayor to inspect smart street lighting projects using Dijkstra’s algorithm to calculate the shortest paths for route optimization. The data generated can be found in the file <a href="#">HERE</a> and the code can be viewed <a href="https://gist.github.com/yashoda-ship-it/4eefbd7e9152c358bfebe872c71b1c24">HERE</a>. The code is implemented using Heap data structure for efficient performance. This case helped me realize how Dijkstra’s algorithm can be applied in real-world smart city projects to optimize energy resources.</p>
+            <h5>Reflection:</h5>
+            <p>Further improvements could involve predictive analytics to forecast energy demands and the integration of smart poles with additional features like Wi-Fi, air quality sensors, and CCTV for multi-purpose utility.</p>
         </div>
     </div>
 
