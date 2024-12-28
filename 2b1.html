@@ -54,10 +54,6 @@
             font-weight: bold;
             margin-top: 10px;
         }
-        .highlight {
-            color: #007BFF;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -65,7 +61,7 @@
 
     <!-- Section 1: Overview -->
     <h2>Overview</h2>
-    <p><strong>Objective:</strong> Create a robust system for detecting fires using IoT devices and optimizing emergency response times through <span class="highlight">Dynamic Programming</span> and <span class="highlight">Greedy Techniques</span>.</p>
+    <p><strong>Objective:</strong> Create a robust system for detecting fires using IoT devices and optimizing emergency response times through Dynamic Programming and Memoization.</p>
     <p><strong>SDG Goal:</strong> Sustainable Cities and Communities (Goal 11).</p>
     <p><strong>Target:</strong> Reduce disaster-related deaths and affected individuals.</p>
 
@@ -73,9 +69,9 @@
     <h2>Data Representation</h2>
     <p>The system is modeled as a graph, where:</p>
     <ul>
-        <li><strong>Vertices:</strong> IoT sensor nodes or fire stations, represented using <span class="highlight">Kruskal's Algorithm</span> for network optimization.</li>
-        <li><strong>Edges:</strong> Routes with weights indicating travel time or distance, optimized through <span class="highlight">Union-Find</span> for connectivity analysis.</li>
-        <li><strong>Population Density:</strong> Added as a factor to prioritize response using <span class="highlight">Greedy Techniques</span>.</li>
+        <li><strong>Vertices:</strong> IoT sensor nodes or fire stations, represented using Kruskal's Algorithm for network optimization.</li>
+        <li><strong>Edges:</strong> Routes with weights indicating travel time or distance, optimized through Edge Relaxation techniques.</li>
+        <li><strong>Population Density:</strong> Added as a factor to prioritize response using Priority Queues and Greedy Techniques.</li>
     </ul>
 
     <!-- Graph Example -->
@@ -116,17 +112,17 @@
                     <tr>
                         <td>Sensor Data</td>
                         <td>Temperature, smoke levels</td>
-                        <td>Fire detection using <span class="highlight">Brute Force</span> for pattern matching.</td>
+                        <td>Fire detection using Brute Force String Search for pattern matching.</td>
                     </tr>
                     <tr>
                         <td>Population Density</td>
                         <td>People per km<sup>2</sup></td>
-                        <td>Risk prioritization with <span class="highlight">Greedy Techniques</span>.</td>
+                        <td>Risk prioritization with Greedy Techniques.</td>
                     </tr>
                     <tr>
                         <td>Historical Data</td>
                         <td>Past fire incidents</td>
-                        <td>Training prediction models using <span class="highlight">Dynamic Programming</span>.</td>
+                        <td>Training prediction models using Dynamic Programming.</td>
                     </tr>
                 </tbody>
             </table>
@@ -137,20 +133,20 @@
     <h2>Algorithms</h2>
     <div class="container">
         <div class="box">
-            <h3>Shortest Path: <span class="highlight">Dijkstra's Algorithm</span></h3>
-            <p>Finds the optimal route for fire engines from the nearest station to the fire location using <span class="highlight">Union-Find</span> for connectivity analysis.</p>
+            <h3>Shortest Path: Dijkstra's Algorithm</h3>
+            <p>Finds the optimal route for fire engines from the nearest station to the fire location using Edge Relaxation.</p>
         </div>
         <div class="box">
-            <h3>Network Optimization: <span class="highlight">Kruskal's Algorithm</span></h3>
+            <h3>Network Optimization: Kruskal's Algorithm</h3>
             <p>Constructs the minimal spanning tree to reduce overall sensor connection costs.</p>
         </div>
         <div class="box">
-            <h3>Data Organization: <span class="highlight">Quick Sort</span></h3>
-            <p>Used to organize sensor data efficiently for rapid access and processing.</p>
+            <h3>Dynamic Routing: Divide and Conquer</h3>
+            <p>Incorporates heuristics for real-time pathfinding based on traffic data using Lazy Propagation and Sliding Window.</p>
         </div>
         <div class="box">
-            <h3>Pattern Matching: <span class="highlight">Brute Force</span></h3>
-            <p>Detects fire-related anomalies in sensor readings by comparing against predefined patterns.</p>
+            <h3>Data Optimization: Memoization</h3>
+            <p>Compresses and optimizes historical fire data to reduce processing requirements.</p>
         </div>
     </div>
 
@@ -158,21 +154,21 @@
     <h2>Process Flow</h2>
     <p>The emergency fire detection system follows these steps:</p>
     <ol>
-        <li>IoT sensors detect abnormal conditions (temperature, smoke) using <span class="highlight">Dynamic Programming</span> for optimizing detection patterns.</li>
-        <li>Data is aggregated and sent to the central system via <span class="highlight">Union-Find</span> data structures for connectivity analysis.</li>
-        <li>Algorithms calculate the quickest route for fire response using <span class="highlight">Shortest Path Trees</span>.</li>
-        <li>Fire engines are dispatched with dynamic route updates optimized by <span class="highlight">Greedy Techniques</span>.</li>
+        <li>IoT sensors detect abnormal conditions (temperature, smoke) using Bit Manipulations.</li>
+        <li>Data is aggregated and sent to the central system via Union-Find data structures for connectivity analysis.</li>
+        <li>Algorithms calculate the quickest route for fire response using Shortest Path Trees.</li>
+        <li>Fire engines are dispatched with dynamic route updates via Lazy Propagation.</li>
     </ol>
 
     <!-- Section 5: Optimization -->
     <h2>Optimization Techniques</h2>
     <ul>
-        <li><strong>Real-Time Updates:</strong> Routes are dynamically adjusted using <span class="highlight">Dynamic Programming</span> techniques.</li>
-        <li><strong>Risk Prioritization:</strong> High-risk zones are prioritized based on population density using <span class="highlight">Greedy Techniques</span>.</li>
-        <li><strong>Storage Optimization:</strong> Historical fire data is compressed using <span class="highlight">Huffman Coding</span>.</li>
+        <li><strong>Real-Time Updates:</strong> Routes are dynamically adjusted using Sliding Window and Dynamic Programming.</li>
+        <li><strong>Risk Prioritization:</strong> High-risk zones are prioritized based on population density using Greedy Techniques.</li>
     </ul>
 </body>
 </html>
+
 
 
 
