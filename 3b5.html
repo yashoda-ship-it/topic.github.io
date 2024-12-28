@@ -3,71 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surveillance Cameras</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Surveillance Camera: Chandigarh City Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        h2 {
+            color: #4a90e2;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        h4 {
+            color: #5cb85c;
+        }
+        table {
+            border: 2px solid #5bc0de;
+        }
+        thead {
+            background-color: #5bc0de;
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #d9edf7;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f7f7f9;
+        }
+        .text-center {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            color: #0275d8;
+            text-decoration: underline;
+        }
+        .graph-container {
+            text-align: center;
+            margin: 30px auto;
+        }
+        .node {
+            fill: #5bc0de;
+        }
+        .edge {
+            stroke: #0275d8;
+            stroke-width: 2;
+        }
+        .label {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <!-- Header Section -->
-        <div class="text-center p-4 bg-danger text-white rounded shadow">
-            <h1>Surveillance Cameras</h1>
+    <div class="container mt-3">
+        <h2 class="text-center">Business Case: Surveillance Camera</h2>
+        <h1 class="text-center mt-4">Surveillance Camera: Chandigarh City Management</h1>
+
+        <div class="mt-4">
+            <h4>Sub-task: Mayor Tour</h4>
+            <p><strong>SDG Goal:</strong> 3</p>
+            <p><strong>Target:</strong> 3.8</p>
+            <p><strong>Indicator:</strong> 3.8.1</p>
         </div>
 
-        <!-- Highlight Section -->
-        <div class="alert alert-info mt-4">
-            <p>
-                Surveillance cameras play a crucial role in enhancing security, monitoring activities, and ensuring safety in various environments. These systems utilize real-time data and advanced algorithms to optimize surveillance, improve incident detection, and ensure efficient resource allocation.
-            </p>
+        <div class="mt-4">
+            <p>The mayor of Chandigarh occasionally takes a tour of areas where surveillance camera systems are used to monitor the effectiveness of health surveillance and accountability in various departments. The locations visited and their numbers are represented below:</p>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sl. No.</th>
+                        <th>Surveillance Camera System Type</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Healthcare Centers</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Traffic Control Centers</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Public Transport Hubs</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Emergency Response Units</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Public Markets</td>
+                        <td>7</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <!-- Solutions Section -->
-        <h2 class="text-primary mt-5">Solutions/Plans:</h2>
+        <div class="mt-4">
+            <p>The above number is drawn from the city design, and the cost was estimated for the car travel. There are several routes that connect these places, and below is the figure:</p>
 
-        <!-- Solution 1 -->
-        <h3 class="text-danger mt-4">Real-Time Data Transmission Using Graph Algorithms</h3>
-        <div class="card border-danger mb-4">
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item"><strong>Use Dijkstra’s Algorithm:</strong> Optimize the transmission routes for real-time surveillance video data. This ensures the data reaches central systems with minimal delay, enhancing monitoring and response capabilities.
-                    <br></br>Here is the implementation in c++ langauge <a href="https://gist.github.com/yashoda-ship-it/1ff00ec7a8acb93de8850db037934138"><strong>C++</strong></a></li>
-                    <li class="list-group-item"><strong>Implement Bellman-Ford Algorithm:</strong> Handle situations with network disruptions or interference. This algorithm dynamically adjusts the data transmission path to maintain consistent connectivity.
-                    <br></br>Here is the implementation in c++ langauge <a href="https://gist.github.com/yashoda-ship-it/3cecca420e12c2285195040a216b7e39"><strong>C++</strong></a></li>
-                </ul>
+            <p><strong>The cost to travel from Healthcare Centers to Traffic Control in Chandigarh is 120.</strong></p>
+        </div>
+
+        <div class="mt-4">
+            <h5>Mayor Travel Map</h5>
+            <div class="graph-container">
+                <svg width="600" height="400">
+                    <!-- Define arrowhead for edges -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#0275d8" />
+                        </marker>
+                    </defs>
+
+                    <!-- Edges -->
+                    <line x1="150" y1="100" x2="300" y2="50" class="edge" marker-end="url(#arrowhead)" />
+                    <line x1="300" y1="50" x2="450" y2="100" class="edge" marker-end="url(#arrowhead)" />
+                    <line x1="150" y1="100" x2="200" y2="250" class="edge" marker-end="url(#arrowhead)" />
+                    <line x1="200" y1="250" x2="300" y2="350" class="edge" marker-end="url(#arrowhead)" />
+                    <line x1="450" y1="100" x2="300" y2="350" class="edge" marker-end="url(#arrowhead)" />
+
+                    <!-- Nodes -->
+                    <circle cx="150" cy="100" r="20" class="node" />
+                    <circle cx="300" cy="50" r="20" class="node" />
+                    <circle cx="450" cy="100" r="20" class="node" />
+                    <circle cx="200" cy="250" r="20" class="node" />
+                    <circle cx="300" cy="350" r="20" class="node" />
+
+                    <!-- Labels -->
+                    <text x="150" y="95" class="label" text-anchor="middle">Healthcare Center</text>
+                    <text x="300" y="45" class="label" text-anchor="middle">Traffic Control</text>
+                    <text x="450" y="95" class="label" text-anchor="middle">Public Market</text>
+                    <text x="200" y="245" class="label" text-anchor="middle">Emergency Unit</text>
+                    <text x="300" y="345" class="label" text-anchor="middle">Transport Hub</text>
+
+                    <!-- Edge Weights -->
+                    <text x="225" y="70" class="label">120</text>
+                    <text x="375" y="70" class="label">180</text>
+                    <text x="175" y="175" class="label">200</text>
+                    <text x="250" y="300" class="label">240</text>
+                    <text x="375" y="225" class="label">300</text>
+                </svg>
             </div>
         </div>
 
-        <!-- Solution 2 -->
-        <h3 class="text-danger mt-4">Improved Resource Allocation Using Greedy Algorithms</h3>
-        <div class="card border-warning mb-4">
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item"><strong>Optimize Surveillance Coverage:</strong> Use Greedy Algorithms to determine the most critical areas for surveillance camera placement. This ensures maximum coverage and resource efficiency.
-                    <br></br>Here is the implementation in c++ langauge <a href="https://gist.github.com/yashoda-ship-it/52d8374a5733043dc654ad2fa7579f71"><strong>C++</strong></a></li>
-                    <li class="list-group-item"><strong>Optimize Storage and Energy Usage:</strong> Implement algorithms to prioritize essential video recordings and conserve storage space and energy during less critical periods, ensuring cameras remain operational longer.
-                    <br></br>Here is the implementation in c++ langauge <a href="https://gist.github.com/yashoda-ship-it/6d85bd0328b89f8c9f22eda1c7e1ab5d"><strong>C++</strong></a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Solution 3 -->
-        <h3 class="text-danger mt-4">Efficient Data Analysis with Divide and Conquer</h3>
-        <div class="card border-info mb-4">
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item"><strong>Sort Surveillance Data:</strong> Use Merge Sort to organize video files based on timestamps or priority, enabling quick access and review of relevant footage.
-                     <br></br>Here is the implementation in c++ langauge <a href="https://gist.github.com/yashoda-ship-it/135ff3af0b71707368a7495ccae764a4"><strong>C++</strong></a></li>
-                    <li class="list-group-item"><strong>Analyze Anomalies:</strong> Apply Binary Search to identify specific incidents or timestamps in large datasets quickly, saving time during investigation and reviews.
-                    <br></br>Here is the implementation in c++ langauge <a href="https://gist.github.com/yashoda-ship-it/d4d450bdbf246db9115eb161202dc83c"><strong>C++</strong></a></li>
-                </ul>
-            </div>
+        <div class="mt-4">
+            <p>An optimal tour is prepared for the mayor of Chandigarh using Dijkstra’s algorithm. The data generated can be found in the file <a href="#">HERE</a> and the code can be viewed <a href="https://gist.github.com/yashoda-ship-it/17c2e687dc4a876287b271690a1957c9">HERE</a>. The code is implemented using Heap data structure. The efficiency of the code is |E|log|V|, and the algorithm uses the greedy technique. This case made me realize how Dijkstra’s algorithm can be used in real-time scenarios.</p>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="text-center mt-4 p-3 bg-light text-muted">
-        &copy; 2024 Surveillance Camera Solutions | Designed with care
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
