@@ -3,95 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water and Waste Management</title>
+    <title>Business Case: Energy Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #0275d8;
-            text-align: center;
+            background-color: #f5f5f5;
         }
         h2 {
+            color: #4a90e2;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        h4 {
             color: #5cb85c;
-            margin-top: 20px;
         }
-        ul {
-            background: #f1f1f1;
-            padding: 15px;
-            border-radius: 5px;
-            list-style-type: disc;
+        table {
+            border: 2px solid #5bc0de;
         }
-        ul li {
-            margin-bottom: 10px;
+        thead {
+            background-color: #5bc0de;
+            color: white;
         }
-        .highlight {
-            background: #d9edf7;
-            padding: 10px;
-            border-left: 5px solid #31708f;
-            border-radius: 5px;
+        tbody tr:nth-child(even) {
+            background-color: #d9edf7;
         }
-        .plan-highlight {
-            background: #e7f8e6;
-            padding: 10px;
-            border-left: 5px solid #5cb85c;
-            border-radius: 5px;
-            margin-bottom: 15px;
+        tbody tr:nth-child(odd) {
+            background-color: #f7f7f9;
         }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
+        .text-center {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            color: #0275d8;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Water and Waste Management</h1>
-        <p class="highlight">Efficient water and waste management systems are essential for sustainable urban development. By leveraging IoT-based sensors and advanced algorithms, these solutions enhance resource utilization and ensure effective waste disposal.</p>
+    <div class="container mt-3">
+        <h2 class="text-center">Business Case: Energy Management</h2>
+        <h1 class="text-center mt-4">Optimizing Energy Consumption in the City</h1>
 
-        <h2>Solutions/Plans:</h2>
+        <div class="mt-4">
+            <h4>Sub-task: Energy Efficiency Optimization</h4>
+            <p><strong>SDG Goal:</strong> 7</p>
+            <p><strong>Target:</strong> 7.3</p>
+            <p><strong>Indicator:</strong> 7.3.1</p>
+        </div>
 
-        <h3>Resource Allocation with Graph Algorithms</h3>
-        <div class="plan-highlight">
+        <div class="mt-4">
+            <p>The city faces growing energy demands, leading to a need for better energy management systems. The focus is to optimize energy consumption through various smart technologies and renewable energy integration. The energy management system involves the following key areas:</p>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sl. No.</th>
+                        <th>Energy System</th>
+                        <th>Number of Units</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Smart Street Lighting</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Solar Panel Installations</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Energy Storage Systems</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Electric Vehicle Charging Stations</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Smart Meters</td>
+                        <td>1000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-4">
+            <p>The above data represents the energy management infrastructure in the city. These technologies help in reducing consumption, enhancing energy efficiency, and supporting sustainable energy use. Below is a visual representation of the key energy systems:</p>
+
+            <p><strong>Figure 1: Energy Management System Map</strong></p>
+            <p><em>[Insert Energy System Network Graph Here]</em></p>
+        </div>
+
+        <div class="mt-4">
+            <p>As energy optimization is crucial, a detailed energy flow analysis is performed to identify the best energy-saving strategies. The data generated can be stored in a table for analysis, including parameters such as energy consumption, savings, and ROI. A sample code for energy optimization calculations can be found in the following <a href="#">GitHub link</a> (placeholder for implementation code).</p>
+
+            <h5>Key Components:</h5>
             <ul>
-                <li><strong>Use Dijkstra’s Algorithm:</strong> Optimize water distribution networks by calculating the shortest paths for pipelines. This ensures equitable water supply across all areas with minimal loss.</li>
-                <li><strong>Implement Bellman-Ford Algorithm:</strong> Adapt to dynamic conditions like pipeline leaks or blockages. This algorithm recalculates optimal routes for water flow, ensuring consistent supply even during disruptions.</li>
+                <li><strong>Input:</strong> Energy consumption data, renewable energy production, and energy storage levels.</li>
+                <li><strong>Output:</strong> Energy efficiency strategies and optimization recommendations.</li>
+                <li><strong>Algorithm:</strong> Optimization techniques using linear programming and energy flow analysis.</li>
             </ul>
         </div>
 
-        <h3>Waste Collection Management Using Greedy Algorithms</h3>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Deploy Sensors:</strong> Place waste-level sensors in bins to monitor real-time fill levels. Greedy Algorithms prioritize collection routes for bins nearing capacity, ensuring timely waste disposal.</li>
-                <li><strong>Optimize Collection Schedules:</strong> Utilize Backtracking to create efficient waste collection schedules. This approach minimizes fuel consumption and ensures all areas are serviced effectively.</li>
-            </ul>
-        </div>
-
-        <h3>Predictive Maintenance with Divide and Conquer</h3>
-        <div class="plan-highlight">
-            <ul>
-                <li><strong>Analyze Sensor Data:</strong> Use Merge Sort to prioritize maintenance tasks for water and waste infrastructure. Sorted data enables efficient scheduling of repairs and upgrades.</li>
-                <li><strong>Locate Issues:</strong> Use Binary Search to quickly identify problem areas, such as leaks or sensor malfunctions. This ensures prompt resolution, minimizing resource wastage.</li>
-            </ul>
+        <div class="mt-4">
+            <h5>Reflection:</h5>
+            <p>This energy management system can further integrate with smart grid technologies to enable real-time monitoring and dynamic adjustment of energy consumption, promoting a more sustainable and cost-effective energy infrastructure.</p>
         </div>
     </div>
 
-    <div class="footer">&copy; 2024 Water and Waste Management Plans | Designed with care</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
