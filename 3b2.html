@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unordered_map>
+#include <vector>
 #include <cmath>
 
 // Structure to represent Sensor Data
@@ -44,7 +45,7 @@ public:
     // Function to detect wear status
     void detectWearStatus() {
         const float ACCELERATION_THRESHOLD = 1.0f; // Example threshold
-        const float GYROSCOPE_THRESHOLD = 1.0f;    // Example threshold
+        const float GYROSCOPE_THRESHOLD = 1.0f;   // Example threshold
         const float MAGNETOMETER_THRESHOLD = 1.0f; // Example threshold
 
         for (auto& device : devices) {
