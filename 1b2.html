@@ -3,178 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Street Lighting</title>
+    <title>Business Case: Smart Street Lighting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
             background-color: #f5f5f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px;
+        h2 {
+            color: #4a90e2;
         }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        h1 {
+            color: #d9534f;
         }
-        h2, h3 {
-            color: #4CAF50;
+        h4 {
+            color: #5cb85c;
         }
         table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
+            border: 2px solid #5bc0de;
         }
-        table, th, td {
-            border: 1px solid #ddd;
+        thead {
+            background-color: #5bc0de;
+            color: white;
         }
-        th, td {
-            padding: 10px;
+        tbody tr:nth-child(even) {
+            background-color: #d9edf7;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f7f7f9;
+        }
+        .text-center {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            color: #0275d8;
+            text-decoration: underline;
+        }
+        .graph {
+            background-color: #f9f9f9;
+            padding: 20px;
             text-align: center;
         }
-        .graph-container {
-            text-align: center;
-            margin-top: 40px;
+        .node {
+            fill: #4a90e2;
+            stroke: #333;
+            stroke-width: 1.5;
         }
-        svg {
-            max-width: 100%;
+        .edge {
+            stroke: #333;
+            stroke-width: 1.5;
+            marker-end: url(#arrowhead);
+        }
+        .label {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            fill: #000;
         }
     </style>
 </head>
 <body>
+    <div class="container mt-3">
+        <h2 class="text-center">Business Case: Smart Street Lighting</h2>
+        <h1 class="text-center mt-4">Energy-Efficient Lighting Control</h1>
 
-<header>
-    <h1>Business Case: Smart Street Lighting</h1>
-    <p>Energy-Efficient Lighting Control</p>
-</header>
+        <div class="mt-4">
+            <h4>Sub-task: Energy-Efficient Lighting Control</h4>
+            <p><strong>SDG Goal:</strong> 11</p>
+            <p><strong>Target:</strong> 11.6</p>
+            <p><strong>Indicator:</strong> 11.6.1</p>
+        </div>
 
-<section>
-    <h2>Subtask: Energy-Efficient Lighting Control</h2>
-    <p><strong>Sustainable Development Goal:</strong> SDG Goal 11</p>
-    <p><strong>Target:</strong> 11.6</p>
-    <p><strong>Indicator:</strong> 11.6.1</p>
-    <p>The city faces significant challenges in managing street lighting efficiently, leading to high energy consumption and rising operational costs. The Smart Street Lighting system aims to enhance energy efficiency by incorporating automated controls and sensors that adjust the illumination levels based on real-time conditions. These include traffic density, pedestrian movement, and ambient light levels, ensuring public safety while minimizing energy usage.</p>
-</section>
+        <div class="mt-4">
+            <p>The city faces significant challenges in managing street lighting efficiently, leading to high energy consumption and rising operational costs. The Smart Street Lighting system aims to enhance energy efficiency by incorporating automated controls and sensors that adjust the illumination levels based on real-time conditions. These include traffic density, pedestrian movement, and ambient light levels, ensuring public safety while minimizing energy usage.</p>
+        </div>
 
-<section>
-    <h3>Lighting Infrastructure Summary</h3>
-    <table>
-        <tr>
-            <th>Sl. No.</th>
-            <th>Lighting Zone Type</th>
-            <th>Number of Streetlights</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Highways</td>
-            <td>15</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Residential Areas</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Commercial Districts</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Parks and Public Spaces</td>
-            <td>8</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Critical Junctions</td>
-            <td>10</td>
-        </tr>
-    </table>
-    <p>The system operates across these zones, adjusting the lighting dynamically to optimize energy consumption and improve safety.</p>
-</section>
+        <div class="mt-4">
+            <h4>Lighting Infrastructure Summary</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sl. No.</th>
+                        <th>Lighting Zone Type</th>
+                        <th>Streetlight Strength</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Highways</td>
+                        <td>High (15 streetlights)</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Residential Areas</td>
+                        <td>Medium (20 streetlights)</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Commercial Districts</td>
+                        <td>High (12 streetlights)</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Parks and Public Spaces</td>
+                        <td>Low (8 streetlights)</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Critical Junctions</td>
+                        <td>Medium (10 streetlights)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-<section>
-    <h3>System Overview: Smart Lighting Network</h3>
-    <p>The smart lighting network is interconnected with sensors that provide real-time data for optimizing energy usage. Below is a graphical representation of how the smart streetlights, traffic sensors, and control center are interconnected.</p>
-    <div class="graph-container">
-        <svg width="600" height="400">
-            <!-- Arrowhead definition -->
-            <defs>
-                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-                    <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-                </marker>
-            </defs>
+        <div class="mt-4">
+            <p>The system operates across these zones, adjusting the lighting dynamically to optimize energy consumption and improve safety.</p>
+        </div>
 
-            <!-- Edges -->
-            <line x1="150" y1="100" x2="300" y2="50" class="edge" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
-            <line x1="300" y1="50" x2="450" y2="100" class="edge" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
-            <line x1="150" y1="100" x2="200" y2="250" class="edge" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
-            <line x1="200" y1="250" x2="300" y2="350" class="edge" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
-            <line x1="450" y1="100" x2="300" y2="350" class="edge" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+        <div class="mt-4">
+            <h4>System Overview: Smart Lighting Network</h4>
+            <p>The smart lighting network is interconnected with sensors that provide real-time data for optimizing energy usage. Below is a graphical representation of how the smart streetlights, traffic sensors, and control center are interconnected.</p>
 
-            <!-- Nodes -->
-            <circle cx="150" cy="100" r="20" fill="#4CAF50" />
-            <circle cx="300" cy="50" r="20" fill="#4CAF50" />
-            <circle cx="450" cy="100" r="20" fill="#4CAF50" />
-            <circle cx="200" cy="250" r="20" fill="#4CAF50" />
-            <circle cx="300" cy="350" r="20" fill="#4CAF50" />
+            <div class="graph">
+                <svg width="600" height="400">
+                    <!-- Arrowhead definition -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+                        </marker>
+                    </defs>
 
-            <!-- Labels -->
-            <text x="150" y="95" class="label" text-anchor="middle" fill="white">Street Light</text>
-            <text x="300" y="45" class="label" text-anchor="middle" fill="white">Traffic Sensor</text>
-            <text x="450" y="95" class="label" text-anchor="middle" fill="white">Pedestrian Sensor</text>
-            <text x="200" y="245" class="label" text-anchor="middle" fill="white">Control Center</text>
-            <text x="300" y="345" class="label" text-anchor="middle" fill="white">Data Hub</text>
+                    <!-- Edges -->
+                    <line x1="150" y1="100" x2="300" y2="50" class="edge" />
+                    <line x1="300" y1="50" x2="450" y2="100" class="edge" />
+                    <line x1="150" y1="100" x2="200" y2="250" class="edge" />
+                    <line x1="200" y1="250" x2="300" y2="350" class="edge" />
+                    <line x1="450" y1="100" x2="300" y2="350" class="edge" />
 
-            <!-- Edge Weights -->
-            <text x="225" y="70" class="label" fill="black">200</text>
-            <text x="375" y="70" class="label" fill="black">50</text>
-            <text x="175" y="175" class="label" fill="black">30</text>
-            <text x="250" y="300" class="label" fill="black">1</text>
-            <text x="375" y="225" class="label" fill="black">50</text>
-        </svg>
-    </div>
-</section>
+                    <!-- Nodes -->
+                    <circle cx="150" cy="100" r="20" class="node" />
+                    <circle cx="300" cy="50" r="20" class="node" />
+                    <circle cx="450" cy="100" r="20" class="node" />
+                    <circle cx="200" cy="250" r="20" class="node" />
+                    <circle cx="300" cy="350" r="20" class="node" />
 
-<section>
-    <h3>Dynamic Scheduling Algorithm</h3>
-    <p>To minimize energy consumption and ensure public safety, a <strong>Dynamic Scheduling Algorithm</strong> is employed. The algorithm adjusts the brightness of the streetlights in real-time based on the following parameters:</p>
-    <ul>
-        <li><strong>Traffic flow:</strong> Higher illumination in busy areas.</li>
-        <li><strong>Pedestrian count:</strong> Adjusts lighting in areas with significant pedestrian activity.</li>
-        <li><strong>Ambient light:</strong> Reduces lighting in well-lit areas.</li>
-    </ul>
-</section>
+                    <!-- Labels -->
+                    <text x="150" y="95" class="label" text-anchor="middle">Street Light</text>
+                    <text x="300" y="45" class="label" text-anchor="middle">Traffic Sensor</text>
+                    <text x="450" y="95" class="label" text-anchor="middle">Pedestrian Sensor</text>
+                    <text x="200" y="245" class="label" text-anchor="middle">Control Center</text>
+                    <text x="300" y="345" class="label" text-anchor="middle">Data Hub</text>
 
-<section>
-    <h3>Key Components</h3>
-    <ul>
-        <li><strong>Input:</strong> Traffic flow, pedestrian counts, and ambient light levels.</li>
-        <li><strong>Output:</strong> Dynamic and energy-efficient lighting schedules for different zones.</li>
-        <li><strong>Algorithm:</strong> The system uses a Dynamic Scheduling Algorithm that integrates sensor-based data for real-time adjustments.</li>
-    </ul>
-</section>
+                    <!-- Edge Weights -->
+                    <text x="225" y="70" class="label">200</text>
+                    <text x="375" y="70" class="label">50</text>
+                    <text x="175" y="175" class="label">30</text>
+                    <text x="250" y="300" class="label">1</text>
+                    <text x="375" y="225" class="label">50</text>
+                </svg>
+            </div>
+        </div>
 
-<section>
-    <h3>System Benefits</h3>
-    <ul>
-        <li><strong>Energy Efficiency:</strong> The system dynamically adjusts street lighting to reduce energy consumption during low-traffic periods.</li>
-        <li><strong>Safety:</strong> Ensures proper illumination during high-traffic periods and in critical areas.</li>
-        <li><strong>Sustainability:</strong> Integration of renewable energy sources like solar power for a more sustainable operation.</li>
-    </ul>
-</section>
+        <div class="mt-4">
+            <h4>Dynamic Scheduling Algorithm</h4>
+            <p>To minimize energy consumption and ensure public safety, a <strong>Dynamic Scheduling Algorithm</strong> is employed. The algorithm adjusts the brightness of the streetlights in real-time based on the following parameters:</p>
+            <ul>
+                <li><strong>Traffic flow:</strong> Higher illumination in busy areas.</li>
+                <li><strong>Pedestrian count:</strong> Adjusts lighting in areas with significant pedestrian activity.</li>
+                <li><strong>Ambient light:</strong> Reduces lighting in well-lit areas.</li>
+            </ul>
+        </div>
 
-<section>
-    <h3>Reflection</h3>
-    <p>This smart street lighting system contributes to <strong>SDG Goal 11</strong> by reducing the environmental impact of urban street lighting and enhancing the livability of cities. Further enhancements could include integrating predictive analytics to anticipate energy needs and incorporating smart poles with additional functions such as air quality monitoring, Wi-Fi, and CCTV.</p>
-</section>
-<p>An optimal tour is prepared for the mayor of Chandigarh using Dijkstra’s algorithm. The data generated can be found in the file <a href="#">HERE</a> and the code can be viewed <a href="https://gist.github.com/yashoda-ship-it/c0d507671ed1f643eb02325024b143d5">HERE</a> The algorithms used are : </p>
-</body>
-</html>
+        <div class="mt-4">
+            <h4>Key Components:</h4>
+            <ul>
+                <li><strong>Input:</strong> Traffic flow, pedestrian counts, and ambient light levels.</li>
+                <li><strong>Output:</strong> Dynamic and energy-efficient lighting schedules for different zones.</li>
+                <li><strong>Algorithm:</strong> The system uses a <strong>Dynamic Scheduling Algorithm</strong> that integrates sensor-based data for real-time adjustments.</li>
+            </ul>
+        </div>
+
+        <div class="mt-4">
+            <h4>System Benefits</h4>
+            <ul>
+                <li><strong>Energy Efficiency:</strong> The system dynamically adjusts street lighting to reduce energy consumption during low-traffic periods.</li>
+                <li><strong>Safety:</strong> Ensures proper illumination during high-traffic periods and in critical areas.</li>
+                <li><strong>Sustainability:</strong> Integration of renewable energy sources like solar power for a more sustainable operation.</li>
+            </ul>
+        </div>
+
+        <div class="mt-4">
+            <h4>Reflection</h4>
+            <p>This smart street lighting system contributes to <strong>SDG Goal
