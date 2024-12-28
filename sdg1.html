@@ -3,80 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDG Mapping - SDG 11</title>
+    <title>SDG Mapping</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background: radial-gradient(circle, #fff7e6, #ffe0b3);
-            font-family: 'Trebuchet MS', sans-serif;
-            color: #333;
-        }
         .heading-box {
-            background: linear-gradient(120deg, #ff6f61, #ff9a8b);
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            text-align: center;
+            background-color: #e0f7fa;
+            border: 1px solid #4dd0e1;
+            padding: 15px;
+            border-radius: 10px;
         }
         .heading-box h1 {
+            color: #00796b;
             margin: 0;
-            font-size: 3rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        .table {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
         .table-bordered th, .table-bordered td {
-            border-color: #ff6f61 !important;
+            border-color: #006064 !important;
         }
-        thead {
-            background: linear-gradient(120deg, #ff6f61, #ff9a8b);
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #e0f2f1;
+        }
+        .table-striped tbody tr:nth-of-type(even) {
+            background-color: #b2dfdb;
+        }
+        .table-primary {
+            background-color: #004d40;
             color: white;
-        }
-        tbody tr:nth-child(odd) {
-            background-color: #fff2e6;
-        }
-        tbody tr:nth-child(even) {
-            background-color: #ffe6cc;
-        }
-        tbody tr:hover {
-            background-color: #ffcc99;
         }
         .meanings-heading {
-            color: #ff6f61;
-            font-size: 1.5rem;
+            color: #01579b;
             font-weight: bold;
-            margin-bottom: 15px;
         }
         .list-group-item {
-            background: linear-gradient(90deg, #ffefdb, #ffd4ba);
-            border: none;
-            color: #993d00;
-            padding: 15px;
-            border-left: 5px solid #ff6f61;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        .list-group-item:hover {
-            background: linear-gradient(90deg, #ff9a8b, #ff6f61);
-            color: white;
-            border-left: 5px solid #993d00;
+            background-color: #e3f2fd;
+            border-color: #90caf9;
+            color: #0d47a1;
         }
     </style>
 </head>
 <body>
     <div class="container mt-5">
-        <div class="heading-box mb-4">
-            <h1>SDG Mapping - SDG 11: Sustainable Cities and Communities</h1>
+        <div class="heading-box text-center mb-4">
+            <h1>SDG Mapping</h1>
         </div>
-        <table class="table table-bordered">
-            <thead class="text-center">
+        <table class="table table-bordered table-striped">
+            <thead class="table-primary text-center">
                 <tr>
                     <th>Technology</th>
                     <th>SDG</th>
@@ -86,45 +56,30 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Smart Traffic Lights</td>
+                    <td>Emergency Fire Detection</td>
                     <td>SDG 11: Sustainable Cities and Communities</td>
-                    <td>Target 11.2: Provide access to safe, affordable, accessible, and sustainable transport systems for all</td>
-                    <td>Indicator 11.2.1: Proportion of population that has access to public transportation</td>
+                    <td>Target 11.5: Reduce the number of deaths and the number of people affected by disasters, with a focus on protecting the poor and people in vulnerable situations.</td>
+                    <td>Indicator 11.5.1: Number of deaths, missing persons and persons affected by disaster, per 100,000 people.</td>
                 </tr>
                 <tr>
-                    <td>Surveillance Cameras</td>
+                    <td>Road Condition Sensors</td>
                     <td>SDG 11: Sustainable Cities and Communities</td>
-                    <td>Target 11.7: Provide universal access to safe, inclusive, and accessible public spaces</td>
-                    <td>Indicator 11.7.1: Proportion of population with access to public spaces by age, sex, etc.</td>
+                    <td>Target 11.2: Provide access to safe, affordable, accessible, and sustainable transport systems for all, improving road safety, notably by expanding public transport.</td>
+                    <td>Indicator 11.2.1: Proportion of population that has convenient access to public transport.</td>
                 </tr>
                 <tr>
-                    <td>Waste Management Systems</td>
+                    <td>Self-Driving Cars</td>
                     <td>SDG 11: Sustainable Cities and Communities</td>
-                    <td>Target 11.6: Reduce the adverse per capita environmental impact of cities</td>
-                    <td>Indicator 11.6.1: Proportion of municipal solid waste regularly collected and with adequate final discharge</td>
-                </tr>
-                <tr>
-                    <td>Smart Street Lighting</td>
-                    <td>SDG 11: Sustainable Cities and Communities</td>
-                    <td>Target 11.3: Enhance inclusive and sustainable urbanization and capacity for participatory, integrated, and sustainable human settlement planning</td>
-                    <td>Indicator 11.3.1: Ratio of land consumption rate to population growth rate</td>
-                </tr>
-                <tr>
-                    <td>Green Buildings</td>
-                    <td>SDG 11: Sustainable Cities and Communities</td>
-                    <td>Target 11.3: Enhance inclusive and sustainable urbanization and capacity for participatory, integrated, and sustainable human settlement planning</td>
-                    <td>Indicator 11.3.2: Proportion of cities with a direct participation structure in urban planning</td>
+                    <td>Target 11.2: Provide access to safe, affordable, accessible, and sustainable transport systems for all, improving road safety, notably by expanding public transport.</td>
+                    <td>Indicator 11.2.1: Proportion of population that has convenient access to public transport.</td>
                 </tr>
             </tbody>
         </table>
 
         <div class="mt-5">
-            <h3 class="meanings-heading">Meanings of SDG 11:</h3>
+            <h3 class="meanings-heading">Meanings of SDGs:</h3>
             <ul class="list-group">
-                <li class="list-group-item"><strong>SDG 11: Sustainable Cities and Communities</strong> - Make cities inclusive, safe, resilient, and sustainable by improving urban areas and public spaces.</li>
-                <li class="list-group-item"><strong>Target 11.2:</strong> Provide access to safe, affordable, accessible, and sustainable transport systems for all, improving road safety, notably by expanding public transport and providing adequate transport systems for all.</li>
-                <li class="list-group-item"><strong>Target 11.6:</strong> Reduce the adverse per capita environmental impact of cities, particularly by paying attention to air quality and municipal and other waste management.</li>
-                <li class="list-group-item"><strong>Target 11.7:</strong> Provide universal access to safe, inclusive, and accessible green and public spaces, particularly for women and children, the elderly, and persons with disabilities.</li>
+                <li class="list-group-item"><strong>SDG 11: Sustainable Cities and Communities</strong> - Makes cities inclusive, safe, resilient, and sustainable, focusing on reducing risks, improving infrastructure, and increasing access to essential services.</li>
             </ul>
         </div>
     </div>
@@ -132,5 +87,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
