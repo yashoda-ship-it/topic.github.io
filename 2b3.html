@@ -3,149 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy Management: Urban Optimization</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Self-Driving Car System</title>
     <style>
         body {
-            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
-        h2 {
-            color: #4a90e2;
-        }
-        h1 {
-            color: #d9534f;
-        }
-        h4 {
-            color: #5cb85c;
+        h1, h2, h3 {
+            color: #333;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
         }
         table {
-            border: 2px solid #5bc0de;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
         }
-        thead {
-            background-color: #5bc0de;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
             color: white;
         }
-        tbody tr:nth-child(even) {
-            background-color: #d9edf7;
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
         }
-        tbody tr:nth-child(odd) {
-            background-color: #f7f7f9;
+        .box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .text-center {
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        svg {
+            margin: 20px auto;
+            display: block;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
         }
-        a {
-            color: #0275d8;
-            text-decoration: underline;
+        .chart-title {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-3">
-        <h2 class="text-center">Business Case: Energy Management</h2>
-        <h1 class="text-center mt-4">Optimizing Energy Utilization in Urban Areas</h1>
+    <h1>Self-Driving Car System</h1>
 
-        <div class="mt-4">
-            <h4>Sub-task: Optimizing Energy Utilization</h4>
-            <p><strong>SDG Goal:</strong> 7</p>
-            <p><strong>Target:</strong> 7.2</p>
-            <p><strong>Indicator:</strong> 7.2.1</p>
+    <!-- Section 1: Overview -->
+    <h2>Overview</h2>
+    <p><strong>Objective:</strong> Develop an efficient and reliable self-driving car system using advanced algorithms and real-time data analysis.</p>
+    <p><strong>SDG Goal:</strong> Sustainable Cities and Communities (Goal 11).</p>
+    <p><strong>Target:</strong> Enhance road safety and optimize traffic flow through intelligent transportation systems.</p>
+
+    <!-- Section 2: Data Representation -->
+    <h2>Data Representation</h2>
+    <p>The system processes various data inputs:</p>
+    <ul>
+        <li><strong>Sensor Data:</strong> Data from LIDAR, radar, and cameras used for object detection and path planning.</li>
+        <li><strong>Road Network:</strong> Represented as a graph with intersections as vertices and roads as edges.</li>
+        <li><strong>Traffic Data:</strong> Real-time traffic conditions incorporated into routing decisions.</li>
+    </ul>
+
+    <!-- Graph Example -->
+    <div class="container">
+        <div class="box">
+            <svg width="400" height="300">
+                <!-- Nodes -->
+                <circle cx="50" cy="150" r="20" fill="blue"></circle>
+                <circle cx="200" cy="50" r="20" fill="green"></circle>
+                <circle cx="200" cy="250" r="20" fill="red"></circle>
+                <circle cx="350" cy="150" r="20" fill="orange"></circle>
+
+                <!-- Edges -->
+                <line x1="50" y1="150" x2="200" y2="50" stroke="black" stroke-width="2"></line>
+                <line x1="50" y1="150" x2="200" y2="250" stroke="black" stroke-width="2"></line>
+                <line x1="200" y1="50" x2="350" y2="150" stroke="black" stroke-width="2"></line>
+                <line x1="200" y1="250" x2="350" y2="150" stroke="black" stroke-width="2"></line>
+
+                <!-- Labels -->
+                <text x="40" y="145" fill="white" font-size="14">A</text>
+                <text x="190" y="45" fill="white" font-size="14">B</text>
+                <text x="190" y="245" fill="white" font-size="14">C</text>
+                <text x="340" y="145" fill="white" font-size="14">D</text>
+            </svg>
+            <p class="chart-title">Graph Representation of Road Network</p>
         </div>
-
-        <div class="mt-4">
-            <p>Urban areas face the dual challenges of high energy consumption and dependency on non-renewable energy sources. The energy mix in the city is represented below:</p>
-
-            <table class="table table-striped">
+        <div class="box">
+            <h3>Real-World Data Used</h3>
+            <table>
                 <thead>
                     <tr>
-                        <th>Sl. No.</th>
-                        <th>Energy Source</th>
-                        <th>Contribution (%)</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                        <th>Usage</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>Solar</td>
-                        <td>25</td>
+                        <td>Sensor Data</td>
+                        <td>LIDAR, radar, cameras</td>
+                        <td>Object detection and collision avoidance.</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>Wind</td>
-                        <td>15</td>
+                        <td>Traffic Data</td>
+                        <td>Real-time traffic updates</td>
+                        <td>Optimize routing and reduce delays.</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>Hydroelectric</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Fossil Fuels</td>
-                        <td>30</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Other Renewable</td>
-                        <td>10</td>
+                        <td>Navigation Maps</td>
+                        <td>High-definition road maps</td>
+                        <td>Path planning and localization.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+    </div>
 
-        <div class="mt-4">
-            <p>The energy distribution network for the city is visualized below:</p>
-
-            <div class="graph">
-                <svg width="600" height="400">
-                    <!-- Arrowhead definition -->
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-                            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-                        </marker>
-                    </defs>
-
-                    <!-- Edges -->
-                    <line x1="150" y1="100" x2="300" y2="50" class="edge" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
-                    <line x1="300" y1="50" x2="450" y2="100" class="edge" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
-                    <line x1="150" y1="100" x2="200" y2="250" class="edge" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
-                    <line x1="200" y1="250" x2="300" y2="350" class="edge" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
-                    <line x1="450" y1="100" x2="300" y2="350" class="edge" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
-
-                    <!-- Nodes -->
-                    <circle cx="150" cy="100" r="20" fill="#4a90e2" />
-                    <circle cx="300" cy="50" r="20" fill="#4a90e2" />
-                    <circle cx="450" cy="100" r="20" fill="#4a90e2" />
-                    <circle cx="200" cy="250" r="20" fill="#4a90e2" />
-                    <circle cx="300" cy="350" r="20" fill="#4a90e2" />
-
-                    <!-- Labels -->
-                    <text x="150" y="95" class="label" text-anchor="middle">Solar Plant</text>
-                    <text x="300" y="45" class="label" text-anchor="middle">Wind Farm</text>
-                    <text x="450" y="95" class="label" text-anchor="middle">Hydroelectric Dam</text>
-                    <text x="200" y="245" class="label" text-anchor="middle">Storage Unit</text>
-                    <text x="300" y="345" class="label" text-anchor="middle">Urban Center</text>
-
-                    <!-- Edge Weights -->
-                    <text x="225" y="70" class="label">50 MW</text>
-                    <text x="375" y="70" class="label">30 MW</text>
-                    <text x="175" y="175" class="label">60 MW</text>
-                    <text x="250" y="300" class="label">40 MW</text>
-                    <text x="375" y="225" class="label">70 MW</text>
-                </svg>
-            </div>
+    <!-- Section 3: Algorithms -->
+    <h2>Algorithms</h2>
+    <div class="container">
+        <div class="box">
+            <h3>Path Planning: Divide and Conquer</h3>
+            <p>Uses the divide-and-conquer strategy to break down the problem of finding an optimal path into smaller, more manageable sub-problems.</p>
         </div>
-
-        <div class="mt-4">
-            <p>To optimize energy distribution and minimize wastage, a <strong>Load Balancing Algorithm</strong> was implemented. The algorithm dynamically adjusts energy supply to match demand in real time while prioritizing renewable sources.</p>
-            <p>For implementation details, visit the code <a href="https://github.com/example/energy-management">HERE</a>. The algorithm leverages predictive analytics and real-time monitoring to optimize the urban energy network.</p>
+        <div class="box">
+            <h3>Obstacle Detection: Backtracking</h3>
+            <p>Backtracking is used to explore possible solutions and detect obstacles while traversing through the environment.</p>
         </div>
-
-        <div class="mt-4">
-            <p><strong>Reflection:</strong> Future enhancements could include the integration of smart meters for real-time tracking and predictive analytics to forecast energy demands and renewable generation capacity.</p>
+        <div class="box">
+            <h3>Traffic Management: Dijkstra's Algorithm</h3>
+            <p>Finds the shortest path considering traffic conditions.</p>
+        </div>
+        <div class="box">
+            <h3>Localization: Memoization</h3>
+            <p>Uses memoization techniques to store previously computed positions and velocities to optimize the localization process.</p>
+        </div>
+        <div class="box">
+            <h3>Route Optimization: Greedy Technique</h3>
+            <p>Greedy algorithms are used to find an optimal route by making the best possible decision at each step based on current conditions.</p>
+        </div>
+        <div class="box">
+            <h3>Collision Avoidance: Lazy Propagation</h3>
+            <p>Lazy propagation can be used to reduce the complexity of recalculating paths for dynamic environments with minimal disturbance to the overall plan.</p>
+        </div>
+        <div class="box">
+            <h3>Decision Making: Randomized Algorithms</h3>
+            <p>Randomized algorithms can be used in decision-making processes to handle uncertainty in complex environments.</p>
+        </div>
+        <div class="box">
+            <h3>Traffic Flow Prediction: Sliding Window</h3>
+            <p>Sliding window techniques can be used to predict traffic flow by analyzing a moving window of past traffic data.</p>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Section 4: Process Flow -->
+    <h2>Process Flow</h2>
+    <p>The self-driving car system follows these steps:</p>
+    <ol>
+        <li>Sensors collect data from the environment.</li>
+        <li>Data is processed to detect obstacles and identify road conditions.</li>
+        <li>Path planning algorithms calculate the optimal route.</li>
+        <li>Control systems execute driving decisions in real-time.</li>
+    </ol>
+
+    <!-- Section 5: Optimization -->
+    <h2>Optimization Techniques</h2>
+    <ul>
+        <li><strong>Real-Time Processing:</strong> Ensures low latency using parallel computing techniques.</li>
+        <li><strong>Energy Efficiency:</strong> Optimizes power usage for on-board systems.</li>
+        <li><strong>Route Optimization:</strong> Incorporates dynamic traffic data to adjust routes.</li>
+    </ul>
 </body>
 </html>
+
