@@ -3,142 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Case: Energy Management</title>
+    <title>Business Case: Energy Management System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             background-color: #f5f5f5;
         }
-        h2 {
-            color: #4a90e2;
+        h1, h2 {
+            color: #007bff;
         }
-        h1 {
-            color: #d9534f;
+        h3 {
+            color: #6c757d;
         }
         h4 {
-            color: #5cb85c;
+            color: #28a745;
         }
         table {
-            border: 2px solid #5bc0de;
+            border: 2px solid #007bff;
         }
         thead {
-            background-color: #5bc0de;
+            background-color: #007bff;
             color: white;
         }
         tbody tr:nth-child(even) {
-            background-color: #d9edf7;
+            background-color: #f8f9fa;
         }
         tbody tr:nth-child(odd) {
-            background-color: #f7f7f9;
+            background-color: #ffffff;
         }
         .text-center {
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
         a {
-            color: #0275d8;
+            color: #007bff;
             text-decoration: underline;
+        }
+        .content-section {
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-3">
-        <h2 class="text-center">Business Case: Energy Management</h2>
-        <h1 class="text-center mt-4">Optimizing Energy Consumption in the City</h1>
+    <div class="container mt-4">
+        <h2 class="text-center">Business Case: Energy Management System</h2>
+        <h3 class="text-center mt-4">Optimizing Energy Utilization</h3>
 
-        <div class="mt-4">
-            <h4>Sub-task: Energy Efficiency Optimization</h4>
-            <p><strong>SDG Goal:</strong> 7</p>
-            <p><strong>Target:</strong> 7.3</p>
-            <p><strong>Indicator:</strong> 7.3.1</p>
+        <div class="content-section">
+            <h4>Subtask: Optimizing Energy Utilization</h4>
+            <p><strong>Sustainable Development Goal:</strong> SDG Goal 11</p>
+            <p><strong>Target:</strong> 11.6</p>
+            <p><strong>Indicator:</strong> 11.6.1</p>
         </div>
 
-        <div class="mt-4">
-            <p>The city faces growing energy demands, leading to a need for better energy management systems. The focus is to optimize energy consumption through various smart technologies and renewable energy integration. The energy management system involves the following key areas:</p>
+        <div class="content-section">
+            <p>The global demand for energy continues to rise, and managing energy consumption efficiently has become crucial for both environmental sustainability and economic viability. The <strong>Energy Management System (EMS)</strong> aims to optimize energy usage, integrate renewable energy solutions, and reduce carbon footprints across different sectors. By improving energy efficiency and incorporating smart technologies, the system helps to build resilient, sustainable, and efficient energy networks.</p>
+        </div>
 
+        <div class="content-section">
+            <h5>Energy Infrastructure and Consumption Overview</h5>
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Sl. No.</th>
-                        <th>Energy System</th>
-                        <th>Number of Units</th>
+                        <th>Energy Source</th>
+                        <th>Contribution (%)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Smart Street Lighting</td>
-                        <td>500</td>
+                        <td>Solar</td>
+                        <td>25</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Solar Panel Installations</td>
-                        <td>200</td>
+                        <td>Wind</td>
+                        <td>15</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Energy Storage Systems</td>
-                        <td>150</td>
+                        <td>Hydroelectric</td>
+                        <td>20</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Electric Vehicle Charging Stations</td>
-                        <td>50</td>
+                        <td>Fossil Fuels</td>
+                        <td>30</td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Smart Meters</td>
-                        <td>1000</td>
+                        <td>Other Renewables</td>
+                        <td>10</td>
                     </tr>
                 </tbody>
             </table>
+            <p>This table showcases the current energy mix, with an emphasis on renewable energy sources like solar, wind, and hydroelectric power. The <strong>Energy Management System (EMS)</strong> focuses on enhancing the share of these renewable sources and optimizing the consumption of energy to reduce dependency on non-renewable energy sources.</p>
+
+            <p><strong>Figure 1: Energy Distribution Network Map</strong></p>
+            <p><em>[Insert Energy Distribution Network Graph Here]</em></p>
         </div>
 
-        <div class="mt-4">
-            <p>The above data represents the energy management infrastructure in the city. These technologies help in reducing consumption, enhancing energy efficiency, and supporting sustainable energy use. Below is a visual representation of the key energy systems:</p>
-
-            <p><strong>Figure 1: Energy Management System Map</strong></p>
-            <canvas id="energyChart" width="400" height="200"></canvas>
-        </div>
-
-        <script>
-            var ctx = document.getElementById('energyChart').getContext('2d');
-            var energyChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Smart Street Lighting', 'Solar Panel Installations', 'Energy Storage Systems', 'Electric Vehicle Charging Stations', 'Smart Meters'],
-                    datasets: [{
-                        label: 'Number of Units',
-                        data: [500, 200, 150, 50, 1000],
-                        backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b'],
-                        borderColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b'],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        </script>
-
-        <div class="mt-4">
-            <p>As energy optimization is crucial, a detailed energy flow analysis is performed to identify the best energy-saving strategies. The data generated can be stored in a table for analysis, including parameters such as energy consumption, savings, and ROI. A sample code for energy optimization calculations can be found in the following <a href="#">GitHub link</a> (placeholder for implementation code).</p>
-
-            <h5>Key Components:</h5>
+        <div class="content-section">
+            <h5>Energy Optimization Strategy</h5>
+            <p>The core of the <strong>Energy Management System</strong> involves implementing a <strong>Load Balancing Algorithm</strong> that adjusts energy supply based on real-time demand and available renewable energy. Key components of the optimization strategy include:</p>
             <ul>
-                <li><strong>Input:</strong> Energy consumption data, renewable energy production, and energy storage levels.</li>
-                <li><strong>Output:</strong> Energy efficiency strategies and optimization recommendations.</li>
-                <li><strong>Algorithm:</strong> Optimization techniques using linear programming and energy flow analysis.</li>
+                <li><strong>Minimizing Carbon Emissions:</strong> The EMS reduces reliance on fossil fuels by prioritizing renewable energy sources.</li>
+                <li><strong>Optimizing Energy Storage:</strong> Efficiency improvements in energy storage systems ensure a reliable energy supply during peak demand periods.</li>
+                <li><strong>Enhancing Energy Supply Stability:</strong> The EMS ensures a stable energy supply by adjusting to varying demands, minimizing wastage, and making use of excess renewable energy.</li>
             </ul>
         </div>
 
-        <div class="mt-4">
+        <div class="content-section">
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Input:</strong> Energy consumption data, renewable energy availability, and energy storage capacity.</li>
+                <li><strong>Output:</strong> Optimized energy distribution schedules that minimize wastage and enhance efficiency.</li>
+                <li><strong>Algorithm:</strong> Load Balancing Algorithm with real-time monitoring and energy flow analysis.</li>
+            </ul>
+            <p>A sample implementation of the algorithm can be found in the following <a href="#">GitHub link</a> (placeholder for implementation code).</p>
+        </div>
+
+        <div class="content-section">
             <h5>Reflection:</h5>
-            <p>This energy management system can further integrate with smart grid technologies to enable real-time monitoring and dynamic adjustment of energy consumption, promoting a more sustainable and cost-effective energy infrastructure.</p>
+            <p>The <strong>Energy Management System (EMS)</strong> plays a critical role in ensuring that energy is used efficiently, contributing to a sustainable future. Future enhancements could include the integration of <strong>smart meters</strong> for real-time energy tracking and predictive analytics to forecast energy demands based on variables such as weather patterns, population growth, and industrial activities. The system can further optimize energy consumption by reducing waste and improving the efficiency of both renewable energy production and energy storage systems.</p>
+            <p>By improving energy management, we contribute directly to <strong>SDG Goal 11</strong>, which promotes making cities and communities more sustainable, and to the overarching goal of reducing the global carbon footprint.</p>
         </div>
     </div>
 
