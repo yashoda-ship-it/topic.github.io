@@ -3,77 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Driving Cars Solutions</title>
+    <title>Energy Management: Urban Optimization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #e1f5fe;
-            color: #333;
-            margin: 20px;
-            padding: 0;
+            background-color: #f5f5f5;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        h2 {
+            color: #4a90e2;
         }
-        h1, h2 {
-            color: #01579b;
+        h1 {
+            color: #d9534f;
         }
-        .plan {
-            margin-top: 20px;
-            padding: 15px;
-            border-left: 5px solid #0288d1;
-            background-color: #e0f7fa;
-            border-radius: 4px;
+        h4 {
+            color: #5cb85c;
         }
-        .plan:nth-of-type(odd) {
-            background-color: #b3e5fc; /* Light blue for odd sections */
+        table {
+            border: 2px solid #5bc0de;
         }
-        .plan:nth-of-type(even) {
-            background-color: #81d4fa; /* Slightly darker blue for even sections */
+        thead {
+            background-color: #5bc0de;
+            color: white;
         }
-        .highlight {
-            background-color: #ffffe0;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
-            color: #d32f2f;
+        tbody tr:nth-child(even) {
+            background-color: #d9edf7;
         }
-        p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+        tbody tr:nth-child(odd) {
+            background-color: #f7f7f9;
+        }
+        .text-center {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            color: #0275d8;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Self-Driving Cars Solutions</h1>
+    <div class="container mt-3">
+        <h2 class="text-center">Business Case: Energy Management</h2>
+        <h1 class="text-center mt-4">Optimizing Energy Utilization in Urban Areas</h1>
 
-        <div class="plan">
-            <h2>1. Route Optimization with Graph Algorithms</h2>
-            <p>Use <span class="highlight">Dijkstra’s Algorithm</span> for real-time route calculations. This algorithm ensures safe and efficient navigation by finding the shortest path from the car’s current location to its destination, considering obstacles and road conditions in real-time.
-            </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/0f2e0bcc4647cc372d80b3533e9f6710"><strong>C++</strong></a></p>
-            <p>Employ the <span class="highlight">Floyd-Warshall Algorithm</span> to precompute all-pairs shortest paths for robust navigation maps. This approach ensures that the self-driving car can quickly adapt to changes in the environment, providing a comprehensive navigation map that is updated dynamically based on real-time sensor data.
-            </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/780c066c135834123a8ff5021165ccfa"><strong>C++</strong></a></p>
+        <div class="mt-4">
+            <h4>Sub-task: Optimizing Energy Utilization</h4>
+            <p><strong>SDG Goal:</strong> 7</p>
+            <p><strong>Target:</strong> 7.2</p>
+            <p><strong>Indicator:</strong> 7.2.1</p>
         </div>
 
-        <div class="plan">
-            <h2>2. Obstacle Detection with Sorting and Searching</h2>
-            <p>Use <span class="highlight">Quick Sort</span> to prioritize obstacles by proximity. This sorting algorithm allows the self-driving car to quickly identify and address immediate threats, ensuring safe navigation through urban environments.
-                </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/f6bf6dfd68ae5a55ba632a063932a46b"><strong>C++</strong></a></p>
-            <p>Employ <span class="highlight">Binary Search</span> to quickly check maps for known hazards. This searching technique efficiently locates obstacles within the map, helping the car avoid hazards and navigate safely.
-                </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/5c209382e6192a16c2171a8b8180aa58"><strong>C++</strong></a></p>
+        <div class="mt-4">
+            <p>Urban areas face the dual challenges of high energy consumption and dependency on non-renewable energy sources. The energy mix in the city is represented below:</p>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sl. No.</th>
+                        <th>Energy Source</th>
+                        <th>Contribution (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Solar</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Wind</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Hydroelectric</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Fossil Fuels</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Other Renewable</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <div class="plan">
-            <h2>3. Decision Making with Dynamic Programming</h2>
-            <p>Apply the <span class="highlight">Knapsack Problem</span> to balance energy efficiency, travel time, and passenger preferences. This dynamic programming approach enables the self-driving car to make optimal decisions regarding route selection based on multiple criteria, such as fuel efficiency and passenger comfort.
-                </br></br>Here is the implementation inn c++ language <a href="https://gist.github.com/yashoda-ship-it/a0dcd9e0417e2d35ff8681d91823aab0"><strong>C++</strong></a></p>
+        <div class="mt-4">
+            <p>The energy distribution network for the city is visualized below:</p>
+
+            <div class="graph">
+                <svg width="600" height="400">
+                    <!-- Arrowhead definition -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+                        </marker>
+                    </defs>
+
+                    <!-- Edges -->
+                    <line x1="150" y1="100" x2="300" y2="50" class="edge" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
+                    <line x1="300" y1="50" x2="450" y2="100" class="edge" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
+                    <line x1="150" y1="100" x2="200" y2="250" class="edge" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
+                    <line x1="200" y1="250" x2="300" y2="350" class="edge" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
+                    <line x1="450" y1="100" x2="300" y2="350" class="edge" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
+
+                    <!-- Nodes -->
+                    <circle cx="150" cy="100" r="20" fill="#4a90e2" />
+                    <circle cx="300" cy="50" r="20" fill="#4a90e2" />
+                    <circle cx="450" cy="100" r="20" fill="#4a90e2" />
+                    <circle cx="200" cy="250" r="20" fill="#4a90e2" />
+                    <circle cx="300" cy="350" r="20" fill="#4a90e2" />
+
+                    <!-- Labels -->
+                    <text x="150" y="95" class="label" text-anchor="middle">Solar Plant</text>
+                    <text x="300" y="45" class="label" text-anchor="middle">Wind Farm</text>
+                    <text x="450" y="95" class="label" text-anchor="middle">Hydroelectric Dam</text>
+                    <text x="200" y="245" class="label" text-anchor="middle">Storage Unit</text>
+                    <text x="300" y="345" class="label" text-anchor="middle">Urban Center</text>
+
+                    <!-- Edge Weights -->
+                    <text x="225" y="70" class="label">50 MW</text>
+                    <text x="375" y="70" class="label">30 MW</text>
+                    <text x="175" y="175" class="label">60 MW</text>
+                    <text x="250" y="300" class="label">40 MW</text>
+                    <text x="375" y="225" class="label">70 MW</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <p>To optimize energy distribution and minimize wastage, a <strong>Load Balancing Algorithm</strong> was implemented. The algorithm dynamically adjusts energy supply to match demand in real time while prioritizing renewable sources.</p>
+            <p>For implementation details, visit the code <a href="https://github.com/example/energy-management">HERE</a>. The algorithm leverages predictive analytics and real-time monitoring to optimize the urban energy network.</p>
+        </div>
+
+        <div class="mt-4">
+            <p><strong>Reflection:</strong> Future enhancements could include the integration of smart meters for real-time tracking and predictive analytics to forecast energy demands and renewable generation capacity.</p>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
