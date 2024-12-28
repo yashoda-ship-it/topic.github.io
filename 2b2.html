@@ -3,140 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Road Condition Monitoring and Management System</title>
+    <title>Road Condition Sensors</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 20px;
         }
         h1, h2 {
-            color: #333;
+            color: #2c3e50;
         }
-        h3 {
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+        }
+        .figure-caption {
+            font-size: 0.9em;
             color: #555;
-        }
-        .container {
-            margin: 20px 0;
-        }
-        .section {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .section ul li {
-            margin: 5px 0;
-        }
-        pre {
-            background-color: #f5f5f5;
-            padding: 10px;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Portfolio Case: Road Condition Monitoring and Management</h1>
-    <div class="container">
-        <h2>Business Case</h2>
-        <div class="section">
-            <p>The city's road maintenance department employs IoT sensors and advanced algorithms to monitor and maintain road conditions. The system collects real-time data from road sensors, evaluates road quality, detects damages, and prioritizes repairs to ensure smooth traffic flow and reduce accidents.</p>
-        </div>
-    </div>
-    
-    <div class="container">
-        <h2>Data Representation</h2>
-        <div class="section">
-            <h3>1. Sensor Nodes</h3>
-            <p>Represent road segments as graph vertices.</p>
-            <h3>2. Road Connections</h3>
-            <p>Represent connections between road segments with graph edges, weighted by factors like distance, quality, and traffic.</p>
-            <h3>3. Repair Priority Queue</h3>
-            <p>Use a priority queue to rank road segments based on their condition (e.g., potholes, cracks, wear).</p>
-        </div>
-    </div>
-    
-    <div class="container">
-        <h2>Real-World Data Used</h2>
-        <div class="section">
-            <ul>
-                <li><strong>Sensor Data:</strong> Real-time road condition data in MBs, including vibration, cracks, and temperature.</li>
-                <li><strong>Traffic Flow:</strong> Data on traffic density and patterns to prioritize high-traffic roads.</li>
-                <li><strong>Weather Data:</strong> To analyze road wear caused by weather (rain, snow, etc.).</li>
-                <li><strong>Historical Maintenance Data:</strong> Helps predict areas prone to faster degradation.</li>
-            </ul>
-        </div>
+    <h1>Road Condition Sensors</h1>
+
+    <h2>Overview</h2>
+    <p>
+        Road condition sensors are deployed to monitor and improve traffic flow and safety by providing real-time data on road conditions such as weather, traffic, and incidents. These sensors are a crucial part of smart city infrastructure, helping traffic management systems optimize routes and reduce accidents.
+    </p>
+
+    <h2>Objective</h2>
+    <p>
+        The objective is to implement an IoT-based system that continuously monitors road conditions, processes sensor data in real-time, and optimizes traffic management by providing intelligent routing recommendations. This system contributes to enhanced safety, reduced traffic congestion, and more efficient road usage.
+    </p>
+
+    <h2>SDG Goal</h2>
+    <p>Sustainable Cities and Communities (Goal 11) - By improving road safety, reducing congestion, and enhancing traffic management, this system helps in the development of sustainable, resilient urban areas.</p>
+
+    <h2>Data Representation</h2>
+    <p>The road condition monitoring system can be modeled as a graph, where:</p>
+    <ul>
+        <li><strong>Vertices:</strong> Represent sensor nodes deployed at various road intersections or on-road segments.</li>
+        <li><strong>Edges:</strong> Represent roads connecting the nodes. Each edge can have weights that represent traffic flow, travel time, or condition severity such as icy roads or accidents.</li>
+    </ul>
+
+    <div class="figure">
+        <img src="road-condition-graph-example.png" alt="Graph Representation of Road Condition Sensors">
+        <p class="figure-caption">Figure 1: Graph Representation of Road Condition Sensors with Traffic and Condition Weights</p>
     </div>
 
-    <div class="container">
-        <h2>Algorithms and Techniques Used</h2>
-        <div class="section">
-            <ul>
-                <li><strong>Shortest Path Algorithm:</strong> Dijkstra’s or A* algorithm to reroute traffic during road repairs.</li>
-                <li><strong>Heap Data Structure:</strong> For efficient priority queue implementation for repair tasks.</li>
-                <li><strong>Kruskal’s Algorithm:</strong> To plan an optimal network for sensor deployment.</li>
-                <li><strong>Binary Search Tree (BST):</strong> To store historical road condition data for efficient retrieval.</li>
-                <li><strong>Dynamic Programming:</strong> For budgeting and scheduling multiple repair tasks efficiently.</li>
-                <li><strong>Machine Learning:</strong> Predict road damage trends using historical data and real-time input.</li>
-            </ul>
-        </div>
+    <h2>Real-World Data Used</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Description</th>
+                <th>Usage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Weather Data</td>
+                <td>Temperature, precipitation, visibility, humidity</td>
+                <td>Used to identify hazardous road conditions such as ice, fog, and heavy rain.</td>
+            </tr>
+            <tr>
+                <td>Traffic Flow</td>
+                <td>Vehicle density, average speed, and lane occupancy</td>
+                <td>Used to identify congestion patterns and optimize traffic lights or routing.</td>
+            </tr>
+            <tr>
+                <td>Incident Reports</td>
+                <td>Accidents, roadblocks, or obstacles</td>
+                <td>Used to provide real-time alerts and reroute vehicles away from affected areas.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Algorithms and Data Structures</h2>
+    <p>Several algorithms and data structures are used to process the sensor data and make real-time decisions. Here are some key components:</p>
+
+    <ul>
+        <li>
+            <strong>Shortest Path: Bellman-Ford Algorithm</strong><br>
+            The Bellman-Ford algorithm is ideal for graphs with negative edge weights and is used to find the shortest path from a source to all other vertices, which helps in optimizing routes.
+        </li>
+        <li>
+            <strong>Clustering: K-Means</strong><br>
+            K-Means is used to group nearby sensors with similar traffic conditions, helping reduce the amount of data transmitted and processed by focusing only on key areas with high traffic or hazards.
+        </li>
+        <li>
+            <strong>Real-Time Data Filtering: Kalman Filter</strong><br>
+            The Kalman filter is applied to smooth noisy sensor data, especially for weather and traffic conditions, providing more accurate real-time updates.
+        </li>
+        <li>
+            <strong>Priority Queue: Min-Heap</strong><br>
+            Used to prioritize urgent alerts and critical incidents in real-time, ensuring that the most important data is processed first.
+        </li>
+        <li>
+            <strong>Data Compression: LZW Algorithm</strong><br>
+            The LZW algorithm is used to compress real-time sensor data to save bandwidth and storage space while maintaining accessibility for analysis and decision-making.
+        </li>
+    </ul>
+
+    <h2>Process Flow</h2>
+    <p>The system follows a multi-step process to manage road conditions in real-time:</p>
+    <ol>
+        <li>IoT sensors gather real-time data on weather, traffic, and incidents from various locations.</li>
+        <li>The collected data is transmitted to a central processing system for analysis.</li>
+        <li>Algorithms such as Bellman-Ford and K-Means process the data, optimizing traffic routes and identifying patterns.</li>
+        <li>Traffic management systems are updated with optimized routes, alerts, and recommendations for both drivers and operators.</li>
+    </ol>
+
+    <h2>Optimization Techniques</h2>
+    <ul>
+        <li>
+            <strong>Real-Time Updates:</strong> Algorithms like BFS/DFS continuously update traffic flow and incident data to keep systems up-to-date and allow for dynamic rerouting.
+        </li>
+        <li>
+            <strong>Risk Assessment:</strong> A combination of algorithms prioritizes high-risk conditions based on severity. For example, icy road conditions or accidents are flagged for immediate rerouting.
+        </li>
+        <li>
+            <strong>Storage Efficiency:</strong> Real-time data compression using LZW reduces the volume of traffic data logs while maintaining efficient retrieval and analysis.
+        </li>
+    </ul>
+
+    <div class="figure">
+        <img src="optimization-techniques-graph.png" alt="Optimization Techniques Diagram for Traffic Management">
+        <p class="figure-caption">Figure 2: Optimization Techniques for Real-Time Traffic Management</p>
     </div>
 
-    <div class="container">
-        <h2>Process Flow</h2>
-        <div class="section">
-            <ul>
-                <li><strong>Monitoring:</strong> Sensors detect vibrations, temperature changes, and cracks.</li>
-                <li><strong>Data Aggregation:</strong> Sensor data is processed and stored.</li>
-                <li><strong>Damage Detection:</strong> Use K-Means Clustering to classify road segments based on condition. Segments are labeled as Good, Moderate, or Poor.</li>
-                <li><strong>Response Planning:</strong> High-priority roads are identified using weighted factors (traffic, damage severity, weather). Repairs are scheduled using dynamic programming.</li>
-                <li><strong>Execution:</strong> Traffic is rerouted, and repairs are performed.</li>
-            </ul>
-        </div>
+    <h2>Example Data Flow</h2>
+    <p>The following diagram outlines how data flows from the sensors to traffic management systems:</p>
+    <div class="figure">
+        <img src="data-flow-diagram.png" alt="Data Flow Diagram">
+        <p class="figure-caption">Figure 3: Data Flow from Road Sensors to Traffic Management Systems</p>
     </div>
 
-    <div class="container">
-        <h2>Graph Representation</h2>
-        <div class="section">
-            <h3>Example: Road Network</h3>
-            <p>Nodes: Road segments</p>
-            <p>Edges: Weighted connections between road segments based on distance, condition, and traffic.</p>
-            <pre>
-Example:
+    <h2>Future Enhancements</h2>
+    <ul>
+        <li>
+            <strong>Machine Learning Integration:</strong> Future systems will integrate machine learning models to predict traffic conditions and optimize routes based on historical data.
+        </li>
+        <li>
+            <strong>Vehicle-to-Infrastructure (V2X) Communication:</strong> Enhancements in V2X communication will enable direct communication between vehicles and infrastructure to improve traffic safety and management.
+        </li>
+        <li>
+            <strong>Expanded Coverage:</strong> As more sensors are deployed, the coverage area will increase, leading to more granular data and improved routing decisions.
+        </li>
+    </ul>
 
-1. Road-1 -> Road-2 (Weight: 8)
-2. Road-2 -> Road-3 (Weight: 12)
-            </pre>
-        </div>
-    </div>
-
-    <div class="container">
-        <h2>Optimization</h2>
-        <div class="section">
-            <ul>
-                <li><strong>Dynamic Routing:</strong> Use BFS or DFS to reroute vehicles dynamically.</li>
-                <li><strong>Efficient Repair Scheduling:</strong> Use Knapsack Algorithm to allocate resources effectively.</li>
-                <li><strong>Data Compression:</strong> Use Huffman Coding to compress historical maintenance data for efficient storage.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container">
-        <h2>Visualization</h2>
-        <div class="section">
-            <ul>
-                <li><strong>Graph 1:</strong> Road network with weights based on road conditions and traffic.</li>
-                <li><strong>Graph 2:</strong> Priority queue visualization showing road segments ranked for repairs.</li>
-            </ul>
-        </div>
-    </div>
 </body>
 </html>
+
 
 
