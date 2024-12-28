@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy Management</title>
+    <title>Business Case: Sustainable Urban Energy Management</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #f5f5f5;
         }
-        h2, h4 {
+        h2 {
             color: #4a90e2;
         }
         h1 {
             color: #d9534f;
+        }
+        h4 {
+            color: #5cb85c;
         }
         table {
             border: 2px solid #5bc0de;
@@ -28,147 +31,46 @@
         tbody tr:nth-child(odd) {
             background-color: #f7f7f9;
         }
-        .graph-container {
-            text-align: center;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-        }
         .text-center {
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
-        .list-group-item {
-            font-size: 18px;
+        a {
+            color: #0275d8;
+            text-decoration: underline;
+        }
+        .graph {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+        .node {
+            fill: #4a90e2;
+            stroke: #333;
+            stroke-width: 1.5;
+        }
+        .edge {
+            stroke: #333;
+            stroke-width: 1.5;
+            marker-end: url(#arrowhead);
+        }
+        .label {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            fill: #000;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-4">
+    <div class="container mt-3">
         <h2 class="text-center">Business Case: Sustainable Urban Energy Management</h2>
-        <h1 class="text-center mt-3">Enhancing Urban Energy Efficiency and Sustainability</h1>
+        <h1 class="text-center mt-4">Energy Efficiency and Sustainability</h1>
 
         <div class="mt-4">
-            <h4>Subtask: Enhancing Urban Energy Efficiency and Sustainability</h4>
-            <p><strong>Sustainable Development Goal (SDG):</strong> 11</p>
+            <h4>Sub-task: Enhancing Urban Energy Efficiency and Sustainability</h4>
+            <p><strong>SDG Goal:</strong> 11</p>
             <p><strong>Target:</strong> 11.6</p>
             <p><strong>Indicator:</strong> 11.6.1</p>
         </div>
 
         <div class="mt-4">
-            <p>Urban areas face significant challenges in managing energy efficiently, exacerbating environmental impacts and straining urban infrastructure. The Sustainable Urban Energy Management system aims to enhance energy efficiency, reduce reliance on non-renewable energy sources, and promote sustainable urban development.</p>
-        </div>
-
-        <div class="mt-4">
-            <h4>Energy Infrastructure and Consumption</h4>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Sl. No.</th>
-                        <th>Energy Source</th>
-                        <th>Contribution (%)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Solar</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Wind</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Hydroelectric</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Fossil Fuels</td>
-                        <td>30</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Other Renewable</td>
-                        <td>10</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="mt-4">
-            <h4>Energy Distribution Network Map</h4>
-            <p>The diagram below illustrates the energy distribution network and connections between renewable energy generation sites and urban consumption centers:</p>
-
-            <div class="graph-container">
-                <svg width="700" height="450">
-                    <!-- Energy Sources and Urban Consumption -->
-                    <rect x="50" y="30" width="150" height="40" fill="#4a90e2" stroke="black" stroke-width="1.5"/>
-                    <text x="125" y="50" font-size="16" fill="white" text-anchor="middle">Solar (25%)</text>
-
-                    <rect x="50" y="100" width="150" height="40" fill="#8e44ad" stroke="black" stroke-width="1.5"/>
-                    <text x="125" y="120" font-size="16" fill="white" text-anchor="middle">Wind (15%)</text>
-
-                    <rect x="50" y="170" width="150" height="40" fill="#3498db" stroke="black" stroke-width="1.5"/>
-                    <text x="125" y="190" font-size="16" fill="white" text-anchor="middle">Hydroelectric (20%)</text>
-
-                    <rect x="50" y="240" width="150" height="40" fill="#e74c3c" stroke="black" stroke-width="1.5"/>
-                    <text x="125" y="260" font-size="16" fill="white" text-anchor="middle">Fossil Fuels (30%)</text>
-
-                    <rect x="50" y="310" width="150" height="40" fill="#2ecc71" stroke="black" stroke-width="1.5"/>
-                    <text x="125" y="330" font-size="16" fill="white" text-anchor="middle">Other Renewable (10%)</text>
-
-                    <!-- Urban Energy Distribution -->
-                    <rect x="300" y="130" width="150" height="40" fill="#f39c12" stroke="black" stroke-width="1.5"/>
-                    <text x="375" y="150" font-size="16" fill="black" text-anchor="middle">Urban Energy Distribution</text>
-
-                    <rect x="300" y="250" width="150" height="40" fill="#1abc9c" stroke="black" stroke-width="1.5"/>
-                    <text x="375" y="270" font-size="16" fill="black" text-anchor="middle">Urban Consumption Centers</text>
-
-                    <!-- Arrows for Flow -->
-                    <line x1="200" y1="50" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-                    <line x1="200" y1="120" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-                    <line x1="200" y1="190" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-                    <line x1="200" y1="260" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-                    <line x1="200" y1="330" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-                    <!-- Arrowhead Definition -->
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-                            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
-                        </marker>
-                    </defs>
-                </svg>
-            </div>
-        </div>
-
-        <div class="mt-4">
-            <h4>Load Balancing Algorithm</h4>
-            <p>To optimize energy distribution, reduce energy wastage, and promote sustainable urban development, a <strong>Load Balancing Algorithm</strong> is implemented. This algorithm dynamically adjusts energy supply to match demand in real-time, prioritizing renewable energy sources.</p>
-        </div>
-
-        <div class="mt-4">
-            <h4>Core Focus</h4>
-            <ul class="list-group">
-                <li class="list-group-item">Reducing reliance on fossil fuels</li>
-                <li class="list-group-item">Enhancing energy efficiency in urban infrastructure</li>
-                <li class="list-group-item">Ensuring a stable energy supply during peak usage hours</li>
-            </ul>
-        </div>
-
-        <div class="mt-4">
-            <h4>Key Components</h4>
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Input:</strong> Energy demand data, renewable energy availability, and urban infrastructure capacity</li>
-                <li class="list-group-item"><strong>Output:</strong> Optimized energy distribution schedules and urban infrastructure development plans</li>
-                <li class="list-group-item"><strong>Algorithm:</strong> Load Balancing Algorithm with real-time monitoring and urban planning considerations</li>
-            </ul>
-        </div>
-
-        <div class="mt-4">
-            <h4>Future Enhancements</h4>
-            <ul class="list-group">
-                <li class="list-group-item">Integrating smart meters for real-time energy consumption tracking</li>
-                <li class="list-group-item">Implementing predictive analytics to forecast energy demands and
+            <p>Urban areas face significant challenges in managing energy efficiently, exacerbating environmental impacts and straining urban infrastructure. The Sustainable Urban Energy Management system aims to enhance energy efficiency, reduce reliance on non-renewable energy sources,
