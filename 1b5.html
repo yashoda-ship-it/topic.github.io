@@ -81,6 +81,49 @@
                 </tbody>
             </table>
         </div>
+        <div class="mt-4">
+            <h4>System Overview: Smart Lighting Network</h4>
+            <p>The smart lighting network is interconnected with sensors that provide real-time data for optimizing energy usage. Below is a graphical representation of how the smart streetlights, traffic sensors, and control center are interconnected.</p>
+
+            <div class="graph">
+                <svg width="600" height="400">
+                    <!-- Arrowhead definition -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+                        </marker>
+                    </defs>
+
+                    <!-- Edges -->
+                    <line x1="150" y1="100" x2="300" y2="50" class="edge" />
+                    <line x1="300" y1="50" x2="450" y2="100" class="edge" />
+                    <line x1="150" y1="100" x2="200" y2="250" class="edge" />
+                    <line x1="200" y1="250" x2="300" y2="350" class="edge" />
+                    <line x1="450" y1="100" x2="300" y2="350" class="edge" />
+
+                    <!-- Nodes -->
+                    <circle cx="150" cy="100" r="20" class="node" />
+                    <circle cx="300" cy="50" r="20" class="node" />
+                    <circle cx="450" cy="100" r="20" class="node" />
+                    <circle cx="200" cy="250" r="20" class="node" />
+                    <circle cx="300" cy="350" r="20" class="node" />
+
+                    <!-- Labels -->
+                    <text x="150" y="95" class="label" text-anchor="middle">Solar</text>
+                    <text x="300" y="45" class="label" text-anchor="middle">Wind</text>
+                    <text x="450" y="95" class="label" text-anchor="middle">Hydro Electric</text>
+                    <text x="200" y="245" class="label" text-anchor="middle">Fossil fuels</text>
+                    <text x="300" y="345" class="label" text-anchor="middle">Other renewable</text>
+
+                    <!-- Edge Weights -->
+                    <text x="225" y="70" class="label">25</text>
+                    <text x="375" y="70" class="label">15</text>
+                    <text x="175" y="175" class="label">20</text>
+                    <text x="250" y="300" class="label">30</text>
+                    <text x="375" y="225" class="label">10</text>
+                </svg>
+            </div>
+        </div>
 
         <div class="mt-5 chart-container">
             <h4>Energy Distribution Network Chart</h4>
