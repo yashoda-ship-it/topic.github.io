@@ -3,169 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Case: Urban Traffic Solutions</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-        h2 {
-            color: #4a90e2;
-        }
-        h1 {
-            color: #d9534f;
-        }
-        h4 {
-            color: #5cb85c;
-        }
-        table {
-            border: 2px solid #5bc0de;
-        }
-        thead {
-            background-color: #5bc0de;
-            color: white;
-        }
-        tbody tr:nth-child(even) {
-            background-color: #d9edf7;
-        }
-        tbody tr:nth-child(odd) {
-            background-color: #f7f7f9;
-        }
-        .text-center {
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-        a {
-            color: #0275d8;
-            text-decoration: underline;
-        }
-        .graph {
-            background-color: #f9f9f9;
-            padding: 20px;
-            text-align: center;
-        }
-        .node {
-            fill: #4a90e2;
-            stroke: #333;
-            stroke-width: 1.5;
-        }
-        .edge {
-            stroke: #333;
-            stroke-width: 1.5;
-            marker-end: url(#arrowhead);
-        }
-        .label {
-            font-size: 14px;
-            font-family: Arial, sans-serif;
-            fill: #000;
-        }
-    </style>
+    <title>Sustainable Urban Energy Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container mt-3">
-        <h2 class="text-center">Business Case: Urban Traffic Solutions</h2>
-        <h1 class="text-center mt-4">Enhancing Urban Mobility</h1>
+    <div class="container my-5">
+        <h1 class="text-center">Portfolio Sample</h1>
+        <h2 class="text-center">Business Case: Sustainable Urban Energy Management</h2>
 
         <div class="mt-4">
-            <h4>Project Objective: Streamlined Urban Traffic Management</h4>
-            <p><strong>SDG Goal:</strong> 11 - Sustainable Cities and Communities</p>
-            <p><strong>Target:</strong> 11.2 - Provide access to safe, affordable, accessible, and sustainable transport systems for all</p>
-            <p><strong>Indicator:</strong> 11.2.1 - Proportion of population with convenient access to public transport</p>
+            <h4>Subtask:</h4>
+            <p>Enhancing Urban Energy Efficiency and Sustainability</p>
+            <h4>Sustainable Development Goal:</h4>
+            <p>SDG Goal 11</p>
+            <h4>Target:</h4>
+            <p>11.6</p>
+            <h4>Indicator:</h4>
+            <p>11.6.1</p>
         </div>
 
-        <div class="mt-4">
-            <p>Urban areas across the globe face increasing challenges related to traffic congestion, economic loss, and environmental pollution. This business case highlights strategic measures to optimize traffic flow and promote sustainable urban mobility using data-driven insights and innovative solutions.</p>
-
-            <table class="table table-striped">
+        <div class="mt-5">
+            <h4>Energy Infrastructure and Consumption</h4>
+            <table class="table table-striped table-bordered mt-3">
                 <thead>
                     <tr>
                         <th>Sl. No.</th>
-                        <th>Solution Category</th>
-                        <th>Components</th>
+                        <th>Energy Source</th>
+                        <th>Contribution (%)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Intelligent Traffic Systems (ITS)</td>
-                        <td>Smart signals, real-time monitoring</td>
+                        <td>Solar</td>
+                        <td>25</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Pedestrian Safety Measures</td>
-                        <td>Advanced crossings, safety barriers</td>
+                        <td>Wind</td>
+                        <td>15</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Public Transport Integration</td>
-                        <td>Dedicated lanes, multi-modal hubs</td>
+                        <td>Hydroelectric</td>
+                        <td>20</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Congestion Mitigation</td>
-                        <td>Dynamic tolling, traffic rerouting</td>
+                        <td>Fossil Fuels</td>
+                        <td>30</td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Emission Control Strategies</td>
-                        <td>EV adoption, eco-friendly routing</td>
+                        <td>Other Renewable</td>
+                        <td>10</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="mt-4">
-            <p>Below is a graphical representation of critical nodes in the traffic network and their interactions:</p>
-
-            <div class="graph">
-                <svg width="600" height="400">
-                    <!-- Arrowhead definition -->
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-                            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-                        </marker>
-                    </defs>
-
-                    <!-- Edges -->
-                    <line x1="150" y1="100" x2="300" y2="50" class="edge" />
-                    <line x1="300" y1="50" x2="450" y2="100" class="edge" />
-                    <line x1="150" y1="100" x2="200" y2="250" class="edge" />
-                    <line x1="200" y1="250" x2="300" y2="350" class="edge" />
-                    <line x1="450" y1="100" x2="300" y2="350" class="edge" />
-
-                    <!-- Nodes -->
-                    <circle cx="150" cy="100" r="20" class="node" />
-                    <circle cx="300" cy="50" r="20" class="node" />
-                    <circle cx="450" cy="100" r="20" class="node" />
-                    <circle cx="200" cy="250" r="20" class="node" />
-                    <circle cx="300" cy="350" r="20" class="node" />
-
-                    <!-- Labels -->
-                    <text x="150" y="95" class="label" text-anchor="middle">Signal 1</text>
-                    <text x="300" y="45" class="label" text-anchor="middle">Signal 2</text>
-                    <text x="450" y="95" class="label" text-anchor="middle">Signal 3</text>
-                    <text x="200" y="245" class="label" text-anchor="middle">Entry/Exit</text>
-                    <text x="300" y="345" class="label" text-anchor="middle">Congestion Zone</text>
-                </svg>
+        <div class="mt-5">
+            <h4>Energy Distribution Network Map</h4>
+            <div class="text-center">
+                <pre>
++---------------+
+|  Solar (25)  |
++---------------+
+        |
+        v
++-------------------------------+
+|          Wind (15)          |
+|  Hydroelectric (20)        |
++-------------------------------+
+        |
+        v
++-------------------------------+
+|  Fossil Fuels (30)          |
+|  Other Renewable (10)      |
++-------------------------------+
+        |
+        v
++-------------------------------+
+|  Urban Energy Distribution  |
+|  Network                      |
++-------------------------------+
+        |
+        v
++-------------------------------+
+|  Urban Consumption Centers  |
++-------------------------------+
+                </pre>
             </div>
         </div>
 
-        <div class="mt-4">
-            <p>To calculate optimal travel routes and reduce congestion, <strong>Dijkstra’s Algorithm</strong> is applied. This method ensures:
-            </p>
-            <ul>
-                <li>Minimized travel time.</li>
-                <li>Improved safety for pedestrians and cyclists.</li>
-                <li>Reduced fuel consumption and emissions.</li>
-            </ul>
-            <p>Further analysis and implementation code are available on this <a href="https://gist.github.com/yashoda-ship-it/be7ff79427d49c625c839e2e265534a9">GitHub repository</a> (placeholder link).</p>
+        <div class="mt-5">
+            <h4>Load Balancing Algorithm</h4>
+            <p>To optimize energy distribution, reduce energy wastage, and promote sustainable urban development, a Load Balancing Algorithm is implemented. This algorithm dynamically adjusts energy supply to match demand in real-time, prioritizing renewable energy sources.</p>
 
-            <p><strong>Reflection:</strong> The integration of IoT devices and AI could enhance this system by providing real-time updates and automated responses to changing traffic conditions.</p>
+            <h5>Core Focus</h5>
+            <ul>
+                <li>Reducing reliance on fossil fuels</li>
+                <li>Enhancing energy efficiency in urban infrastructure</li>
+                <li>Ensuring a stable energy supply during peak usage hours</li>
+            </ul>
+
+            <h5>Key Components</h5>
+            <ul>
+                <li><b>Input:</b> Energy demand data, renewable energy availability, and urban infrastructure capacity</li>
+                <li><b>Output:</b> Optimized energy distribution schedules and urban infrastructure development plans</li>
+                <li><b>Algorithm:</b> Load Balancing Algorithm with real-time monitoring and urban planning considerations</li>
+            </ul>
+        </div>
+
+        <div class="mt-5">
+            <h4>Reflection</h4>
+            <p>Future enhancements could include:</p>
+            <ul>
+                <li>Integrating smart meters for real-time energy consumption tracking</li>
+                <li>Implementing predictive analytics to forecast energy demands and renewable energy generation capacity</li>
+                <li>Collaborating with urban planners to develop sustainable and resilient urban infrastructure strategies</li>
+            </ul>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
