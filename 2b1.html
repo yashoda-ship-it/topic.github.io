@@ -76,7 +76,7 @@
 
     <!-- SDG, Target, Indicator Section -->
     <section>
-        <h2>SDG Mapping</h2>  
+        <h2>SDG Mapping</h2>
         <p><strong>Objective:</strong> Create a robust system for detecting fires using IoT devices and optimizing emergency response times through Dynamic Programming and Memoization.</p>
         <p><strong>SDG Goal:</strong> Sustainable Cities and Communities (Goal 11).</p>
         <p><strong>Target:</strong> Reduce disaster-related deaths and affected individuals (Target 11.5).</p>
@@ -111,8 +111,8 @@
                 <!-- Labels -->
                 <text x="40" y="145" fill="white" font-size="14">S1</text>
                 <text x="190" y="45" fill="white" font-size="14">S2</text>
-                <text x="190" y="245" fill="white" font-size="14">F</text>
                 <text x="340" y="145" fill="white" font-size="14">S3</text>
+                <text x="190" y="245" fill="white" font-size="14">F</text>
             </svg>
             <p class="chart-title">Graph Representation of Fire Detection System</p>
         </div>
@@ -147,67 +147,50 @@
         </div>
     </div>
 
-    <!-- Section 3: Algorithms -->
-    <h2>Algorithms</h2>
+    <!-- Additional Graphs Section Added Here -->
+
     <div class="container">
+        <!-- Fire Incident Heatmap Graph -->
         <div class="box">
-            <h3>Shortest Path: Dijkstra's Algorithm</h3>
-            <p>Finds the optimal route for fire engines from the nearest station to the fire location using Edge Relaxation. 
-                <strong>Efficiency:</strong> Time complexity of O(E log V) where E is the number of edges and V is the number of vertices.</p>
-            <ul class="gist-links">
-                <li><a href="https://gist.github.com/yashoda-ship-it/befd8bc848a83b1f9a0610c48d9d9572" target="_blank">Dijkstra's Algorithm Code</a></li>
-            </ul>
+            <svg width="400" height="300">
+                <!-- Fire Incident Points (example data) -->
+                <circle cx="100" cy="100" r="5" fill="red"></circle>
+                <circle cx="150" cy="180" r="8" fill="orange"></circle>
+                <circle cx="250" cy="50" r="6" fill="yellow"></circle>
+                <circle cx="300" cy="220" r="7" fill="orange"></circle>
+                <circle cx="50" cy="250" r="4" fill="green"></circle>
+                <circle cx="200" cy="200" r="9" fill="red"></circle>
+            </svg>
+            <p class="chart-title">Fire Incident Heatmap</p>
+            <p>This heatmap visualizes fire incident frequency and severity across different locations. Red represents high-severity areas, while green indicates lower-severity regions.</p>
         </div>
+
+        <!-- Fire Station Network Graph -->
         <div class="box">
-            <h3>Network Optimization: Kruskal's Algorithm</h3>
-            <p>Constructs the minimal spanning tree to reduce overall sensor connection costs. 
-                <strong>Efficiency:</strong> Time complexity of O(E log V), where E is the number of edges and V is the number of vertices.</p>
-            <ul class="gist-links">
-                <li><a href="https://gist.github.com/yashoda-ship-it/72ea8b86faecb2dc80b0991cef360f92" target="_blank">Kruskal's Algorithm Code</a></li>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>Priority Queue: Min-Heap</h3>
-            <p>The Min-Heap is used to manage the priority of fire engines dispatched to locations based on urgency. 
-                <strong>Efficiency:</strong> Time complexity of O(log n) for both insertion and removal of elements.</p>
-            <ul class="gist-links">
-                <li><a href="https://gist.github.com/yashoda-ship-it/d43dbcf518f41914c4126573e593f4bd" target="_blank">Min-Heap Code</a></li>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>Union-Find: Disjoint-Set Union</h3>
-            <p>The Union-Find data structure is used for efficiently checking connectivity between different fire stations and fire locations in the network. 
-                <strong>Efficiency:</strong> Time complexity of O(α(n)), where α(n) is the inverse Ackermann function.</p>
-            <ul class="gist-links">
-                <li><a href="https://gist.github.com/yashoda-ship-it/0ed35e5a0a9dd23d98f68dba7e252334" target="_blank">Union-Find Code</a></li>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>Segment Tree</h3>
-            <p>Used for querying ranges of data (e.g., population density in different areas) efficiently. 
-                <strong>Efficiency:</strong> Time complexity for both updates and queries is O(log n).</p>
-            <ul class="gist-links">
-                <li><a href="https://gist.github.com/yashoda-ship-it/ae7f099c6f3b6f0344e33282d99698a8" target="_blank">Segment Tree Code</a></li>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>Trie</h3>
-            <p>Used for efficiently searching and storing fire-related keywords (such as location names or types of incidents). 
-                <strong>Efficiency:</strong> Time complexity for insertion and searching is O(k), where k is the length of the string.</p>
-            <ul class="gist-links">
-                <li><a href="https://gist.github.com/yashoda-ship-it/37c6721728fa0a25a5e9ce25ef8e3580" target="_blank">Trie Code</a></li>
-            </ul>
+            <svg width="400" height="300">
+                <!-- Fire Stations -->
+                <circle cx="50" cy="150" r="20" fill="blue"></circle>
+                <circle cx="200" cy="50" r="20" fill="green"></circle>
+                <circle cx="350" cy="150" r="20" fill="orange"></circle>
+                <circle cx="200" cy="250" r="20" fill="red"></circle>
+
+                <!-- Edges (Routes between stations) -->
+                <line x1="50" y1="150" x2="200" y2="50" stroke="black" stroke-width="2"></line>
+                <line x1="50" y1="150" x2="200" y2="250" stroke="black" stroke-width="2"></line>
+                <line x1="200" y1="50" x2="350" y2="150" stroke="black" stroke-width="2"></line>
+                <line x1="200" y1="250" x2="350" y2="150" stroke="black" stroke-width="2"></line>
+
+                <!-- Labels -->
+                <text x="40" y="145" fill="white" font-size="14">S1</text>
+                <text x="190" y="45" fill="white" font-size="14">S2</text>
+                <text x="340" y="145" fill="white" font-size="14">S3</text>
+                <text x="190" y="245" fill="white" font-size="14">S4</text>
+            </svg>
+            <p class="chart-title">Fire Station Network</p>
+            <p>This graph shows the fire stations and the routes between them. It can be optimized using Dijkstra’s or Kruskal’s Algorithm for the shortest response time.</p>
         </div>
     </div>
 
-    <!-- Section 4: Process Flow -->
-    <h2>Process Flow</h2>
-    <p>The emergency fire detection system follows the steps outlined below:</p>
-    <ol>
-        <li>Data collection from sensors.</li>
-        <li>Processing using the optimized algorithms.</li>
-        <li>Fire detection and emergency response dispatch.</li>
-    </ol>
-
 </body>
 </html>
+
