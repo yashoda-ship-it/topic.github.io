@@ -147,6 +147,7 @@
         <div class="box">
             <h3>Shortest Path: <span class="highlight">Dijkstra's Algorithm</span></h3>
             <p>This algorithm calculates the shortest path from one node to another by iteratively choosing the vertex with the smallest tentative distance. It is particularly useful for optimizing routing in real-time traffic conditions.</p>
+            <p><strong>Efficiency:</strong> Dijkstra's algorithm has a time complexity of O(E log V) when implemented with a priority queue, where E is the number of edges and V is the number of vertices. It is highly efficient for sparse graphs and dynamic route optimization.</p>
             <ul class="gist-links">
                 <li><a href="https://gist.github.com/yashoda-ship-it/9e945034cf51560d1a199d0b2f775d7b" target="_blank">Dijkstra's Algorithm Code</a></li>
             </ul>
@@ -154,6 +155,7 @@
         <div class="box">
             <h3>Dynamic Programming: <span class="highlight">Memoization</span></h3>
             <p>Memoization is an optimization technique used in dynamic programming. It stores the results of expensive function calls and returns the cached result when the same inputs occur again. This technique helps reduce redundant calculations.</p>
+            <p><strong>Efficiency:</strong> Memoization has a time complexity of O(n), where n is the number of unique function calls. It significantly reduces the time complexity of problems with overlapping subproblems, such as route recalculations in traffic management.</p>
             <ul class="gist-links">
                 <li><a href="https://gist.github.com/yashoda-ship-it/af7d701477280743e2cfe47484124c43" target="_blank">Memoization Code</a></li>
             </ul>
@@ -161,6 +163,7 @@
         <div class="box">
             <h3>Graph Traversal: <span class="highlight">Breadth-First Search (BFS)</span></h3>
             <p>BFS explores nodes level by level, making it ideal for shortest path finding in unweighted graphs. It can be used to dynamically reroute traffic by considering all possible paths from a given intersection.</p>
+            <p><strong>Efficiency:</strong> BFS has a time complexity of O(V + E), where V is the number of vertices and E is the number of edges. It is efficient for exploring all paths and determining the shortest route in unweighted networks.</p>
             <ul class="gist-links">
                 <li><a href="https://gist.github.com/yashoda-ship-it/fc7b2a2e64e8ae5357108f50490624cc" target="_blank">BFS Code</a></li>
             </ul>
@@ -168,15 +171,9 @@
         <div class="box">
             <h3>Lazy Propagation</h3>
             <p>Lazy propagation is a technique used to delay updates in a data structure until necessary. This is useful in range updates or segment trees where updates are costly and need to be propagated only when accessed.</p>
+            <p><strong>Efficiency:</strong> Lazy propagation improves the efficiency of segment tree operations, reducing the time complexity from O(n) to O(log n) for range updates.</p>
             <ul class="gist-links">
                 <li><a href="https://gist.github.com/yashoda-ship-it/9c30d20a39791c75f50eee0668b349fd" target="_blank">Lazy Propagation Code</a></li>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>Backtracking: <span class="highlight">Parental Dominance</span></h3>
-            <p>Parental Dominance in backtracking can be used to explore possible traffic reroutes by considering the dominant road conditions, avoiding unnecessary paths by pruning inefficient routes.</p>
-            <ul class="gist-links">
-                <li><a href="https://gist.github.com/yashoda-ship-it/d8d6b55c4831d93a0bf43119d74f5a6b" target="_blank">Parental Dominance Code</a></li>
             </ul>
         </div>
     </div>
@@ -196,12 +193,7 @@
         <li><strong>Real-Time Updates:</strong> Dynamic routing using algorithms like <span class="highlight">BFS</span> ensures accurate adjustments based on real-time sensor data.</li>
         <li><strong>Risk Assessment:</strong> Prioritize hazardous road segments, such as icy patches or congested routes, using algorithms like <span class="highlight">Dijkstra’s</span>.</li>
         <li><strong>Data Storage:</strong> <span class="highlight">Lazy Propagation</span> ensures efficient handling of range updates in large data sets.</li>
-        <li><strong>Predictive Analytics:</strong> Using <span class="highlight
-
-
-
-
-
-
-
-
+        <li><strong>Predictive Analytics:</strong> Using <span class="highlight">Memoization</span> to store past traffic patterns can predict future congestion and reroute traffic in advance.</li>
+    </ul>
+</body>
+</html>
