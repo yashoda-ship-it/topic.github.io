@@ -94,6 +94,7 @@
 
     <!-- Graph Example -->
     <div class="container">
+        <!-- Fire Detection System (Undirected Graph) -->
         <div class="box">
             <svg width="400" height="300">
                 <!-- Nodes -->
@@ -116,81 +117,121 @@
             </svg>
             <p class="chart-title">Graph Representation of Fire Detection System</p>
         </div>
-        <div class="box">
-            <h3>Real-World Data Used</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Data Type</th>
-                        <th>Description</th>
-                        <th>Usage</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sensor Data</td>
-                        <td>Temperature, smoke levels</td>
-                        <td>Fire detection using Brute Force String Search for pattern matching.</td>
-                    </tr>
-                    <tr>
-                        <td>Population Density</td>
-                        <td>People per km<sup>2</sup></td>
-                        <td>Risk prioritization with Greedy Techniques.</td>
-                    </tr>
-                    <tr>
-                        <td>Historical Data</td>
-                        <td>Past fire incidents</td>
-                        <td>Training prediction models using Dynamic Programming.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
 
-    <!-- Additional Graphs Section Added Here -->
-
-    <div class="container">
-        <!-- Fire Incident Heatmap Graph -->
+        <!-- Binary Search Tree (BST) -->
         <div class="box">
             <svg width="400" height="300">
-                <!-- Fire Incident Points (example data) -->
-                <circle cx="100" cy="100" r="5" fill="red"></circle>
-                <circle cx="150" cy="180" r="8" fill="orange"></circle>
-                <circle cx="250" cy="50" r="6" fill="yellow"></circle>
-                <circle cx="300" cy="220" r="7" fill="orange"></circle>
-                <circle cx="50" cy="250" r="4" fill="green"></circle>
-                <circle cx="200" cy="200" r="9" fill="red"></circle>
-            </svg>
-            <p class="chart-title">Fire Incident Heatmap</p>
-            <p>This heatmap visualizes fire incident frequency and severity across different locations. Red represents high-severity areas, while green indicates lower-severity regions.</p>
-        </div>
+                <!-- Nodes of BST -->
+                <circle cx="200" cy="50" r="20" fill="blue"></circle>
+                <circle cx="100" cy="150" r="20" fill="green"></circle>
+                <circle cx="300" cy="150" r="20" fill="red"></circle>
+                <circle cx="50" cy="250" r="20" fill="orange"></circle>
+                <circle cx="150" cy="250" r="20" fill="yellow"></circle>
+                <circle cx="250" cy="250" r="20" fill="purple"></circle>
 
-        <!-- Fire Station Network Graph -->
-        <div class="box">
-            <svg width="400" height="300">
-                <!-- Fire Stations -->
-                <circle cx="50" cy="150" r="20" fill="blue"></circle>
-                <circle cx="200" cy="50" r="20" fill="green"></circle>
-                <circle cx="350" cy="150" r="20" fill="orange"></circle>
-                <circle cx="200" cy="250" r="20" fill="red"></circle>
-
-                <!-- Edges (Routes between stations) -->
-                <line x1="50" y1="150" x2="200" y2="50" stroke="black" stroke-width="2"></line>
-                <line x1="50" y1="150" x2="200" y2="250" stroke="black" stroke-width="2"></line>
-                <line x1="200" y1="50" x2="350" y2="150" stroke="black" stroke-width="2"></line>
-                <line x1="200" y1="250" x2="350" y2="150" stroke="black" stroke-width="2"></line>
+                <!-- Edges -->
+                <line x1="200" y1="50" x2="100" y2="150" stroke="black" stroke-width="2"></line>
+                <line x1="200" y1="50" x2="300" y2="150" stroke="black" stroke-width="2"></line>
+                <line x1="100" y1="150" x2="50" y2="250" stroke="black" stroke-width="2"></line>
+                <line x1="100" y1="150" x2="150" y2="250" stroke="black" stroke-width="2"></line>
+                <line x1="300" y1="150" x2="250" y2="250" stroke="black" stroke-width="2"></line>
 
                 <!-- Labels -->
-                <text x="40" y="145" fill="white" font-size="14">S1</text>
-                <text x="190" y="45" fill="white" font-size="14">S2</text>
-                <text x="340" y="145" fill="white" font-size="14">S3</text>
-                <text x="190" y="245" fill="white" font-size="14">S4</text>
+                <text x="190" y="45" fill="white" font-size="14">Root</text>
+                <text x="90" y="145" fill="white" font-size="14">Left</text>
+                <text x="290" y="145" fill="white" font-size="14">Right</text>
+                <text x="40" y="245" fill="white" font-size="14">Left-Left</text>
+                <text x="140" y="245" fill="white" font-size="14">Left-Right</text>
+                <text x="240" y="245" fill="white" font-size="14">Right-Left</text>
             </svg>
-            <p class="chart-title">Fire Station Network</p>
-            <p>This graph shows the fire stations and the routes between them. It can be optimized using Dijkstra’s or Kruskal’s Algorithm for the shortest response time.</p>
+            <p class="chart-title">Binary Search Tree (BST)</p>
+            <p>This is a Binary Search Tree (BST) where each node follows the rule: left children are smaller, right children are larger.</p>
+        </div>
+
+        <!-- AVL Tree (Self-Balancing Binary Tree) -->
+        <div class="box">
+            <svg width="400" height="300">
+                <!-- Nodes of AVL Tree -->
+                <circle cx="200" cy="50" r="20" fill="blue"></circle>
+                <circle cx="100" cy="150" r="20" fill="green"></circle>
+                <circle cx="300" cy="150" r="20" fill="red"></circle>
+                <circle cx="50" cy="250" r="20" fill="orange"></circle>
+                <circle cx="150" cy="250" r="20" fill="yellow"></circle>
+                <circle cx="250" cy="250" r="20" fill="purple"></circle>
+
+                <!-- Edges -->
+                <line x1="200" y1="50" x2="100" y2="150" stroke="black" stroke-width="2"></line>
+                <line x1="200" y1="50" x2="300" y2="150" stroke="black" stroke-width="2"></line>
+                <line x1="100" y1="150" x2="50" y2="250" stroke="black" stroke-width="2"></line>
+                <line x1="100" y1="150" x2="150" y2="250" stroke="black" stroke-width="2"></line>
+                <line x1="300" y1="150" x2="250" y2="250" stroke="black" stroke-width="2"></line>
+
+                <!-- Labels -->
+                <text x="190" y="45" fill="white" font-size="14">Root</text>
+                <text x="90" y="145" fill="white" font-size="14">Left</text>
+                <text x="290" y="145" fill="white" font-size="14">Right</text>
+                <text x="40" y="245" fill="white" font-size="14">Left-Left</text>
+                <text x="140" y="245" fill="white" font-size="14">Left-Right</text>
+                <text x="240" y="245" fill="white" font-size="14">Right-Left</text>
+            </svg>
+            <p class="chart-title">AVL Tree (Balanced BST)</p>
+            <p>AVL Trees are self-balancing binary search trees that maintain a balance factor for every node to ensure O(log n) time complexity for all operations.</p>
+        </div>
+
+        <!-- Heap -->
+        <div class="box">
+            <svg width="400" height="300">
+                <!-- Nodes of Heap -->
+                <circle cx="200" cy="50" r="20" fill="blue"></circle>
+                <circle cx="100" cy="150" r="20" fill="green"></circle>
+                <circle cx="300" cy="150" r="20" fill="red"></circle>
+                <circle cx="50" cy="250" r="20" fill="orange"></circle>
+                <circle cx="150" cy="250" r="20" fill="yellow"></circle>
+
+                <!-- Edges -->
+                <line x1="200" y1="50" x2="100" y2="150" stroke="black" stroke-width="2"></line>
+                <line x1="200" y1="50" x2="300" y2="150" stroke="black" stroke-width="2"></line>
+                <line x1="100" y1="150" x2="50" y2="250" stroke="black" stroke-width="2"></line>
+                <line x1="100" y1="150" x2="150" y2="250" stroke="black" stroke-width="2"></line>
+
+                <!-- Labels -->
+                <text x="190" y="45" fill="white" font-size="14">Root</text>
+                <text x="90" y="145" fill="white" font-size="14">Left</text>
+                <text x="290" y="145" fill="white" font-size="14">Right</text>
+                <text x="40" y="245" fill="white" font-size="14">Left-Left</text>
+                <text x="140" y="245" fill="white" font-size="14">Left-Right</text>
+            </svg>
+            <p class="chart-title">Heap (Binary Tree)</p>
+            <p>A heap is a complete binary tree that satisfies the heap property. In a max-heap, each parent node is greater than its children.</p>
+        </div>
+
+        <!-- Union-Find -->
+        <div class="box">
+            <svg width="400" height="300">
+                <!-- Union-Find Nodes -->
+                <circle cx="100" cy="100" r="20" fill="blue"></circle>
+                <circle cx="200" cy="100" r="20" fill="green"></circle>
+                <circle cx="300" cy="100" r="20" fill="red"></circle>
+                <circle cx="100" cy="250" r="20" fill="yellow"></circle>
+                <circle cx="200" cy="250" r="20" fill="orange"></circle>
+
+                <!-- Edges -->
+                <line x1="100" y1="100" x2="200" y2="100" stroke="black" stroke-width="2"></line>
+                <line x1="200" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"></line>
+                <line x1="100" y1="250" x2="200" y2="250" stroke="black" stroke-width="2"></line>
+
+                <!-- Labels -->
+                <text x="90" y="95" fill="white" font-size="14">A</text>
+                <text x="190" y="95" fill="white" font-size="14">B</text>
+                <text x="290" y="95" fill="white" font-size="14">C</text>
+                <text x="90" y="245" fill="white" font-size="14">D</text>
+                <text x="190" y="245" fill="white" font-size="14">E</text>
+            </svg>
+            <p class="chart-title">Union-Find</p>
+            <p>Union-Find data structure helps manage connected components. Nodes are initially separate, and connections are made using union operations.</p>
         </div>
     </div>
-
 </body>
 </html>
+
 
