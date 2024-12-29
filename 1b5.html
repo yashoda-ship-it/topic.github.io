@@ -3,49 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainable Urban Energy Management</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Urban Energy Management</title>
     <style>
         body {
-            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
             color: #333;
-        }
-        .table {
-            background-color: #fff;
-            border: 1px solid #ddd;
-        }
-        h1, h2, h4 {
-            color: #0056b3;
-        }
-        .chart-container {
-            background-color: #fff;
+            line-height: 1.6;
+            margin: 0;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2, h4 {
+            color: #5cb85c;
+        }
+        h1 {
+            color: #d9534f;
+            text-align: center;
+        }
+        table {
+            border: 2px solid #5bc0de;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        thead {
+            background-color: #5bc0de;
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #d9edf7;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f7f7f9;
+        }
+        .text-center {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .graph {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .node {
+            fill: #4a90e2;
+            stroke: #333;
+            stroke-width: 1.5;
+        }
+        .edge {
+            stroke: #333;
+            stroke-width: 1.5;
+            marker-end: url(#arrowhead);
+        }
+        .label {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            fill: #000;
         }
     </style>
 </head>
 <body>
-    <div class="container my-5">
-        <h1 class="text-center">Portfolio Sample</h1>
-        <h2 class="text-center">Business Case: Sustainable Urban Energy Management</h2>
+    <div class="container">
+        <h1>Sustainable Urban Energy Management</h1>
 
-        <div class="mt-4">
-            <h4>Subtask:</h4>
-            <p>Enhancing Urban Energy Efficiency and Sustainability</p>
-            <h4>Sustainable Development Goal:</h4>
-            <p>SDG Goal 11</p>
-            <h4>Target:</h4>
-            <p>11.6</p>
-            <h4>Indicator:</h4>
-            <p>11.6.1</p>
+        <div>
+            <h4>Sub-task: Enhancing Urban Energy Efficiency and Sustainability</h4>
+            <p><strong>SDG Goal:</strong> 11</p>
+            <p><strong>Target:</strong> 11.6</p>
+            <p><strong>Indicator:</strong> 11.6.1</p>
         </div>
 
-        <div class="mt-5">
-            <h4>Energy Infrastructure and Consumption</h4>
-            <table class="table table-striped table-bordered mt-3">
-                <thead class="table-primary">
+        <div>
+            <p>Urban areas face significant challenges in managing energy efficiently, exacerbating environmental impacts and straining urban infrastructure. The Sustainable Urban Energy Management system aims to enhance energy efficiency, reduce reliance on non-renewable energy sources, and promote sustainable urban development.</p>
+
+            <table>
+                <thead>
                     <tr>
                         <th>Sl. No.</th>
                         <th>Energy Source</th>
@@ -81,111 +120,56 @@
                 </tbody>
             </table>
         </div>
-        <div class="mt-4">
-            <h4>System Overview: Smart Lighting Network</h4>
-            <p>The smart lighting network is interconnected with sensors that provide real-time data for optimizing energy usage. Below is a graphical representation of how the smart streetlights, traffic sensors, and control center are interconnected.</p>
 
-           <svg width="600" height="400">
-    <!-- Arrowhead definition -->
-    <defs>
-        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-        </marker>
-    </defs>
+        <div class="graph">
+            <svg width="600" height="400">
+                <!-- Arrowhead definition -->
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+                    </marker>
+                </defs>
 
-    <!-- Edges -->
-    <line x1="150" y1="100" x2="300" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
-    <line x1="300" y1="50" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
-    <line x1="150" y1="100" x2="200" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
-    <line x1="200" y1="250" x2="300" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
-    <line x1="450" y1="100" x2="300" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+                <!-- Edges -->
+                <line x1="150" y1="100" x2="300" y2="50" class="edge" />
+                <line x1="300" y1="50" x2="450" y2="100" class="edge" />
+                <line x1="150" y1="100" x2="300" y2="200" class="edge" />
+                <line x1="300" y1="200" x2="450" y2="100" class="edge" />
+                <line x1="300" y1="200" x2="300" y2="300" class="edge" />
 
-    <!-- Nodes -->
-    <circle cx="150" cy="100" r="20" fill="#007bff" />
-    <circle cx="300" cy="50" r="20" fill="#28a745" />
-    <circle cx="450" cy="100" r="20" fill="#ffc107" />
-    <circle cx="200" cy="250" r="20" fill="#dc3545" />
-    <circle cx="300" cy="350" r="20" fill="#6f42c1" />
+                <!-- Nodes -->
+                <circle cx="150" cy="100" r="20" class="node" />
+                <circle cx="300" cy="50" r="20" class="node" />
+                <circle cx="450" cy="100" r="20" class="node" />
+                <circle cx="300" cy="200" r="20" class="node" />
+                <circle cx="300" cy="300" r="20" class="node" />
 
-    <!-- Labels -->
-    <text x="150" y="95" fill="#fff" text-anchor="middle" font-size="12px">Solar</text>
-    <text x="300" y="45" fill="#fff" text-anchor="middle" font-size="12px">Wind</text>
-    <text x="450" y="95" fill="#fff" text-anchor="middle" font-size="12px">Hydro</text>
-    <text x="200" y="245" fill="#fff" text-anchor="middle" font-size="12px">Fossil</text>
-    <text x="300" y="345" fill="#fff" text-anchor="middle" font-size="12px">Renewable</text>
-</svg>
+                <!-- Labels -->
+                <text x="150" y="95" class="label" text-anchor="middle">1. Solar</text>
+                <text x="300" y="45" class="label" text-anchor="middle">2. Wind</text>
+                <text x="450" y="95" class="label" text-anchor="middle">3. Hydro</text>
+                <text x="300" y="195" class="label" text-anchor="middle">4. Fossil</text>
+                <text x="300" y="295" class="label" text-anchor="middle">5. Urban</text>
 
-
-        <div class="mt-5 chart-container">
-            <h4>Energy Distribution Network Chart</h4>
-            <canvas id="energyChart" width="400" height="200"></canvas>
+                <!-- Edge Weights -->
+                <text x="225" y="70" class="label">40</text>
+                <text x="375" y="70" class="label">50</text>
+                <text x="225" y="150" class="label">30</text>
+                <text x="375" y="150" class="label">60</text>
+                <text x="310" y="250" class="label">70</text>
+            </svg>
         </div>
 
-        <div class="mt-5">
-            <h4>Load Balancing Algorithm</h4>
-            <p>To optimize energy distribution, reduce energy wastage, and promote sustainable urban development, a Load Balancing Algorithm is implemented. This algorithm dynamically adjusts energy supply to match demand in real-time, prioritizing renewable energy sources.</p>
-
-            <h5>Core Focus</h5>
+        <div>
+            <p><strong>Key Components:</strong></p>
             <ul>
-                <li>Reducing reliance on fossil fuels</li>
-                <li>Enhancing energy efficiency in urban infrastructure</li>
-                <li>Ensuring a stable energy supply during peak usage hours</li>
+                <li>Input: Energy demand data, renewable energy availability, and urban infrastructure capacity</li>
+                <li>Output: Optimized energy distribution schedules and urban infrastructure development plans</li>
+                <li>Algorithm: Load Balancing Algorithm with real-time monitoring and urban planning considerations</li>
             </ul>
 
-            <h5>Key Components</h5>
-            <ul>
-                <li><b>Input:</b> Energy demand data, renewable energy availability, and urban infrastructure capacity</li>
-                <li><b>Output:</b> Optimized energy distribution schedules and urban infrastructure development plans</li>
-                <li><b>Algorithm:</b> Load Balancing Algorithm with real-time monitoring and urban planning considerations</li>
-            </ul>
-        </div>
-
-        <div class="mt-5">
-            <h4>Reflection</h4>
-            <p>Future enhancements could include:</p>
-            <ul>
-                <li>Integrating smart meters for real-time energy consumption tracking</li>
-                <li>Implementing predictive analytics to forecast energy demands and renewable energy generation capacity</li>
-                <li>Collaborating with urban planners to develop sustainable and resilient urban infrastructure strategies</li>
-            </ul>
+            <p><strong>Reflection:</strong> Future enhancements could include integrating smart meters for real-time energy consumption tracking, predictive analytics for demand forecasts, and collaboration with urban planners for sustainable infrastructure strategies.</p>
         </div>
     </div>
-
-    <script>
-        const ctx = document.getElementById('energyChart').getContext('2d');
-        const energyChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Solar', 'Wind', 'Hydroelectric', 'Fossil Fuels', 'Other Renewable'],
-                datasets: [{
-                    data: [25, 15, 20, 30, 10],
-                    backgroundColor: [
-                        'rgba(255, 205, 86, 0.7)',
-                        'rgba(54, 162, 235, 0.7)',
-                        'rgba(75, 192, 192, 0.7)',
-                        'rgba(255, 99, 132, 0.7)',
-                        'rgba(153, 102, 255, 0.7)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 205, 86, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(153, 102, 255, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                plugins: {
-                    legend: {
-                        position: 'bottom'
-                    }
-                }
-            }
-        });
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
