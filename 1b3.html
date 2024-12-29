@@ -1,124 +1,171 @@
-Here is the completed HTML code:
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Case: Energy Management</title>
-<link href="(link unavailable)" rel="stylesheet">
-<style>
-body {
-background-color: #f5f5f5;
-}
-h2 {
-color: #4a90e2;
-}
-h1 {
-color: #d9534f;
-}
-h4 {
-color: #5cb85c;
-}
-table {
-border: 2px solid #5bc0de;
-}
-thead {
-background-color: #5bc0de;
-color: white;
-}
-tbody tr:nth-child(even) {
-background-color: #d9edf7;
-}
-tbody tr:nth-child(odd) {
-background-color: #f7f7f9;
-}
-.text-center {
-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-a {
-color: #0275d8;
-text-decoration: underline;
-}
-.graph {
-background-color: #f9f9f9;
-padding: 20px;
-text-align: center;
-}
-.node {
-fill: #4a90e2;
-stroke: #333;
-stroke-width: 1.5;
-}
-.edge {
-stroke: #333;
-stroke-width: 1.5;
-marker-end: url(#arrowhead);
-}
-.label {
-font-size: 14px;
-font-family: Arial, sans-serif;
-fill: #000;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Case: Urban Traffic Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #4a90e2;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        h4 {
+            color: #5cb85c;
+        }
+        table {
+            border: 2px solid #5bc0de;
+        }
+        thead {
+            background-color: #5bc0de;
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #d9edf7;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f7f7f9;
+        }
+        .text-center {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            color: #0275d8;
+            text-decoration: underline;
+        }
+        .graph {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+        .node {
+            fill: #4a90e2;
+            stroke: #333;
+            stroke-width: 1.5;
+        }
+        .edge {
+            stroke: #333;
+            stroke-width: 1.5;
+            marker-end: url(#arrowhead);
+        }
+        .label {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            fill: #000;
+        }
+    </style>
 </head>
 <body>
-<div class="container mt-3">
-<h2 class="text-center">Business Case: Energy Management</h2>
-<h1 class="text-center mt-4">Energy Efficiency and Sustainability</h1>
-<div class="mt-4">
-<h4>Sub-task: Enhancing Urban Energy Efficiency and Sustainability</h4>
-<p><strong>SDG Goal:</strong> 11</p>
-<p><strong>Target:</strong> 11.6</p>
-<p><strong>Indicator:</strong> 11.6.1</p>
-</div>
-<div class="mt-4">
-<p>Urban areas face significant challenges in managing energy efficiently, exacerbating environmental impacts and straining urban infrastructure. The Sustainable Urban Energy Management system aims to enhance energy efficiency, reduce reliance on non-renewable energy sources, and promote sustainable urban development.</p>
-</div>
-<div class="mt-4">
-<h4>Energy Infrastructure and Consumption</h4>
-<table class="table table-striped">
-<thead>
-<tr>
-<th>Sl. No.</th>
-<th>Energy Source</th>
-<th>Contribution (%)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Solar</td>
-<td>25</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Wind</td>
-<td>15</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Hydroelectric</td>
-<td>20</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Fossil Fuels</td>
-<td>30</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Other Renewable</td>
-<td>10</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="mt-4">
-<h4>Figure 1: Energy Distribution Network Map</h4>
-<div class="graph">
-<svg width="600" height="400">
-<rect x="50" y="50" width="100" height="50" fill="#4a90e2" />
-<text x="75" y="75" font-size="14" font-family="Arial, sans-serif" fill="#000">Solar (25)</text>
-<rect x="200" y="50" width="100" height="50" fill="#4a90e2" />
-<text x
+    <div class="container mt-3">
+        <h2 class="text-center">Business Case: Urban Traffic Solutions</h2>
+        <h1 class="text-center mt-4">Enhancing Urban Mobility</h1>
+
+        <div class="mt-4">
+            <h4>Project Objective: Streamlined Urban Traffic Management</h4>
+            <p><strong>SDG Goal:</strong> 11 - Sustainable Cities and Communities</p>
+            <p><strong>Target:</strong> 11.2 - Provide access to safe, affordable, accessible, and sustainable transport systems for all</p>
+            <p><strong>Indicator:</strong> 11.2.1 - Proportion of population with convenient access to public transport</p>
+        </div>
+
+        <div class="mt-4">
+            <p>Urban areas across the globe face increasing challenges related to traffic congestion, economic loss, and environmental pollution. This business case highlights strategic measures to optimize traffic flow and promote sustainable urban mobility using data-driven insights and innovative solutions.</p>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sl. No.</th>
+                        <th>Solution Category</th>
+                        <th>Components</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Intelligent Traffic Systems (ITS)</td>
+                        <td>Smart signals, real-time monitoring</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pedestrian Safety Measures</td>
+                        <td>Advanced crossings, safety barriers</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Public Transport Integration</td>
+                        <td>Dedicated lanes, multi-modal hubs</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Congestion Mitigation</td>
+                        <td>Dynamic tolling, traffic rerouting</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Emission Control Strategies</td>
+                        <td>EV adoption, eco-friendly routing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-4">
+            <p>Below is a graphical representation of critical nodes in the traffic network and their interactions:</p>
+
+            <div class="graph">
+                <svg width="600" height="400">
+                    <!-- Arrowhead definition -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+                        </marker>
+                    </defs>
+
+                    <!-- Edges -->
+                    <line x1="150" y1="100" x2="300" y2="50" class="edge" />
+                    <line x1="300" y1="50" x2="450" y2="100" class="edge" />
+                    <line x1="150" y1="100" x2="200" y2="250" class="edge" />
+                    <line x1="200" y1="250" x2="300" y2="350" class="edge" />
+                    <line x1="450" y1="100" x2="300" y2="350" class="edge" />
+
+                    <!-- Nodes -->
+                    <circle cx="150" cy="100" r="20" class="node" />
+                    <circle cx="300" cy="50" r="20" class="node" />
+                    <circle cx="450" cy="100" r="20" class="node" />
+                    <circle cx="200" cy="250" r="20" class="node" />
+                    <circle cx="300" cy="350" r="20" class="node" />
+
+                    <!-- Labels -->
+                    <text x="150" y="95" class="label" text-anchor="middle">Signal 1</text>
+                    <text x="300" y="45" class="label" text-anchor="middle">Signal 2</text>
+                    <text x="450" y="95" class="label" text-anchor="middle">Signal 3</text>
+                    <text x="200" y="245" class="label" text-anchor="middle">Entry/Exit</text>
+                    <text x="300" y="345" class="label" text-anchor="middle">Congestion Zone</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <p>To calculate optimal travel routes and reduce congestion, <strong>Dijkstra’s Algorithm</strong> is applied. This method ensures:
+            </p>
+            <ul>
+                <li>Minimized travel time.</li>
+                <li>Improved safety for pedestrians and cyclists.</li>
+                <li>Reduced fuel consumption and emissions.</li>
+            </ul>
+            <p>Further analysis and implementation code are available on this <a href="#">GitHub repository</a> (placeholder link).</p>
+
+            <p><strong>Reflection:</strong> The integration of IoT devices and AI could enhance this system by providing real-time updates and automated responses to changing traffic conditions.</p>
+        </div>
+    </div>
+</body>
+</html>
